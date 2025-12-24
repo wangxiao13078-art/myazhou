@@ -87,7 +87,7 @@ export function ProblemDetailScreen({ problem }: ProblemDetailScreenProps) {
                   {getProblemSvgs(problem.id).map((svgName, idx) => (
                     <Image
                       key={idx}
-                      source={{ uri: `/svg/${svgName}.svg`, width: 350, height: 180 }}
+                      source={{ uri: `/myazhou/svg/${svgName}.svg`, width: 350, height: 180 }}
                       width={350}
                       height={180}
                       resizeMode="contain"

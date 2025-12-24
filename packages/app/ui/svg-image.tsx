@@ -1,21 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { YStack, Image } from 'tamagui'
 
 interface SvgImageProps {
   name: string
   width?: number
   height?: number
-}
-
-// 检测是否在 GitHub Pages 上运行
-function getBasePath(): string {
-  if (typeof window === 'undefined') return ''
-  // 检查 URL 路径是否包含 /myazhou
-  const path = window.location.pathname
-  if (path.startsWith('/myazhou')) {
-    return '/myazhou'
-  }
-  return ''
 }
 
 // SVG文件名映射（不包含路径前缀）
@@ -254,25 +243,14 @@ export const problemSvgMap: Record<string, string[]> = {
 
 export function SvgImage({ name, width = 400, height = 200 }: SvgImageProps) {
   const fileName = svgFileNames[name]
-  const [src, setSrc] = useState<string | null>(null)
-  
-  useEffect(() => {
-    if (fileName) {
-      // 在客户端动态判断路径前缀
-      const basePath = getBasePath()
-      setSrc(basePath + '/svg/' + fileName)
-    }
-  }, [fileName])
   
   if (!fileName) {
     console.warn(`SVG not found: ${name}`)
     return null
   }
   
-  // 等待客户端计算正确的 src
-  if (!src) {
-    return <YStack ai="center" my="$2" height={height} />
-  }
+  // 直接硬编码 GitHub Pages 路径
+  const src = '/myazhou/svg/' + fileName
   
   return (
     <YStack ai="center" my="$2">
