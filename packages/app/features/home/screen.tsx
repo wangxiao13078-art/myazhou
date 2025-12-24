@@ -33,8 +33,9 @@ function TechniqueCard({ tech, theme }: {
   tech: { id: string; title: string; methodName: string }
   theme: { bg: string; border: string; icon: string; accent: string }
 }) {
+  // 链接到例题页面（tech.id 如 t35 → t35-example）
   return (
-    <Link href={`/problem/${tech.id}`}>
+    <Link href={`/problem/${tech.id}-example`}>
       <Card 
         p="$4" 
         borderWidth={1}
