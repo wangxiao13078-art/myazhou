@@ -248,17 +248,25 @@ export const problemSvgMap: Record<string, string[]> = {
 
 export function SvgImage({ name, width = 400, height = 200 }: SvgImageProps) {
   const baseSrc = svgFiles[name]
-  const [src, setSrc] = useState(baseSrc || '')
+  const [isClient, setIsClient] = useState(false)
   
   useEffect(() => {
-    if (baseSrc && typeof window !== 'undefined' && window.location.hostname.includes('github.io')) {
-      setSrc(baseSrc.replace('/svg/', '/myazhou/svg/'))
-    }
-  }, [baseSrc])
+    setIsClient(true)
+  }, [])
   
   if (!baseSrc) {
     console.warn(`SVG not found: ${name}`)
     return null
+  }
+  
+  // 在客户端判断是否需要添加 basePath
+  const src = isClient && typeof window !== 'undefined' && window.location.hostname.includes('github.io')
+    ? baseSrc.replace('/svg/', '/myazhou/svg/')
+    : baseSrc
+  
+  // 客户端未准备好时不渲染图片
+  if (!isClient) {
+    return <YStack ai="center" my="$2" height={height} />
   }
   
   return (
