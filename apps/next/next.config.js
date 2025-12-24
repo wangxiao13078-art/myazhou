@@ -1,8 +1,16 @@
 /** @type {import('next').NextConfig} */
 const { withTamagui } = require('@tamagui/next-plugin')
 
+const isProd = process.env.NODE_ENV === 'production'
+
 let nextConfig = {
+  output: 'export',
+  basePath: isProd ? '/myazhou' : '',
+  assetPrefix: isProd ? '/myazhou/' : '',
   reactStrictMode: true,
+  images: {
+    unoptimized: true,
+  },
   transpilePackages: [
     'react-native-web',
     'react-native-svg',

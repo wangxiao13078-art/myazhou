@@ -3,7 +3,7 @@ import { YStack, XStack, Text, Card, ScrollView, H2, Theme } from 'tamagui'
 import { ChevronRight, ClipboardList, Star } from '@tamagui/lucide-icons'
 import { Header } from 'app/ui/header'
 import { Link } from 'solito/link'
-import { GetServerSidePropsContext } from 'next'
+import { GetStaticProps, GetStaticPaths } from 'next'
 import { problemData } from 'app/features/problem/mock-data'
 
 interface QuizPageProps {
@@ -84,7 +84,16 @@ export default function QuizPage({ quizId, quizName, problems }: QuizPageProps) 
   )
 }
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+export const getStaticPaths: GetStaticPaths = async () => {
+  const quizIds = ['z1', 'z2', 'z3', 'z4', 'z5', 'z6', 'final']
+  
+  return {
+    paths: quizIds.map(id => ({ params: { id } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps: GetStaticProps<QuizPageProps> = async (context) => {
   const { id } = context.params as { id: string }
   
   // 专题集训名称映射

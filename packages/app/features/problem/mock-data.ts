@@ -6544,6 +6544,11 @@ export function getProblemById(id: string): Problem {
   return problemData[targetId] || problemData['t1-example']
 }
 
+// 获取所有问题 ID（用于静态生成）
+export function getAllProblemIds(): string[] {
+  return Object.keys(problemData)
+}
+
 // 获取某个考法的所有题目（例题+针对训练）
 export function getProblemsByTechnique(techId: string): Problem[] {
   const prefix = techId.replace('t', '')
