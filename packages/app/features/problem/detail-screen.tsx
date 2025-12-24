@@ -193,7 +193,7 @@ export function ProblemDetailScreen({ problem }: ProblemDetailScreenProps) {
 
           {/* 底部操作 */}
           <XStack space="$4" mt="$6" pb="$10">
-            <Button f={1} theme="blue_alt" size="$5" br="$10" borderWidth={1} borderColor="$borderColor">加入错题本</Button>
+            <Button f={1} theme="blue_alt1" size="$5" br="$10" borderWidth={1} borderColor="$borderColor">加入错题本</Button>
             <Button 
               f={1} 
               theme="blue" 

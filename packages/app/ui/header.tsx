@@ -31,6 +31,7 @@ export function Header({ title, showBack }: HeaderProps) {
       backgroundColor="$background"
       borderBottomWidth={1}
       borderBottomColor="$borderColor"
+      // @ts-ignore - sticky is valid CSS
       position="sticky"
       top={0}
       zIndex={100}

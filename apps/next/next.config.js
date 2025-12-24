@@ -23,7 +23,7 @@ const plugins = [
     components: ['tamagui'],
     importsWhitelist: ['constants.js', 'colors.js'],
     logTimings: true,
-    disableExtraction: process.env.NODE_ENV === 'development',
+    disableExtraction: true,
   }),
 ]
 
