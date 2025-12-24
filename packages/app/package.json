@@ -1,0 +1,26 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "solito": "latest",
+    "moti": "latest",
+    "tamagui": "1.141.4",
+    "@tamagui/config": "1.141.4",
+    "lucide-react-native": "0.368.0",
+    "react-katex": "latest",
+    "zod": "latest",
+    "zustand": "latest",
+    "@tanstack/react-query": "latest"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@types/react": "*",
+    "@types/react-native": "*"
+  }
+}
+

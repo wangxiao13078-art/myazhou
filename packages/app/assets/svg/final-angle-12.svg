@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" width="400" height="180">
+  <style>
+    .line { stroke: #333; stroke-width: 2; fill: none; }
+    .thin-line { stroke: #333; stroke-width: 1.5; fill: none; }
+    .arrow { stroke: #333; stroke-width: 2; fill: #333; }
+    .point { fill: #2563eb; }
+    .label { font-family: 'Times New Roman', serif; font-size: 16px; fill: #333; }
+    .small-label { font-family: 'Times New Roman', serif; font-size: 14px; fill: #333; }
+    .italic { font-style: italic; }
+  </style>
+
+  <!-- 原点O -->
+  <circle cx="100" cy="150" r="3" fill="#333"/>
+  <text x="88" y="165" class="label italic">O</text>
+  
+  <!-- 射线OB (水平向右) -->
+  <line x1="100" y1="150" x2="350" y2="150" class="line"/>
+  <text x="355" y="155" class="label italic">B</text>
+  
+  <!-- 射线OA (垂直向上) -->
+  <line x1="100" y1="150" x2="100" y2="20" class="line"/>
+  <text x="95" y="12" class="label italic">A</text>
+  
+  <!-- 射线OC (在∠AOB内) -->
+  <line x1="100" y1="150" x2="280" y2="40" class="line"/>
+  <text x="290" y="35" class="label italic">C</text>
+  
+  <!-- 射线OD (在∠AOB内，更靠近OB) -->
+  <line x1="100" y1="150" x2="320" y2="85" class="line"/>
+  <text x="330" y="85" class="label italic">D</text>
+  
+  <!-- 角度弧线 ∠COD -->
+  <path d="M 160 115 A 60 60 0 0 1 175 95" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+  
+  <!-- 直角标记 -->
+  <polyline points="100,135 115,135 115,150" fill="none" stroke="#333" stroke-width="1"/>
+
+</svg>

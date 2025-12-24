@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 100">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- 数轴主线 -->
+  <line x1="30" y1="50" x2="570" y2="50" 
+        stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="50.0" y1="45" x2="50.0" y2="55" stroke="#333" stroke-width="1.5"/>
+  <text x="50.0" y="70" text-anchor="middle" font-size="12" fill="#333">-7</text>
+  <line x1="88.46153846153845" y1="45" x2="88.46153846153845" y2="55" stroke="#333" stroke-width="1.5"/>
+  <text x="88.46153846153845" y="70" text-anchor="middle" font-size="12" fill="#333">-6</text>
+  <line x1="126.92307692307692" y1="45" x2="126.92307692307692" y2="55" stroke="#333" stroke-width="1.5"/>
+  <text x="126.92307692307692" y="70" text-anchor="middle" font-size="12" fill="#333">-5</text>
+  <line x1="165.3846153846154" y1="45" x2="165.3846153846154" y2="55" stroke="#333" stroke-width="1.5"/>
+  <text x="165.3846153846154" y="70" text-anchor="middle" font-size="12" fill="#333">-4</text>
+  <line x1="203.84615384615384" y1="45" x2="203.84615384615384" y2="55" stroke="#333" stroke-width="1.5"/>
+  <text x="203.84615384615384" y="70" text-anchor="middle" font-size="12" fill="#333">-3</text>
+  <line x1="242.3076923076923" y1="45" x2="242.3076923076923" y2="55" stroke="#333" stroke-width="1.5"/>
+  <text x="242.3076923076923" y="70" text-anchor="middle" font-size="12" fill="#333">-2</text>
+  <line x1="280.7692307692308" y1="45" x2="280.7692307692308" y2="55" stroke="#333" stroke-width="1.5"/>
+  <text x="280.7692307692308" y="70" text-anchor="middle" font-size="12" fill="#333">-1</text>
+  <line x1="319.2307692307692" y1="45" x2="319.2307692307692" y2="55" stroke="#333" stroke-width="1.5"/>
+  <text x="319.2307692307692" y="70" text-anchor="middle" font-size="12" fill="#333">0</text>
+  <line x1="357.6923076923077" y1="45" x2="357.6923076923077" y2="55" stroke="#333" stroke-width="1.5"/>
+  <text x="357.6923076923077" y="70" text-anchor="middle" font-size="12" fill="#333">1</text>
+  <line x1="396.15384615384613" y1="45" x2="396.15384615384613" y2="55" stroke="#333" stroke-width="1.5"/>
+  <text x="396.15384615384613" y="70" text-anchor="middle" font-size="12" fill="#333">2</text>
+  <line x1="434.6153846153846" y1="45" x2="434.6153846153846" y2="55" stroke="#333" stroke-width="1.5"/>
+  <text x="434.6153846153846" y="70" text-anchor="middle" font-size="12" fill="#333">3</text>
+  <line x1="473.07692307692304" y1="45" x2="473.07692307692304" y2="55" stroke="#333" stroke-width="1.5"/>
+  <text x="473.07692307692304" y="70" text-anchor="middle" font-size="12" fill="#333">4</text>
+  <line x1="511.53846153846155" y1="45" x2="511.53846153846155" y2="55" stroke="#333" stroke-width="1.5"/>
+  <text x="511.53846153846155" y="70" text-anchor="middle" font-size="12" fill="#333">5</text>
+  <line x1="550.0" y1="45" x2="550.0" y2="55" stroke="#333" stroke-width="1.5"/>
+  <text x="550.0" y="70" text-anchor="middle" font-size="12" fill="#333">6</text>
+
+  <circle cx="126.92307692307692" cy="50" r="6" fill="#e74c3c"/>
+  <text x="126.92307692307692" y="35" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c">A</text>
+
+  <circle cx="473.07692307692304" cy="50" r="6" fill="#3498db"/>
+  <text x="473.07692307692304" y="35" text-anchor="middle" font-size="14" font-weight="bold" fill="#3498db">B</text>
+</svg>

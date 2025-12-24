@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+  <line x1="200" y1="200" x2="93.93398282201788" y2="93.93398282201787" 
+        stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="83.32738110421967" y="83.32738110421965" 
+        text-anchor="middle" font-size="16" font-weight="bold" fill="#e74c3c">A</text>
+  <line x1="200" y1="200" x2="200.0" y2="50.0" 
+        stroke="#3498db" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="200.0" y="35.0" 
+        text-anchor="middle" font-size="16" font-weight="bold" fill="#3498db">B</text>
+  <line x1="200" y1="200" x2="306.06601717798213" y2="93.93398282201788" 
+        stroke="#27ae60" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="316.6726188957804" y="83.32738110421967" 
+        text-anchor="middle" font-size="16" font-weight="bold" fill="#27ae60">C</text>
+
+  <circle cx="200" cy="200" r="4" fill="#333"/>
+  <text x="185" y="220" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">O</text>
+</svg>

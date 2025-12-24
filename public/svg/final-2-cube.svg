@@ -1,0 +1,41 @@
+<svg width="550" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 图1：展开图 -->
+  <text x="100" y="20" text-anchor="middle" font-size="12">图1</text>
+  
+  <!-- 十字形展开 -->
+  <rect x="70" y="30" width="40" height="40" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="90" y="55" text-anchor="middle" font-size="14">5</text>
+  
+  <rect x="30" y="70" width="40" height="40" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="50" y="95" text-anchor="middle" font-size="14">1</text>
+  
+  <rect x="70" y="70" width="40" height="40" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="90" y="95" text-anchor="middle" font-size="14">2</text>
+  
+  <rect x="110" y="70" width="40" height="40" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="130" y="95" text-anchor="middle" font-size="14">3</text>
+  
+  <rect x="150" y="70" width="40" height="40" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="170" y="95" text-anchor="middle" font-size="14">4</text>
+  
+  <rect x="70" y="110" width="40" height="40" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="90" y="135" text-anchor="middle" font-size="14">6</text>
+  
+  <!-- 图2：三个立方体堆叠 -->
+  <text x="400" y="20" text-anchor="middle" font-size="12">图2</text>
+  
+  <!-- 第一个立方体（底层左） -->
+  <polygon points="300,150 340,150 340,110 300,110" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <polygon points="340,150 370,130 370,90 340,110" fill="#bbdefb" stroke="#333" stroke-width="1.5"/>
+  <polygon points="300,110 340,110 370,90 330,90" fill="#90caf9" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- 第二个立方体（底层右） -->
+  <polygon points="340,150 380,150 380,110 340,110" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <polygon points="380,150 410,130 410,90 380,110" fill="#bbdefb" stroke="#333" stroke-width="1.5"/>
+  <polygon points="340,110 380,110 410,90 370,90" fill="#90caf9" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- 第三个立方体（上层） -->
+  <polygon points="340,110 380,110 380,70 340,70" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <polygon points="380,110 410,90 410,50 380,70" fill="#bbdefb" stroke="#333" stroke-width="1.5"/>
+  <polygon points="340,70 380,70 410,50 370,50" fill="#90caf9" stroke="#333" stroke-width="1.5"/>
+</svg>

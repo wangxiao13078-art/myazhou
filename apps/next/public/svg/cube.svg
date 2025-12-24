@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 后面 -->
+  <polygon points="70,40 150,40 150,120 70,120" fill="#3498db" fill-opacity="0.2" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- 顶面 -->
+  <polygon points="50,60 70,40 150,40 130,60" fill="#27ae60" fill-opacity="0.3" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- 前面 -->
+  <polygon points="50,60 130,60 130,140 50,140" fill="#e74c3c" fill-opacity="0.2" stroke="#333" stroke-width="2"/>
+  
+  <!-- 右面 -->
+  <polygon points="130,60 150,40 150,120 130,140" fill="#f39c12" fill-opacity="0.3" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- 标注 -->
+  <text x="90" y="170" text-anchor="middle" font-size="14" fill="#333">a</text>
+  <line x1="50" y1="155" x2="130" y2="155" stroke="#333" stroke-width="1"/>
+</svg>

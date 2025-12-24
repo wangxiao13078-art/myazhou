@@ -1,0 +1,31 @@
+<svg width="250" height="180" xmlns="http://www.w3.org/2000/svg">
+  <text x="125" y="20" text-anchor="middle" font-size="12">图2</text>
+  
+  <!-- 点O -->
+  <circle cx="80" cy="140" r="3" fill="#333"/>
+  <text x="65" y="155" font-size="14" font-style="italic">O</text>
+  
+  <!-- 射线OM -->
+  <line x1="80" y1="140" x2="20" y2="60" stroke="#333" stroke-width="1.5"/>
+  <text x="10" y="55" font-size="14" font-style="italic">M</text>
+  
+  <!-- 射线ON -->
+  <line x1="80" y1="140" x2="220" y2="140" stroke="#333" stroke-width="1.5"/>
+  <text x="225" y="145" font-size="14" font-style="italic">N</text>
+  
+  <!-- 射线OA -->
+  <line x1="80" y1="140" x2="100" y2="50" stroke="#2196F3" stroke-width="1.5"/>
+  <text x="105" y="45" font-size="14" font-style="italic" fill="#2196F3">A</text>
+  
+  <!-- 射线OB -->
+  <line x1="80" y1="140" x2="180" y2="90" stroke="#2196F3" stroke-width="1.5"/>
+  <text x="185" y="85" font-size="14" font-style="italic" fill="#2196F3">B</text>
+  
+  <!-- 射线OC（平分∠AOM） -->
+  <line x1="80" y1="140" x2="55" y2="55" stroke="#4CAF50" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="45" y="50" font-size="12" font-style="italic" fill="#4CAF50">C</text>
+  
+  <!-- 射线OD（平分∠BON） -->
+  <line x1="80" y1="140" x2="200" y2="110" stroke="#F44336" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="205" y="105" font-size="12" font-style="italic" fill="#F44336">D</text>
+</svg>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 180" width="380" height="180">
+  <style>
+    .line { stroke: #333; stroke-width: 2; fill: none; }
+    .thin-line { stroke: #333; stroke-width: 1.5; fill: none; }
+    .arrow { stroke: #333; stroke-width: 2; fill: #333; }
+    .point { fill: #2563eb; }
+    .label { font-family: 'Times New Roman', serif; font-size: 16px; fill: #333; }
+    .small-label { font-family: 'Times New Roman', serif; font-size: 14px; fill: #333; }
+    .italic { font-style: italic; }
+  </style>
+
+  <!-- 原点O -->
+  <circle cx="150" cy="130" r="3" fill="#333"/>
+  <text x="140" y="145" class="label italic">O</text>
+  
+  <!-- 射线OM -->
+  <line x1="150" y1="130" x2="50" y2="60" class="line"/>
+  <text x="40" y="55" class="label italic">M</text>
+  
+  <!-- 射线ON (水平向右) -->
+  <line x1="150" y1="130" x2="330" y2="130" class="line"/>
+  <text x="340" y="135" class="label italic">N</text>
+  
+  <!-- 射线OC -->
+  <line x1="150" y1="130" x2="90" y2="50" class="thin-line" stroke="#666"/>
+  <text x="80" y="45" class="small-label italic" fill="#666">C</text>
+  
+  <!-- 射线OA -->
+  <line x1="150" y1="130" x2="200" y2="30" class="line"/>
+  <text x="205" y="25" class="label italic">A</text>
+  
+  <!-- 射线OB -->
+  <line x1="150" y1="130" x2="300" y2="70" class="line"/>
+  <text x="310" y="65" class="label italic">B</text>
+  
+  <!-- 射线OD -->
+  <line x1="150" y1="130" x2="290" y2="110" class="thin-line" stroke="#666"/>
+  <text x="300" y="108" class="small-label italic" fill="#666">D</text>
+  
+  <text x="190" y="165" class="small-label" text-anchor="middle">图2</text>
+
+</svg>

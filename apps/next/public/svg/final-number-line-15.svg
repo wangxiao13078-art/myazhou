@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 130" width="600" height="130">
+  <style>
+    .line { stroke: #333; stroke-width: 2; fill: none; }
+    .thin-line { stroke: #333; stroke-width: 1.5; fill: none; }
+    .arrow { stroke: #333; stroke-width: 2; fill: #333; }
+    .point { fill: #2563eb; }
+    .label { font-family: 'Times New Roman', serif; font-size: 16px; fill: #333; }
+    .small-label { font-family: 'Times New Roman', serif; font-size: 14px; fill: #333; }
+    .italic { font-style: italic; }
+  </style>
+
+  <!-- 数轴 -->
+  <line x1="30" y1="80" x2="570" y2="80" class="line"/>
+  <polygon points="570,80 560,75 560,85" class="arrow"/>
+  
+  <!-- 刻度线和点 -->
+  <!-- A点 (-26) -->
+  <line x1="80" y1="73" x2="80" y2="87" class="thin-line"/>
+  <circle cx="80" cy="80" r="4" class="point"/>
+  <text x="80" y="60" class="label italic" text-anchor="middle">A</text>
+  <text x="80" y="108" class="label" text-anchor="middle">-26</text>
+  
+  <!-- B点 (-10) -->
+  <line x1="210" y1="73" x2="210" y2="87" class="thin-line"/>
+  <circle cx="210" cy="80" r="4" class="point"/>
+  <text x="210" y="60" class="label italic" text-anchor="middle">B</text>
+  <text x="210" y="108" class="label" text-anchor="middle">-10</text>
+  
+  <!-- 原点 (0) -->
+  <line x1="290" y1="73" x2="290" y2="87" class="thin-line"/>
+  <text x="290" y="108" class="label" text-anchor="middle">0</text>
+  
+  <!-- C点 (10) -->
+  <line x1="370" y1="73" x2="370" y2="87" class="thin-line"/>
+  <circle cx="370" cy="80" r="4" class="point"/>
+  <text x="370" y="60" class="label italic" text-anchor="middle">C</text>
+  <text x="370" y="108" class="label" text-anchor="middle">10</text>
+
+</svg>

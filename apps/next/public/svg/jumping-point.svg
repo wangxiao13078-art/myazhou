@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- 数轴 -->
+  <line x1="30" y1="100" x2="470" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 原点O -->
+  <line x1="100" y1="95" x2="100" y2="105" stroke="#333" stroke-width="2"/>
+  <text x="100" y="120" text-anchor="middle" font-size="12" fill="#333">O</text>
+  <text x="100" y="135" text-anchor="middle" font-size="10" fill="#666">0</text>
+  
+  <!-- 起始点 (8个单位) -->
+  <line x1="340" y1="95" x2="340" y2="105" stroke="#333" stroke-width="2"/>
+  <text x="340" y="120" text-anchor="middle" font-size="12" fill="#333">8</text>
+  <circle cx="340" cy="100" r="5" fill="#e74c3c"/>
+  <text x="340" y="85" text-anchor="middle" font-size="12" fill="#e74c3c">P</text>
+  
+  <!-- 跳跃路径 -->
+  <path d="M 340 90 Q 280 50 220 90" stroke="#3498db" stroke-width="1.5" fill="none" stroke-dasharray="4"/>
+  <text x="280" y="55" text-anchor="middle" font-size="10" fill="#3498db">M₁</text>
+  
+  <path d="M 220 90 Q 180 60 160 90" stroke="#27ae60" stroke-width="1.5" fill="none" stroke-dasharray="4"/>
+  <text x="190" y="65" text-anchor="middle" font-size="10" fill="#27ae60">M₂</text>
+  
+  <!-- 中间点 -->
+  <circle cx="220" cy="100" r="4" fill="#3498db"/>
+  <circle cx="160" cy="100" r="4" fill="#27ae60"/>
+</svg>

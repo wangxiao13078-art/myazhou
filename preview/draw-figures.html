@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数学图形绘制工具</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        
+        .tool-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .tool-card h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .canvas-container {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .control-group label {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        input[type="number"], input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            width: 100px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #e9ecef;
+            color: #333;
+        }
+        
+        svg {
+            max-width: 100%;
+        }
+        
+        .preview-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .preview-item {
+            background: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .code-output {
+            background: #1a1a2e;
+            color: #a0e7a0;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 12px;
+            overflow-x: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📐 数学图形绘制工具</h1>
+        
+        <div class="tool-grid">
+            <!-- 数轴绘制 -->
+            <div class="tool-card">
+                <h2>📏 数轴</h2>
+                <div class="canvas-container" id="numberLineCanvas"></div>
+                <div class="controls">
+                    <div class="control-group">
+                        <label>起点</label>
+                        <input type="number" id="nlStart" value="-5">
+                    </div>
+                    <div class="control-group">
+                        <label>终点</label>
+                        <input type="number" id="nlEnd" value="5">
+                    </div>
+                    <div class="control-group">
+                        <label>标记点（逗号分隔）</label>
+                        <input type="text" id="nlPoints" value="-3,0,2" style="width:150px">
+                    </div>
+                </div>
+                <button class="btn-primary" onclick="drawNumberLine()">生成数轴</button>
+                <button class="btn-secondary" onclick="downloadSVG('numberLineCanvas')">下载SVG</button>
+            </div>
+            
+            <!-- 坐标系 -->
+            <div class="tool-card">
+                <h2>📊 坐标系</h2>
+                <div class="canvas-container" id="coordinateCanvas"></div>
+                <div class="controls">
+                    <div class="control-group">
+                        <label>X范围</label>
+                        <input type="text" id="coordX" value="-5,5">
+                    </div>
+                    <div class="control-group">
+                        <label>Y范围</label>
+                        <input type="text" id="coordY" value="-5,5">
+                    </div>
+                    <div class="control-group">
+                        <label>点（如A(1,2),B(3,4)）</label>
+                        <input type="text" id="coordPoints" value="A(1,2),B(-2,3)" style="width:200px">
+                    </div>
+                </div>
+                <button class="btn-primary" onclick="drawCoordinate()">生成坐标系</button>
+                <button class="btn-secondary" onclick="downloadSVG('coordinateCanvas')">下载SVG</button>
+            </div>
+            
+            <!-- 三角形 -->
+            <div class="tool-card">
+                <h2>🔺 三角形</h2>
+                <div class="canvas-container" id="triangleCanvas"></div>
+                <div class="controls">
+                    <div class="control-group">
+                        <label>类型</label>
+                        <select id="triType">
+                            <option value="equilateral">等边三角形</option>
+                            <option value="isosceles">等腰三角形</option>
+                            <option value="right">直角三角形</option>
+                            <option value="custom">自定义</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>边长/底边</label>
+                        <input type="number" id="triSide" value="100">
+                    </div>
+                    <div class="control-group">
+                        <label>顶点标签</label>
+                        <input type="text" id="triLabels" value="A,B,C">
+                    </div>
+                </div>
+                <button class="btn-primary" onclick="drawTriangle()">生成三角形</button>
+                <button class="btn-secondary" onclick="downloadSVG('triangleCanvas')">下载SVG</button>
+            </div>
+            
+            <!-- 圆 -->
+            <div class="tool-card">
+                <h2>⭕ 圆</h2>
+                <div class="canvas-container" id="circleCanvas"></div>
+                <div class="controls">
+                    <div class="control-group">
+                        <label>半径</label>
+                        <input type="number" id="circleR" value="50">
+                    </div>
+                    <div class="control-group">
+                        <label>圆心标签</label>
+                        <input type="text" id="circleCenter" value="O">
+                    </div>
+                    <div class="control-group">
+                        <label>显示半径</label>
+                        <input type="checkbox" id="circleShowR" checked>
+                    </div>
+                </div>
+                <button class="btn-primary" onclick="drawCircle()">生成圆</button>
+                <button class="btn-secondary" onclick="downloadSVG('circleCanvas')">下载SVG</button>
+            </div>
+            
+            <!-- 角 -->
+            <div class="tool-card">
+                <h2>📐 角</h2>
+                <div class="canvas-container" id="angleCanvas"></div>
+                <div class="controls">
+                    <div class="control-group">
+                        <label>角度(°)</label>
+                        <input type="number" id="angleDeg" value="60">
+                    </div>
+                    <div class="control-group">
+                        <label>顶点标签</label>
+                        <input type="text" id="angleVertex" value="O">
+                    </div>
+                    <div class="control-group">
+                        <label>边标签</label>
+                        <input type="text" id="angleLabels" value="A,B">
+                    </div>
+                </div>
+                <button class="btn-primary" onclick="drawAngle()">生成角</button>
+                <button class="btn-secondary" onclick="downloadSVG('angleCanvas')">下载SVG</button>
+            </div>
+            
+            <!-- 矩形/正方形 -->
+            <div class="tool-card">
+                <h2>⬜ 矩形</h2>
+                <div class="canvas-container" id="rectCanvas"></div>
+                <div class="controls">
+                    <div class="control-group">
+                        <label>宽度</label>
+                        <input type="number" id="rectW" value="120">
+                    </div>
+                    <div class="control-group">
+                        <label>高度</label>
+                        <input type="number" id="rectH" value="80">
+                    </div>
+                    <div class="control-group">
+                        <label>顶点标签</label>
+                        <input type="text" id="rectLabels" value="A,B,C,D">
+                    </div>
+                </div>
+                <button class="btn-primary" onclick="drawRect()">生成矩形</button>
+                <button class="btn-secondary" onclick="downloadSVG('rectCanvas')">下载SVG</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 创建SVG元素
+        function createSVG(width, height) {
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.setAttribute('width', width);
+            svg.setAttribute('height', height);
+            svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+            return svg;
+        }
+        
+        // 添加线条
+        function addLine(svg, x1, y1, x2, y2, stroke = '#333', strokeWidth = 2) {
+            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            line.setAttribute('x1', x1);
+            line.setAttribute('y1', y1);
+            line.setAttribute('x2', x2);
+            line.setAttribute('y2', y2);
+            line.setAttribute('stroke', stroke);
+            line.setAttribute('stroke-width', strokeWidth);
+            svg.appendChild(line);
+            return line;
+        }
+        
+        // 添加文本
+        function addText(svg, x, y, text, fontSize = 14, anchor = 'middle') {
+            const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+            t.setAttribute('x', x);
+            t.setAttribute('y', y);
+            t.setAttribute('font-size', fontSize);
+            t.setAttribute('text-anchor', anchor);
+            t.setAttribute('fill', '#333');
+            t.textContent = text;
+            svg.appendChild(t);
+            return t;
+        }
+        
+        // 添加圆点
+        function addPoint(svg, x, y, r = 4, fill = '#667eea') {
+            const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            circle.setAttribute('cx', x);
+            circle.setAttribute('cy', y);
+            circle.setAttribute('r', r);
+            circle.setAttribute('fill', fill);
+            svg.appendChild(circle);
+            return circle;
+        }
+        
+        // 添加箭头
+        function addArrow(svg, id) {
+            const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+            const marker = document.createElementNS('http://www.w3.org/2000/svg', 'marker');
+            marker.setAttribute('id', id);
+            marker.setAttribute('markerWidth', '10');
+            marker.setAttribute('markerHeight', '10');
+            marker.setAttribute('refX', '9');
+            marker.setAttribute('refY', '3');
+            marker.setAttribute('orient', 'auto');
+            marker.setAttribute('markerUnits', 'strokeWidth');
+            
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', 'M0,0 L0,6 L9,3 z');
+            path.setAttribute('fill', '#333');
+            
+            marker.appendChild(path);
+            defs.appendChild(marker);
+            svg.appendChild(defs);
+        }
+        
+        // 绘制数轴
+        function drawNumberLine() {
+            const container = document.getElementById('numberLineCanvas');
+            const start = parseInt(document.getElementById('nlStart').value);
+            const end = parseInt(document.getElementById('nlEnd').value);
+            const points = document.getElementById('nlPoints').value.split(',').map(s => parseFloat(s.trim())).filter(n => !isNaN(n));
+            
+            const width = 400;
+            const height = 80;
+            const margin = 40;
+            const axisY = height / 2;
+            
+            const svg = createSVG(width, height);
+            addArrow(svg, 'arrow');
+            
+            // 数轴主线
+            const line = addLine(svg, margin, axisY, width - margin + 10, axisY);
+            line.setAttribute('marker-end', 'url(#arrow)');
+            
+            // 刻度和数字
+            const range = end - start;
+            const step = (width - 2 * margin) / range;
+            
+            for (let i = start; i <= end; i++) {
+                const x = margin + (i - start) * step;
+                addLine(svg, x, axisY - 5, x, axisY + 5);
+                addText(svg, x, axisY + 20, i.toString(), 12);
+            }
+            
+            // 标记点
+            points.forEach(p => {
+                if (p >= start && p <= end) {
+                    const x = margin + (p - start) * step;
+                    addPoint(svg, x, axisY, 5, '#e74c3c');
+                }
+            });
+            
+            container.innerHTML = '';
+            container.appendChild(svg);
+        }
+        
+        // 绘制坐标系
+        function drawCoordinate() {
+            const container = document.getElementById('coordinateCanvas');
+            const [xMin, xMax] = document.getElementById('coordX').value.split(',').map(Number);
+            const [yMin, yMax] = document.getElementById('coordY').value.split(',').map(Number);
+            const pointsStr = document.getElementById('coordPoints').value;
+            
+            const width = 300;
+            const height = 300;
+            const margin = 30;
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const scaleX = (width - 2 * margin) / (xMax - xMin);
+            const scaleY = (height - 2 * margin) / (yMax - yMin);
+            
+            const svg = createSVG(width, height);
+            addArrow(svg, 'arrow');
+            
+            // X轴
+            const xAxis = addLine(svg, margin, centerY, width - margin + 10, centerY);
+            xAxis.setAttribute('marker-end', 'url(#arrow)');
+            addText(svg, width - margin + 5, centerY - 10, 'x', 14);
+            
+            // Y轴
+            const yAxis = addLine(svg, centerX, height - margin, centerX, margin - 10);
+            yAxis.setAttribute('marker-end', 'url(#arrow)');
+            addText(svg, centerX + 15, margin, 'y', 14);
+            
+            // 原点
+            addText(svg, centerX - 10, centerY + 15, 'O', 12);
+            
+            // 刻度
+            for (let i = xMin; i <= xMax; i++) {
+                if (i === 0) continue;
+                const x = centerX + i * scaleX;
+                addLine(svg, x, centerY - 3, x, centerY + 3);
+                addText(svg, x, centerY + 15, i.toString(), 10);
+            }
+            for (let i = yMin; i <= yMax; i++) {
+                if (i === 0) continue;
+                const y = centerY - i * scaleY;
+                addLine(svg, centerX - 3, y, centerX + 3, y);
+                addText(svg, centerX - 15, y + 4, i.toString(), 10);
+            }
+            
+            // 解析并绘制点
+            const pointRegex = /([A-Z])\((-?\d+),(-?\d+)\)/g;
+            let match;
+            while ((match = pointRegex.exec(pointsStr)) !== null) {
+                const label = match[1];
+                const px = parseFloat(match[2]);
+                const py = parseFloat(match[3]);
+                const x = centerX + px * scaleX;
+                const y = centerY - py * scaleY;
+                addPoint(svg, x, y, 4, '#e74c3c');
+                addText(svg, x + 10, y - 5, label, 12);
+            }
+            
+            container.innerHTML = '';
+            container.appendChild(svg);
+        }
+        
+        // 绘制三角形
+        function drawTriangle() {
+            const container = document.getElementById('triangleCanvas');
+            const type = document.getElementById('triType').value;
+            const side = parseFloat(document.getElementById('triSide').value);
+            const labels = document.getElementById('triLabels').value.split(',').map(s => s.trim());
+            
+            const width = 200;
+            const height = 180;
+            const svg = createSVG(width, height);
+            
+            let points;
+            const cx = width / 2;
+            const cy = height / 2 + 20;
+            
+            if (type === 'equilateral') {
+                const h = side * Math.sqrt(3) / 2;
+                points = [
+                    [cx, cy - h * 2/3],
+                    [cx - side/2, cy + h/3],
+                    [cx + side/2, cy + h/3]
+                ];
+            } else if (type === 'isosceles') {
+                const h = side * 0.8;
+                points = [
+                    [cx, cy - h/2],
+                    [cx - side/2, cy + h/2],
+                    [cx + side/2, cy + h/2]
+                ];
+            } else if (type === 'right') {
+                points = [
+                    [cx - side/2, cy - side/2],
+                    [cx - side/2, cy + side/2],
+                    [cx + side/2, cy + side/2]
+                ];
+            } else {
+                points = [
+                    [cx, cy - side/2],
+                    [cx - side/2, cy + side/2],
+                    [cx + side/3, cy + side/2]
+                ];
+            }
+            
+            // 绘制三角形
+            const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+            polygon.setAttribute('points', points.map(p => p.join(',')).join(' '));
+            polygon.setAttribute('fill', 'none');
+            polygon.setAttribute('stroke', '#333');
+            polygon.setAttribute('stroke-width', '2');
+            svg.appendChild(polygon);
+            
+            // 顶点标签
+            const labelOffsets = [
+                [0, -10], [-15, 15], [15, 15]
+            ];
+            points.forEach((p, i) => {
+                if (labels[i]) {
+                    addText(svg, p[0] + labelOffsets[i][0], p[1] + labelOffsets[i][1], labels[i], 14);
+                }
+                addPoint(svg, p[0], p[1], 3);
+            });
+            
+            container.innerHTML = '';
+            container.appendChild(svg);
+        }
+        
+        // 绘制圆
+        function drawCircle() {
+            const container = document.getElementById('circleCanvas');
+            const r = parseFloat(document.getElementById('circleR').value);
+            const centerLabel = document.getElementById('circleCenter').value;
+            const showRadius = document.getElementById('circleShowR').checked;
+            
+            const size = r * 2 + 60;
+            const svg = createSVG(size, size);
+            const cx = size / 2;
+            const cy = size / 2;
+            
+            // 圆
+            const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            circle.setAttribute('cx', cx);
+            circle.setAttribute('cy', cy);
+            circle.setAttribute('r', r);
+            circle.setAttribute('fill', 'none');
+            circle.setAttribute('stroke', '#333');
+            circle.setAttribute('stroke-width', '2');
+            svg.appendChild(circle);
+            
+            // 圆心
+            addPoint(svg, cx, cy, 3);
+            addText(svg, cx - 15, cy + 5, centerLabel, 14);
+            
+            // 半径
+            if (showRadius) {
+                addLine(svg, cx, cy, cx + r, cy, '#667eea');
+                addText(svg, cx + r/2, cy - 10, 'r', 12);
+            }
+            
+            container.innerHTML = '';
+            container.appendChild(svg);
+        }
+        
+        // 绘制角
+        function drawAngle() {
+            const container = document.getElementById('angleCanvas');
+            const deg = parseFloat(document.getElementById('angleDeg').value);
+            const vertex = document.getElementById('angleVertex').value;
+            const labels = document.getElementById('angleLabels').value.split(',').map(s => s.trim());
+            
+            const size = 180;
+            const svg = createSVG(size, size);
+            const cx = 40;
+            const cy = size - 40;
+            const length = 100;
+            
+            const rad = deg * Math.PI / 180;
+            const x2 = cx + length;
+            const y2 = cy;
+            const x3 = cx + length * Math.cos(rad);
+            const y3 = cy - length * Math.sin(rad);
+            
+            // 两条边
+            addLine(svg, cx, cy, x2, y2);
+            addLine(svg, cx, cy, x3, y3);
+            
+            // 角弧
+            const arcR = 25;
+            const arc = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            const arcX = cx + arcR * Math.cos(rad/2);
+            const arcY = cy - arcR * Math.sin(rad/2);
+            arc.setAttribute('d', `M ${cx + arcR} ${cy} A ${arcR} ${arcR} 0 0 0 ${cx + arcR * Math.cos(rad)} ${cy - arcR * Math.sin(rad)}`);
+            arc.setAttribute('fill', 'none');
+            arc.setAttribute('stroke', '#667eea');
+            arc.setAttribute('stroke-width', '1.5');
+            svg.appendChild(arc);
+            
+            // 标签
+            addPoint(svg, cx, cy, 3);
+            addText(svg, cx - 15, cy + 15, vertex, 14);
+            addText(svg, x2 + 10, y2 + 5, labels[1] || 'B', 14);
+            addText(svg, x3 + 5, y3 - 5, labels[0] || 'A', 14);
+            addText(svg, cx + 35, cy - 15, deg + '°', 11);
+            
+            container.innerHTML = '';
+            container.appendChild(svg);
+        }
+        
+        // 绘制矩形
+        function drawRect() {
+            const container = document.getElementById('rectCanvas');
+            const w = parseFloat(document.getElementById('rectW').value);
+            const h = parseFloat(document.getElementById('rectH').value);
+            const labels = document.getElementById('rectLabels').value.split(',').map(s => s.trim());
+            
+            const svgW = w + 60;
+            const svgH = h + 60;
+            const svg = createSVG(svgW, svgH);
+            const x = 30;
+            const y = 30;
+            
+            // 矩形
+            const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+            rect.setAttribute('x', x);
+            rect.setAttribute('y', y);
+            rect.setAttribute('width', w);
+            rect.setAttribute('height', h);
+            rect.setAttribute('fill', 'none');
+            rect.setAttribute('stroke', '#333');
+            rect.setAttribute('stroke-width', '2');
+            svg.appendChild(rect);
+            
+            // 顶点
+            const corners = [
+                [x, y, -10, -5],
+                [x + w, y, 5, -5],
+                [x + w, y + h, 5, 15],
+                [x, y + h, -10, 15]
+            ];
+            
+            corners.forEach((c, i) => {
+                addPoint(svg, c[0], c[1], 3);
+                if (labels[i]) {
+                    addText(svg, c[0] + c[2], c[1] + c[3], labels[i], 14);
+                }
+            });
+            
+            container.innerHTML = '';
+            container.appendChild(svg);
+        }
+        
+        // 下载SVG
+        function downloadSVG(containerId) {
+            const container = document.getElementById(containerId);
+            const svg = container.querySelector('svg');
+            if (!svg) {
+                alert('请先生成图形');
+                return;
+            }
+            
+            const svgData = new XMLSerializer().serializeToString(svg);
+            const blob = new Blob([svgData], { type: 'image/svg+xml' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = containerId.replace('Canvas', '') + '.svg';
+            a.click();
+            
+            URL.revokeObjectURL(url);
+        }
+        
+        // 初始化
+        drawNumberLine();
+        drawCoordinate();
+        drawTriangle();
+        drawCircle();
+        drawAngle();
+        drawRect();
+    </script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- 数轴 -->
+  <line x1="30" y1="60" x2="470" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="0" y1="55" x2="0" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="0" y="80" text-anchor="middle" font-size="12" fill="#333">-5</text>
+  <line x1="30" y1="55" x2="30" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="30" y="80" text-anchor="middle" font-size="12" fill="#333">-4</text>
+  <line x1="60" y1="55" x2="60" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="60" y="80" text-anchor="middle" font-size="12" fill="#333">-3</text>
+  <line x1="90" y1="55" x2="90" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="90" y="80" text-anchor="middle" font-size="12" fill="#333">-2</text>
+  <line x1="120" y1="55" x2="120" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="120" y="80" text-anchor="middle" font-size="12" fill="#333">-1</text>
+  <line x1="150" y1="55" x2="150" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="150" y="80" text-anchor="middle" font-size="12" fill="#333">0</text>
+  <line x1="180" y1="55" x2="180" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="180" y="80" text-anchor="middle" font-size="12" fill="#333">1</text>
+  <line x1="210" y1="55" x2="210" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="210" y="80" text-anchor="middle" font-size="12" fill="#333">2</text>
+  <line x1="240" y1="55" x2="240" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="240" y="80" text-anchor="middle" font-size="12" fill="#333">3</text>
+  <line x1="270" y1="55" x2="270" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="270" y="80" text-anchor="middle" font-size="12" fill="#333">4</text>
+  <line x1="300" y1="55" x2="300" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="300" y="80" text-anchor="middle" font-size="12" fill="#333">5</text>
+
+  <circle cx="60" cy="60" r="5" fill="#e74c3c"/>
+  <text x="60" y="45" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c">A</text>
+  
+  <circle cx="300" cy="60" r="5" fill="#3498db"/>
+  <text x="300" y="45" text-anchor="middle" font-size="14" font-weight="bold" fill="#3498db">B</text>
+  
+  <!-- 折叠标记 -->
+  <path d="M 180.0 40 Q 150.0 20 60 40" stroke="#27ae60" stroke-width="1.5" fill="none" stroke-dasharray="4"/>
+  <path d="M 180.0 40 Q 210.0 20 300 40" stroke="#27ae60" stroke-width="1.5" fill="none" stroke-dasharray="4"/>
+  <text x="180.0" y="25" text-anchor="middle" font-size="12" fill="#27ae60">折叠</text>
+</svg>

@@ -1,0 +1,29 @@
+{
+  "name": "math-final-app",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "web": "yarn workspace next dev",
+    "native": "yarn workspace expo start",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "turbo": "^1.13.3"
+  },
+  "dependencies": {
+    "@tamagui/adapt": "^1.141.4",
+    "@tamagui/next-theme": "^1.141.4",
+    "@tamagui/sheet": "^1.141.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-native-reanimated": "^4.2.0",
+    "react-native-svg": "^15.15.1",
+    "react-native-svg-web": "^1.0.9",
+    "react-remove-scroll": "^2.7.2"
+  }
+}

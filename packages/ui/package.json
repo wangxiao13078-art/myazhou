@@ -1,0 +1,11 @@
+{
+  "name": "ui",
+  "version": "0.0.0",
+  "main": "src/index.tsx",
+  "dependencies": {
+    "tamagui": "1.141.4",
+    "@tamagui/config": "1.141.4",
+    "@tamagui/lucide-icons": "1.141.4"
+  }
+}
+

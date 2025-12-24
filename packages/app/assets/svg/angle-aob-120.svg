@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+  <line x1="80" y1="250" x2="330" y2="250" 
+        stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="342" y="255" font-size="16" font-weight="bold">A</text>
+  <line x1="80" y1="250" x2="-44.99999999999994" y2="33.493649053890294" 
+        stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="-36.99999999999994" y="28.493649053890294" font-size="16" font-weight="bold">B</text>
+  <line x1="80" y1="250" x2="186.25000000000003" y2="65.9696016958068" 
+        stroke="#e74c3c" stroke-width="2" stroke-dasharray="5" marker-end="url(#arrowhead)"/>
+  <text x="196.25000000000003" y="65.9696016958068" font-size="16" font-weight="bold" fill="#e74c3c">C</text>
+
+  <path d="M 130 250 A 50 50 0 0 0 55.000000000000014 206.69872981077805" 
+        fill="none" stroke="#666" stroke-width="1"/>
+  <text x="115" y="215" font-size="12" fill="#666">120°</text>
+
+  <circle cx="80" cy="250" r="4" fill="#333"/>
+  <text x="68" y="268" font-size="16" font-weight="bold">O</text>
+</svg>

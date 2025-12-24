@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 140" width="600" height="140">
+  <style>
+    .line { stroke: #333; stroke-width: 2; fill: none; }
+    .thin-line { stroke: #333; stroke-width: 1.5; fill: none; }
+    .arrow { stroke: #333; stroke-width: 2; fill: #333; }
+    .point { fill: #2563eb; }
+    .label { font-family: 'Times New Roman', serif; font-size: 16px; fill: #333; }
+    .small-label { font-family: 'Times New Roman', serif; font-size: 14px; fill: #333; }
+    .italic { font-style: italic; }
+  </style>
+
+  <!-- 线段MN -->
+  <line x1="50" y1="80" x2="550" y2="80" class="line"/>
+  
+  <!-- M点 -->
+  <circle cx="50" cy="80" r="3" fill="#333"/>
+  <text x="50" y="60" class="label italic" text-anchor="middle">M</text>
+  
+  <!-- C点 -->
+  <circle cx="150" cy="80" r="3" fill="#333"/>
+  <text x="150" y="60" class="label italic" text-anchor="middle">C</text>
+  
+  <!-- A点 -->
+  <circle cx="250" cy="80" r="4" class="point"/>
+  <text x="250" y="60" class="label italic" text-anchor="middle">A</text>
+  
+  <!-- B点 -->
+  <circle cx="350" cy="80" r="4" class="point"/>
+  <text x="350" y="60" class="label italic" text-anchor="middle">B</text>
+  
+  <!-- D点 -->
+  <circle cx="450" cy="80" r="3" fill="#333"/>
+  <text x="450" y="60" class="label italic" text-anchor="middle">D</text>
+  
+  <!-- N点 -->
+  <circle cx="550" cy="80" r="3" fill="#333"/>
+  <text x="550" y="60" class="label italic" text-anchor="middle">N</text>
+  
+  <text x="300" y="120" class="small-label" text-anchor="middle">图1</text>
+
+</svg>

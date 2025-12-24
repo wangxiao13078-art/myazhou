@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+    <marker id="arrow-right" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#e74c3c"/>
+    </marker>
+  </defs>
+  
+  <!-- 数轴主线 -->
+  <line x1="30" y1="60" x2="570" y2="60" 
+        stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="100" y1="55" x2="100" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="100" y="80" text-anchor="middle" font-size="10" fill="#333">-8</text>
+  <line x1="125" y1="57" x2="125" y2="63" stroke="#333" stroke-width="1"/>
+  <line x1="150" y1="55" x2="150" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="150" y="80" text-anchor="middle" font-size="10" fill="#333">-6</text>
+  <line x1="175" y1="57" x2="175" y2="63" stroke="#333" stroke-width="1"/>
+  <line x1="200" y1="55" x2="200" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="200" y="80" text-anchor="middle" font-size="10" fill="#333">-4</text>
+  <line x1="225" y1="57" x2="225" y2="63" stroke="#333" stroke-width="1"/>
+  <line x1="250" y1="55" x2="250" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="250" y="80" text-anchor="middle" font-size="10" fill="#333">-2</text>
+  <line x1="275" y1="57" x2="275" y2="63" stroke="#333" stroke-width="1"/>
+  <line x1="300" y1="55" x2="300" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="300" y="80" text-anchor="middle" font-size="10" fill="#333">0</text>
+  <line x1="325" y1="57" x2="325" y2="63" stroke="#333" stroke-width="1"/>
+  <line x1="350" y1="55" x2="350" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="350" y="80" text-anchor="middle" font-size="10" fill="#333">2</text>
+  <line x1="375" y1="57" x2="375" y2="63" stroke="#333" stroke-width="1"/>
+  <line x1="400" y1="55" x2="400" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="400" y="80" text-anchor="middle" font-size="10" fill="#333">4</text>
+  <line x1="425" y1="57" x2="425" y2="63" stroke="#333" stroke-width="1"/>
+  <line x1="450" y1="55" x2="450" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="450" y="80" text-anchor="middle" font-size="10" fill="#333">6</text>
+  <line x1="475" y1="57" x2="475" y2="63" stroke="#333" stroke-width="1"/>
+  <line x1="500" y1="55" x2="500" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="500" y="80" text-anchor="middle" font-size="10" fill="#333">8</text>
+  <line x1="525" y1="57" x2="525" y2="63" stroke="#333" stroke-width="1"/>
+  <line x1="550" y1="55" x2="550" y2="65" stroke="#333" stroke-width="1.5"/>
+  <text x="550" y="80" text-anchor="middle" font-size="10" fill="#333">10</text>
+
+  <circle cx="100" cy="60" r="6" fill="#e74c3c"/>
+  <text x="100" y="45" text-anchor="middle" font-size="12" font-weight="bold" fill="#e74c3c">A(-8)</text>
+
+  <circle cx="550" cy="60" r="6" fill="#3498db"/>
+  <text x="550" y="45" text-anchor="middle" font-size="12" font-weight="bold" fill="#3498db">B(10)</text>
+
+  <circle cx="200" cy="60" r="5" fill="#27ae60"/>
+  <text x="200" y="95" text-anchor="middle" font-size="11" fill="#27ae60">P</text>
+  <line x1="210" y1="60" x2="240" y2="60" stroke="#27ae60" stroke-width="2" stroke-dasharray="4" marker-end="url(#arrow-right)"/>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 100">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- 数轴主线 -->
+  <line x1="30" y1="50" x2="570" y2="50" 
+        stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 原点 -->
+  <line x1="300" y1="45" x2="300" y2="55" stroke="#333" stroke-width="2"/>
+  <text x="300" y="70" text-anchor="middle" font-size="12" fill="#333">0</text>
+  
+  <!-- a点 (负) -->
+  <circle cx="120" cy="50" r="5" fill="#e74c3c"/>
+  <text x="120" y="38" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c">a</text>
+  
+  <!-- b点 (负，在a右边) -->
+  <circle cx="200" cy="50" r="5" fill="#3498db"/>
+  <text x="200" y="38" text-anchor="middle" font-size="14" font-weight="bold" fill="#3498db">b</text>
+  
+  <!-- c点 (正) -->
+  <circle cx="380" cy="50" r="5" fill="#27ae60"/>
+  <text x="380" y="38" text-anchor="middle" font-size="14" font-weight="bold" fill="#27ae60">c</text>
+  
+  <!-- d点 (正，在c右边) -->
+  <circle cx="480" cy="50" r="5" fill="#9b59b6"/>
+  <text x="480" y="38" text-anchor="middle" font-size="14" font-weight="bold" fill="#9b59b6">d</text>
+</svg>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 180" width="500" height="180">
+  <style>
+    .line { stroke: #333; stroke-width: 2; fill: none; }
+    .thin-line { stroke: #333; stroke-width: 1.5; fill: none; }
+    .arrow { stroke: #333; stroke-width: 2; fill: #333; }
+    .point { fill: #2563eb; }
+    .label { font-family: 'Times New Roman', serif; font-size: 16px; fill: #333; }
+    .small-label { font-family: 'Times New Roman', serif; font-size: 14px; fill: #333; }
+    .italic { font-style: italic; }
+  </style>
+
+  <!-- 图1：展开图 -->
+  <text x="120" y="30" class="small-label" text-anchor="middle">图1</text>
+  
+  <!-- 展开图十字形状 -->
+  <rect x="80" y="40" width="40" height="40" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="100" y="67" class="label" text-anchor="middle">5</text>
+  
+  <rect x="40" y="80" width="40" height="40" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="60" y="107" class="label" text-anchor="middle">1</text>
+  
+  <rect x="80" y="80" width="40" height="40" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="100" y="107" class="label" text-anchor="middle">2</text>
+  
+  <rect x="120" y="80" width="40" height="40" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="140" y="107" class="label" text-anchor="middle">3</text>
+  
+  <rect x="160" y="80" width="40" height="40" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="180" y="107" class="label" text-anchor="middle">4</text>
+  
+  <rect x="80" y="120" width="40" height="40" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="100" y="147" class="label" text-anchor="middle">6</text>
+  
+  <!-- 图2：三个立方体堆叠 -->
+  <text x="380" y="30" class="small-label" text-anchor="middle">图2</text>
+  
+  <!-- 底部立方体 -->
+  <polygon points="300,160 340,160 360,140 320,140" fill="#f0f0f0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="340,160 360,140 360,100 340,120" fill="#e0e0e0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="300,160 340,160 340,120 300,120" fill="#d0d0d0" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- 中间立方体 -->
+  <polygon points="340,120 380,120 400,100 360,100" fill="#f0f0f0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="380,120 400,100 400,60 380,80" fill="#e0e0e0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="340,120 380,120 380,80 340,80" fill="#d0d0d0" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- 顶部立方体 -->
+  <polygon points="380,80 420,80 440,60 400,60" fill="#f0f0f0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="420,80 440,60 440,20 420,40" fill="#e0e0e0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="380,80 420,80 420,40 380,40" fill="#d0d0d0" stroke="#333" stroke-width="1.5"/>
+
+</svg>

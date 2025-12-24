@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" width="600" height="160">
+  <style>
+    .line { stroke: #333; stroke-width: 2; fill: none; }
+    .thin-line { stroke: #333; stroke-width: 1.5; fill: none; }
+    .arrow { stroke: #333; stroke-width: 2; fill: #333; }
+    .point { fill: #2563eb; }
+    .label { font-family: 'Times New Roman', serif; font-size: 16px; fill: #333; }
+    .small-label { font-family: 'Times New Roman', serif; font-size: 14px; fill: #333; }
+    .italic { font-style: italic; }
+  </style>
+
+  <!-- 数轴 -->
+  <line x1="50" y1="100" x2="550" y2="100" class="line"/>
+  <polygon points="550,100 540,95 540,105" class="arrow"/>
+  
+  <!-- 刻度线 -->
+  <line x1="100" y1="93" x2="100" y2="107" class="thin-line"/>
+  <line x1="200" y1="93" x2="200" y2="107" class="thin-line"/>
+  <line x1="300" y1="93" x2="300" y2="107" class="thin-line"/>
+  <line x1="400" y1="93" x2="400" y2="107" class="thin-line"/>
+  <line x1="500" y1="93" x2="500" y2="107" class="thin-line"/>
+  
+  <!-- 刻度标签 -->
+  <text x="100" y="130" class="label" text-anchor="middle">-2</text>
+  <text x="200" y="130" class="label" text-anchor="middle">-1</text>
+  <text x="300" y="130" class="label" text-anchor="middle">0</text>
+  <text x="400" y="130" class="label" text-anchor="middle">1</text>
+  <text x="500" y="130" class="label" text-anchor="middle">2</text>
+  
+  <!-- b点 (在-1和0之间，偏左) -->
+  <circle cx="170" cy="100" r="5" class="point"/>
+  <text x="170" y="80" class="label italic" text-anchor="middle">b</text>
+  
+  <!-- a点 (在0和1之间，偏右) -->
+  <circle cx="430" cy="100" r="5" class="point"/>
+  <text x="430" y="80" class="label italic" text-anchor="middle">a</text>
+
+</svg>

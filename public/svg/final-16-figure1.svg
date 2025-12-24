@@ -1,0 +1,30 @@
+<svg width="400" height="100" xmlns="http://www.w3.org/2000/svg">
+  <text x="200" y="20" text-anchor="middle" font-size="12">图1</text>
+  
+  <!-- 线段MN -->
+  <line x1="50" y1="50" x2="350" y2="50" stroke="#333" stroke-width="2"/>
+  
+  <!-- 点M -->
+  <circle cx="50" cy="50" r="3" fill="#333"/>
+  <text x="50" y="75" text-anchor="middle" font-size="14" font-style="italic">M</text>
+  
+  <!-- 点C（AM的中点） -->
+  <circle cx="120" cy="50" r="3" fill="#2196F3"/>
+  <text x="120" y="75" text-anchor="middle" font-size="14" font-style="italic" fill="#2196F3">C</text>
+  
+  <!-- 点A -->
+  <circle cx="150" cy="50" r="3" fill="#333"/>
+  <text x="150" y="35" text-anchor="middle" font-size="14" font-style="italic">A</text>
+  
+  <!-- 点B -->
+  <circle cx="200" cy="50" r="3" fill="#333"/>
+  <text x="200" y="35" text-anchor="middle" font-size="14" font-style="italic">B</text>
+  
+  <!-- 点D（BN的中点） -->
+  <circle cx="275" cy="50" r="3" fill="#F44336"/>
+  <text x="275" y="75" text-anchor="middle" font-size="14" font-style="italic" fill="#F44336">D</text>
+  
+  <!-- 点N -->
+  <circle cx="350" cy="50" r="3" fill="#333"/>
+  <text x="350" y="75" text-anchor="middle" font-size="14" font-style="italic">N</text>
+</svg>
