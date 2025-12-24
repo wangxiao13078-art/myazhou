@@ -7,6 +7,17 @@ interface SvgImageProps {
   height?: number
 }
 
+// 检测是否在 GitHub Pages 上运行
+function getBasePath(): string {
+  if (typeof window === 'undefined') return ''
+  // 检查 URL 路径是否包含 /myazhou
+  const path = window.location.pathname
+  if (path.startsWith('/myazhou')) {
+    return '/myazhou'
+  }
+  return ''
+}
+
 // SVG文件名映射（不包含路径前缀）
 const svgFileNames: Record<string, string> = {
   // 数轴类型
@@ -248,10 +259,8 @@ export function SvgImage({ name, width = 400, height = 200 }: SvgImageProps) {
   useEffect(() => {
     if (fileName) {
       // 在客户端动态判断路径前缀
-      const basePath = window.location.hostname.includes('github.io') 
-        ? '/myazhou/svg/' 
-        : '/svg/'
-      setSrc(basePath + fileName)
+      const basePath = getBasePath()
+      setSrc(basePath + '/svg/' + fileName)
     }
   }, [fileName])
   
