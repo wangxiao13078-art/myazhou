@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { YStack, Image } from 'tamagui'
 
 interface SvgImageProps {
@@ -248,16 +248,18 @@ export const problemSvgMap: Record<string, string[]> = {
 
 export function SvgImage({ name, width = 400, height = 200 }: SvgImageProps) {
   const baseSrc = svgFiles[name]
+  const [src, setSrc] = useState(baseSrc || '')
+  
+  useEffect(() => {
+    if (baseSrc && typeof window !== 'undefined' && window.location.hostname.includes('github.io')) {
+      setSrc(baseSrc.replace('/svg/', '/myazhou/svg/'))
+    }
+  }, [baseSrc])
   
   if (!baseSrc) {
     console.warn(`SVG not found: ${name}`)
     return null
   }
-  
-  // 在客户端动态添加 basePath（用于 GitHub Pages）
-  const src = typeof window !== 'undefined' && window.location.hostname.includes('github.io')
-    ? baseSrc.replace('/svg/', '/myazhou/svg/')
-    : baseSrc
   
   return (
     <YStack ai="center" my="$2">
