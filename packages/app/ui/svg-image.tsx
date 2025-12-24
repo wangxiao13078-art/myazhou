@@ -7,62 +7,67 @@ interface SvgImageProps {
   height?: number
 }
 
+// 获取基础路径（用于 GitHub Pages 部署）
+const basePath = typeof window !== 'undefined' && window.location.hostname.includes('github.io') 
+  ? '/myazhou' 
+  : ''
+
 // SVG文件映射到对应的图形类型
 const svgFiles: Record<string, string> = {
   // 数轴类型
-  'number-line-basic': '/svg/number-line-basic.svg',
-  'number-line-circle': '/svg/number-line-circle.svg',
-  'number-line-ab': '/svg/number-line-ab.svg',
-  'number-line-ab-2': '/svg/number-line-ab-2.svg',
-  'number-line-ab-3': '/svg/number-line-ab-3.svg',
-  'number-line-abcd': '/svg/number-line-abcd.svg',
-  'triangle-flip': '/svg/triangle-flip.svg',
-  'moving-points': '/svg/moving-points.svg',
-  'circle-numbers': '/svg/circle-numbers.svg',
-  'folding-line': '/svg/folding-line.svg',
-  'jumping-point': '/svg/jumping-point.svg',
-  'two-circles': '/svg/two-circles.svg',
+  'number-line-basic': `${basePath}/svg/number-line-basic.svg`,
+  'number-line-circle': `${basePath}/svg/number-line-circle.svg`,
+  'number-line-ab': `${basePath}/svg/number-line-ab.svg`,
+  'number-line-ab-2': `${basePath}/svg/number-line-ab-2.svg`,
+  'number-line-ab-3': `${basePath}/svg/number-line-ab-3.svg`,
+  'number-line-abcd': `${basePath}/svg/number-line-abcd.svg`,
+  'triangle-flip': `${basePath}/svg/triangle-flip.svg`,
+  'moving-points': `${basePath}/svg/moving-points.svg`,
+  'circle-numbers': `${basePath}/svg/circle-numbers.svg`,
+  'folding-line': `${basePath}/svg/folding-line.svg`,
+  'jumping-point': `${basePath}/svg/jumping-point.svg`,
+  'two-circles': `${basePath}/svg/two-circles.svg`,
   
   // 几何图形
-  'area-square': '/svg/area-square.svg',
-  'chess-pattern': '/svg/chess-pattern.svg',
-  'house-plan': '/svg/house-plan.svg',
-  'cube': '/svg/cube.svg',
+  'area-square': `${basePath}/svg/area-square.svg`,
+  'chess-pattern': `${basePath}/svg/chess-pattern.svg`,
+  'house-plan': `${basePath}/svg/house-plan.svg`,
+  'cube': `${basePath}/svg/cube.svg`,
   
   // 火柴棒
-  'matchstick-1': '/svg/matchstick-1.svg',
-  'matchstick-2': '/svg/matchstick-2.svg',
-  'matchstick-3': '/svg/matchstick-3.svg',
-  'matchstick-4': '/svg/matchstick-4.svg',
+  'matchstick-1': `${basePath}/svg/matchstick-1.svg`,
+  'matchstick-2': `${basePath}/svg/matchstick-2.svg`,
+  'matchstick-3': `${basePath}/svg/matchstick-3.svg`,
+  'matchstick-4': `${basePath}/svg/matchstick-4.svg`,
   
   // 正多边形
-  'polygon-3': '/svg/polygon-3.svg',
-  'polygon-4': '/svg/polygon-4.svg',
-  'polygon-5': '/svg/polygon-5.svg',
-  'polygon-6': '/svg/polygon-6.svg',
+  'polygon-3': `${basePath}/svg/polygon-3.svg`,
+  'polygon-4': `${basePath}/svg/polygon-4.svg`,
+  'polygon-5': `${basePath}/svg/polygon-5.svg`,
+  'polygon-6': `${basePath}/svg/polygon-6.svg`,
   
   // 角度和几何图形
-  'angle-rays-5': '/svg/angle-rays-5.svg',
-  'angle-rays-4': '/svg/angle-rays-4.svg',
-  'angle-rays-3': '/svg/angle-rays-3.svg',
-  'angle-bisector': '/svg/angle-bisector.svg',
-  'rotating-angle': '/svg/rotating-angle.svg',
-  'segment-abc': '/svg/segment-abc.svg',
-  'segment-midpoints': '/svg/segment-midpoints.svg',
-  'triangle-lines': '/svg/triangle-lines.svg',
-  'angle-aob-150': '/svg/angle-aob-150.svg',
-  'angle-aob-120': '/svg/angle-aob-120.svg',
-  'rays-abcde': '/svg/rays-abcde.svg',
+  'angle-rays-5': `${basePath}/svg/angle-rays-5.svg`,
+  'angle-rays-4': `${basePath}/svg/angle-rays-4.svg`,
+  'angle-rays-3': `${basePath}/svg/angle-rays-3.svg`,
+  'angle-bisector': `${basePath}/svg/angle-bisector.svg`,
+  'rotating-angle': `${basePath}/svg/rotating-angle.svg`,
+  'segment-abc': `${basePath}/svg/segment-abc.svg`,
+  'segment-midpoints': `${basePath}/svg/segment-midpoints.svg`,
+  'triangle-lines': `${basePath}/svg/triangle-lines.svg`,
+  'angle-aob-150': `${basePath}/svg/angle-aob-150.svg`,
+  'angle-aob-120': `${basePath}/svg/angle-aob-120.svg`,
+  'rays-abcde': `${basePath}/svg/rays-abcde.svg`,
   
   // 期末冲刺练图形
-  'final-number-line-1': '/svg/final-number-line-1.svg',
-  'final-cube': '/svg/final-cube.svg',
-  'final-triangles': '/svg/final-triangles.svg',
-  'final-angle-12': '/svg/final-angle-12.svg',
-  'final-number-line-15': '/svg/final-number-line-15.svg',
-  'final-segment-16': '/svg/final-segment-16.svg',
-  'final-angle-16-2': '/svg/final-angle-16-2.svg',
-  'final-angle-16-3': '/svg/final-angle-16-3.svg',
+  'final-number-line-1': `${basePath}/svg/final-number-line-1.svg`,
+  'final-cube': `${basePath}/svg/final-cube.svg`,
+  'final-triangles': `${basePath}/svg/final-triangles.svg`,
+  'final-angle-12': `${basePath}/svg/final-angle-12.svg`,
+  'final-number-line-15': `${basePath}/svg/final-number-line-15.svg`,
+  'final-segment-16': `${basePath}/svg/final-segment-16.svg`,
+  'final-angle-16-2': `${basePath}/svg/final-angle-16-2.svg`,
+  'final-angle-16-3': `${basePath}/svg/final-angle-16-3.svg`,
 }
 
 // 题目ID到SVG的映射
