@@ -1,0 +1,11 @@
+[build]
+  base = "apps/next"
+  command = "cd ../.. && yarn install && yarn workspace next build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
