@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react'
-import { YStack, XStack, Text, Button, Card, ScrollView, H2, H3, Theme, Separator, Image } from 'tamagui'
+import { YStack, XStack, Text, Button, Card, ScrollView, H2, H3, Theme, Separator } from 'tamagui'
 import { ChevronRight, ChevronDown, BookOpen, Star, ListOrdered } from '@tamagui/lucide-icons'
 import { Problem, MathStep } from './schema'
 import { MathText } from '../../ui/math-text'
@@ -85,13 +85,19 @@ export function ProblemDetailScreen({ problem }: ProblemDetailScreenProps) {
                 <Text fontWeight="bold" color="$blue10" fontSize="$3">📐 题目图形</Text>
                 <XStack flexWrap="wrap" jc="center" gap="$3">
                   {getProblemSvgs(problem.id).map((svgName, idx) => (
-                    <Image
-                      key={idx}
-                      source={{ uri: `/myazhou/svg/${svgName}.svg`, width: 350, height: 180 }}
-                      width={350}
-                      height={180}
-                      resizeMode="contain"
-                    />
+                    <YStack key={idx} ai="center">
+                      {/* 使用标准 img 标签确保静态渲染 */}
+                      <img
+                        src={`/myazhou/svg/${svgName}.svg`}
+                        alt={`图形 ${idx + 1}`}
+                        style={{ 
+                          width: 350, 
+                          height: 180, 
+                          objectFit: 'contain',
+                          maxWidth: '100%'
+                        }}
+                      />
+                    </YStack>
                   ))}
                 </XStack>
               </YStack>
