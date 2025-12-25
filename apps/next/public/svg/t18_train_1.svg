@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="100" viewBox="0 0 350 100">
+<style>
+text { font-family: -apple-system, 'Helvetica Neue', sans-serif; }
+.formula { font-size: 16px; fill: #333; font-weight: 500; font-style: italic; }
+.label { font-size: 14px; fill: #333; font-weight: 500; }
+.small { font-size: 12px; fill: #666; }
+.box { stroke: #667eea; stroke-width: 2; fill: rgba(102,126,234,0.05); rx: 8; }
+.highlight { fill: #fef3c7; stroke: #fbbf24; }
+.arrow { fill: #667eea; }
+.line { stroke: #667eea; stroke-width: 2; }
+</style>
+<defs>
+<marker id="arrow-right" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+<path d="M0,0 L0,6 L9,3 z" class="arrow"/>
+</marker>
+</defs>
+<rect x="10" y="10" width="330" height="80" class="box"/>
+<text x="30" y="40" class="label">4(a+b) - 2(a+b)</text>
+<line x1="170" y1="35" x2="210" y2="35" class="line" marker-end="url(#arrow-right)"/>
+<text x="190" y="55" text-anchor="middle" class="small">整体</text>
+<text x="225" y="40" class="label">(4-2)(a+b) = 2(a+b)</text>
+<rect x="50" y="22" width="50" height="25" class="highlight" rx="3"/>
+<rect x="118" y="22" width="50" height="25" class="highlight" rx="3"/>
+</svg>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+<style>
+text { font-family: -apple-system, 'Helvetica Neue', sans-serif; }
+.axis { stroke: #333; stroke-width: 2; fill: none; }
+.tick { stroke: #333; stroke-width: 1.5; }
+.grid { stroke: #ddd; stroke-width: 0.5; }
+.point { fill: #e74c3c; }
+.point-blue { fill: #667eea; }
+.label { font-size: 14px; fill: #333; font-weight: 500; }
+.small { font-size: 12px; fill: #666; }
+.shape { stroke: #667eea; stroke-width: 2; fill: none; }
+.shape-fill { stroke: #667eea; stroke-width: 2; fill: rgba(102,126,234,0.1); }
+.segment { stroke: #667eea; stroke-width: 3; }
+.arrow { fill: #333; }
+</style>
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+<path d="M0,0 L0,6 L9,3 z" class="arrow"/>
+</marker>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+<path d="M0,0 L0,6 L9,3 z" fill="#667eea"/>
+</marker>
+</defs>
+<circle cx="100.0" cy="100.0" r="30" class="shape-fill"/>
+<line x1="130.0" y1="100.0" x2="150.0" y2="100.0" class="shape"/>
+<line x1="121.21320343559643" y1="121.21320343559643" x2="135.35533905932738" y2="135.35533905932738" class="shape"/>
+<line x1="100.0" y1="130.0" x2="100.0" y2="150.0" class="shape"/>
+<line x1="78.78679656440357" y1="121.21320343559643" x2="64.64466094067262" y2="135.35533905932738" class="shape"/>
+<line x1="70.0" y1="100.0" x2="50.0" y2="100.0" class="shape"/>
+<line x1="78.78679656440357" y1="78.78679656440357" x2="64.64466094067262" y2="64.64466094067262" class="shape"/>
+<line x1="100.0" y1="70.0" x2="99.99999999999999" y2="50.0" class="shape"/>
+<line x1="121.21320343559643" y1="78.78679656440357" x2="135.35533905932738" y2="64.64466094067262" class="shape"/>
+<text x="100.0" y="190" text-anchor="middle" class="small">图2</text>
+</svg>
