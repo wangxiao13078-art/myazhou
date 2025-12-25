@@ -133,8 +133,7 @@ export const problemSvgMap: Record<string, string[]> = {
   't19-train-2': ['matchstick-2'],
   't19-train-3': ['polygon-5'],
   
-  // t20 新定义
-  't20-example': ['matchstick-1'],
+  // t20 新定义 - 组合数题目，无需图形
   
   // ========== 专题四 ==========
   // t21 整体思想
