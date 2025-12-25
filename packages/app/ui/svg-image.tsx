@@ -419,3 +419,8 @@ export function SvgImage({ name, width = 400, height = 200 }: SvgImageProps) {
 export function getProblemSvgs(problemId: string): string[] {
   return problemSvgMap[problemId] || []
 }
+
+// 获取 SVG 的实际文件名
+export function getSvgFileName(svgName: string): string | null {
+  return svgFileNames[svgName] || null
+}

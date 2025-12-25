@@ -7,7 +7,7 @@ import { Header } from '../../ui/header'
 import { useRouter } from 'solito/router'
 import { getProblemsByTechnique } from './mock-data'
 import { Link } from 'solito/link'
-import { getProblemSvgs } from '../../ui/svg-image'
+import { getProblemSvgs, getSvgFileName } from '../../ui/svg-image'
 
 interface ProblemDetailScreenProps {
   problem: Problem
@@ -84,21 +84,25 @@ export function ProblemDetailScreen({ problem }: ProblemDetailScreenProps) {
               <YStack space="$3">
                 <Text fontWeight="bold" color="$blue10" fontSize="$3">📐 题目图形</Text>
                 <XStack flexWrap="wrap" jc="center" gap="$3">
-                  {getProblemSvgs(problem.id).map((svgName, idx) => (
-                    <YStack key={idx} ai="center">
-                      {/* 使用标准 img 标签确保静态渲染 */}
-                      <img
-                        src={`/myazhou/svg/${svgName}.svg`}
-                        alt={`图形 ${idx + 1}`}
-                        style={{ 
-                          width: 350, 
-                          height: 180, 
-                          objectFit: 'contain',
-                          maxWidth: '100%'
-                        }}
-                      />
-                    </YStack>
-                  ))}
+                  {getProblemSvgs(problem.id).map((svgName, idx) => {
+                    const fileName = getSvgFileName(svgName)
+                    if (!fileName) return null
+                    return (
+                      <YStack key={idx} ai="center">
+                        {/* 使用标准 img 标签确保静态渲染 */}
+                        <img
+                          src={`/myazhou/svg/${fileName}`}
+                          alt={`图形 ${idx + 1}`}
+                          style={{ 
+                            width: 350, 
+                            height: 180, 
+                            objectFit: 'contain',
+                            maxWidth: '100%'
+                          }}
+                        />
+                      </YStack>
+                    )
+                  })}
                 </XStack>
               </YStack>
             </Card>
