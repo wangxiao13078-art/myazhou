@@ -87,6 +87,8 @@ export const problemSvgMap: Record<string, string[]> = {
   // t3 比较大小
   't3-example': ['number-line-ab'],
   't3-train-1': ['number-line-ab'],
+  't3-train-2': ['number-line-ab'],
+  't3-train-3': ['number-line-ab'],
   
   // t4 绝对值
   't4-example': ['number-line-ab'],
@@ -205,10 +207,13 @@ export const problemSvgMap: Record<string, string[]> = {
   'z3-quiz-5': ['area-square'],
   'z3-quiz-6': ['matchstick-1'],
   'z3-quiz-7': ['matchstick-2'],
+  'z3-quiz-4': ['circle-numbers'],
   'z3-quiz-8': ['polygon-3'],
   'z3-quiz-9': ['chess-pattern'],
   
   // ========== 专题集训四 ==========
+  'z4-quiz-1': ['number-line-ab'],
+  'z4-quiz-2': ['number-line-ab'],
   'z4-quiz-3': ['number-line-ab'],
   'z4-quiz-5': ['number-line-abcd'],
   'z4-quiz-8': ['area-square'],
@@ -221,8 +226,10 @@ export const problemSvgMap: Record<string, string[]> = {
   'z5-quiz-13': ['rotating-angle'],
   
   // ========== 专题集训六 ==========
+  'z6-quiz-2': ['segment-abc'],
   'z6-quiz-4': ['segment-abc'],
   'z6-quiz-6': ['angle-aob-150'],
+  'z6-quiz-7': ['angle-bisector'],
   'z6-quiz-8': ['triangle-lines'],
   'z6-quiz-9': ['angle-bisector'],
   'z6-quiz-10': ['segment-abc'],
