@@ -26,10 +26,26 @@ export default class MyDocument extends Document {
   }
 
   render() {
+    const basePath = process.env.NODE_ENV === 'production' ? '/myazhou' : ''
+    
     return (
       <Html lang="zh-CN">
         <Head>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          
+          {/* PWA 配置 */}
+          <link rel="manifest" href={`${basePath}/manifest.json`} />
+          <meta name="theme-color" content="#4f46e5" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+          <meta name="apple-mobile-web-app-title" content="数学压轴" />
+          
+          {/* 图标 */}
+          <link rel="icon" type="image/png" sizes="192x192" href={`${basePath}/icons/icon-192.png`} />
+          <link rel="apple-touch-icon" href={`${basePath}/icons/icon-192.png`} />
+          
+          {/* 防止自动检测电话号码 */}
+          <meta name="format-detection" content="telephone=no" />
         </Head>
         <body>
           <Main />
