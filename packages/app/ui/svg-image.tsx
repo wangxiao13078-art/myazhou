@@ -308,23 +308,29 @@ export const problemSvgMap: Record<string, string[]> = {
   't27-train-1': ['t27-train-1'],
   
   // ========== 专题六：几何图形初步 ==========
+  // 考点1：整体思想（线段中点）
   't32-example': ['segment-midpoints'],
   't32-train-1': ['segment-abc'],
   't32-train-2': ['segment-abc'],
+  // 考法2：方程思想（线段）
   't33-example': ['segment-abc'],
   't33-train-1': ['segment-abc'],
   't33-train-2': ['segment-abc'],
+  // 考法3：分类讨论（线段动点）
   't34-example': ['segment-abc'],
   't34-train-1': ['segment-abc'],
   't34-train-2': ['number-line-ab'],
-  't35-example': ['segment-abc'],
+  // 考法4：数形结合（数轴）- 修正：使用数轴图形
+  't35-example': ['number-line-abcd'],  // 修正：数轴上两条线段AB和CD
   't35-train-1': ['number-line-ab'],
   't35-train-2': ['number-line-ab'],
   't35-train-3': ['number-line-ab'],
   't35-train-4': ['segment-abc'],
+  // 考点2：角度整体思想
   't36-example': ['rays-abcde'],
   't36-train-1': ['angle-bisector'],
   't36-train-2': ['rays-abcde'],
+  // 考法1：旋转角度问题
   't37-example': ['rotating-angle'],
   't37-train-1': ['angle-bisector'],
   't37-train-2': ['rotating-angle'],
