@@ -1,0 +1,1 @@
+{"pageProps":{"problem":{"id":"t22-train-2","grade":"7","semester":"up","category":"整式的加减","title":"针对训练2：合并同类项","difficulty":3,"tags":["同类项","合并"],"content":"化简：$3x^2y - 2xy^2 + 5xy^2 - x^2y + 4$","steps":[{"title":"合并同类项","content":"$= (3x^2y - x^2y) + (-2xy^2 + 5xy^2) + 4$\n\n$= 2x^2y + 3xy^2 + 4$","formula":"2x^2y + 3xy^2 + 4"}]},"id":"t22-train-2"},"__N_SSG":true}

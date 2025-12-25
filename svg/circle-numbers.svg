@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <!-- 圆 -->
+  <circle cx="200" cy="80" r="60" fill="none" stroke="#3498db" stroke-width="2"/>
+  
+  <!-- 四个数字 0,1,2,3 -->
+  <text x="200" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#e74c3c">0</text>
+  <text x="250" y="85" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">1</text>
+  <text x="200" y="150" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">2</text>
+  <text x="150" y="85" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">3</text>
+  
+  <!-- 圆心点 -->
+  <circle cx="200" cy="80" r="3" fill="#333"/>
+  
+  <!-- 数轴 -->
+  <line x1="50" y1="180" x2="350" y2="180" stroke="#333" stroke-width="2"/>
+  <polygon points="350,180 340,175 340,185" fill="#333"/>
+  
+  <!-- 刻度 -->
+  <line x1="100" y1="175" x2="100" y2="185" stroke="#333" stroke-width="1.5"/>
+  <text x="100" y="198" text-anchor="middle" font-size="12">-1</text>
+  
+  <line x1="150" y1="175" x2="150" y2="185" stroke="#333" stroke-width="1.5"/>
+  <text x="150" y="198" text-anchor="middle" font-size="12">0</text>
+  
+  <line x1="200" y1="175" x2="200" y2="185" stroke="#333" stroke-width="1.5"/>
+  <text x="200" y="198" text-anchor="middle" font-size="12">1</text>
+  
+  <line x1="250" y1="175" x2="250" y2="185" stroke="#333" stroke-width="1.5"/>
+  <text x="250" y="198" text-anchor="middle" font-size="12">2</text>
+  
+  <line x1="300" y1="175" x2="300" y2="185" stroke="#333" stroke-width="1.5"/>
+  <text x="300" y="198" text-anchor="middle" font-size="12">3</text>
+</svg>

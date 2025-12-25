@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="140" viewBox="0 0 180 140">
+<style>
+text { font-family: -apple-system, 'Helvetica Neue', sans-serif; }
+.axis { stroke: #333; stroke-width: 2; fill: none; }
+.tick { stroke: #333; stroke-width: 1.5; }
+.grid { stroke: #ddd; stroke-width: 0.5; }
+.point { fill: #e74c3c; }
+.point-blue { fill: #667eea; }
+.label { font-size: 14px; fill: #333; font-weight: 500; }
+.small { font-size: 12px; fill: #666; }
+.shape { stroke: #667eea; stroke-width: 2; fill: none; }
+.shape-fill { stroke: #667eea; stroke-width: 2; fill: rgba(102,126,234,0.1); }
+.segment { stroke: #667eea; stroke-width: 3; }
+.arrow { fill: #333; }
+</style>
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+<path d="M0,0 L0,6 L9,3 z" class="arrow"/>
+</marker>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+<path d="M0,0 L0,6 L9,3 z" fill="#667eea"/>
+</marker>
+</defs>
+<rect x="30" y="30" width="120" height="80" class="shape-fill"/>
+<circle cx="30" cy="30" r="3" class="point-blue"/>
+<text x="20" y="25" class="label">客厅</text>
+<circle cx="150" cy="30" r="3" class="point-blue"/>
+<text x="155" y="25" class="label">次卧</text>
+<circle cx="150" cy="110" r="3" class="point-blue"/>
+<text x="155" y="125" class="label">主卧</text>
+<circle cx="30" cy="110" r="3" class="point-blue"/>
+<text x="20" y="125" class="label">厨房</text>
+</svg>

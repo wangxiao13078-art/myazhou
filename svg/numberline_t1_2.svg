@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="80" viewBox="0 0 450 80">
+    <style>
+        text { font-family: -apple-system, sans-serif; }
+        .axis { stroke: #333; stroke-width: 2; }
+        .tick { stroke: #333; stroke-width: 1; }
+        .point { fill: #e74c3c; }
+        .label { font-size: 14px; fill: #333; }
+        .small-label { font-size: 12px; fill: #666; }
+    </style>
+    <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+        </marker>
+    </defs>
+    <line x1="40" y1="40.0" x2="420" y2="40.0" class="axis" marker-end="url(#arrow)"/>
+    <line x1="40.0" y1="35.0" x2="40.0" y2="45.0" class="tick"/>
+    <text x="40.0" y="60.0" text-anchor="middle" class="small-label">-5</text>
+    <line x1="58.5" y1="35.0" x2="58.5" y2="45.0" class="tick"/>
+    <text x="58.5" y="60.0" text-anchor="middle" class="small-label">-4</text>
+    <line x1="77.0" y1="35.0" x2="77.0" y2="45.0" class="tick"/>
+    <text x="77.0" y="60.0" text-anchor="middle" class="small-label">-3</text>
+    <line x1="95.5" y1="35.0" x2="95.5" y2="45.0" class="tick"/>
+    <text x="95.5" y="60.0" text-anchor="middle" class="small-label">-2</text>
+    <line x1="114.0" y1="35.0" x2="114.0" y2="45.0" class="tick"/>
+    <text x="114.0" y="60.0" text-anchor="middle" class="small-label">-1</text>
+    <line x1="132.5" y1="35.0" x2="132.5" y2="45.0" class="tick"/>
+    <text x="132.5" y="60.0" text-anchor="middle" class="small-label">0</text>
+    <line x1="151.0" y1="35.0" x2="151.0" y2="45.0" class="tick"/>
+    <text x="151.0" y="60.0" text-anchor="middle" class="small-label">1</text>
+    <line x1="169.5" y1="35.0" x2="169.5" y2="45.0" class="tick"/>
+    <text x="169.5" y="60.0" text-anchor="middle" class="small-label">2</text>
+    <line x1="188.0" y1="35.0" x2="188.0" y2="45.0" class="tick"/>
+    <text x="188.0" y="60.0" text-anchor="middle" class="small-label">3</text>
+    <line x1="206.5" y1="35.0" x2="206.5" y2="45.0" class="tick"/>
+    <text x="206.5" y="60.0" text-anchor="middle" class="small-label">4</text>
+    <line x1="225.0" y1="35.0" x2="225.0" y2="45.0" class="tick"/>
+    <text x="225.0" y="60.0" text-anchor="middle" class="small-label">5</text>
+    <line x1="243.5" y1="35.0" x2="243.5" y2="45.0" class="tick"/>
+    <text x="243.5" y="60.0" text-anchor="middle" class="small-label">6</text>
+    <line x1="262.0" y1="35.0" x2="262.0" y2="45.0" class="tick"/>
+    <text x="262.0" y="60.0" text-anchor="middle" class="small-label">7</text>
+    <line x1="280.5" y1="35.0" x2="280.5" y2="45.0" class="tick"/>
+    <text x="280.5" y="60.0" text-anchor="middle" class="small-label">8</text>
+    <line x1="299.0" y1="35.0" x2="299.0" y2="45.0" class="tick"/>
+    <text x="299.0" y="60.0" text-anchor="middle" class="small-label">9</text>
+    <line x1="317.5" y1="35.0" x2="317.5" y2="45.0" class="tick"/>
+    <text x="317.5" y="60.0" text-anchor="middle" class="small-label">10</text>
+    <line x1="336.0" y1="35.0" x2="336.0" y2="45.0" class="tick"/>
+    <text x="336.0" y="60.0" text-anchor="middle" class="small-label">11</text>
+    <line x1="354.5" y1="35.0" x2="354.5" y2="45.0" class="tick"/>
+    <text x="354.5" y="60.0" text-anchor="middle" class="small-label">12</text>
+    <line x1="373.0" y1="35.0" x2="373.0" y2="45.0" class="tick"/>
+    <text x="373.0" y="60.0" text-anchor="middle" class="small-label">13</text>
+    <line x1="391.5" y1="35.0" x2="391.5" y2="45.0" class="tick"/>
+    <text x="391.5" y="60.0" text-anchor="middle" class="small-label">14</text>
+    <line x1="410.0" y1="35.0" x2="410.0" y2="45.0" class="tick"/>
+    <text x="410.0" y="60.0" text-anchor="middle" class="small-label">15</text>
+    <line x1="95.5" y1="25.0" x2="317.5" y2="25.0" stroke="#667eea" stroke-width="3"/>
+    <circle cx="95.5" cy="25.0" r="4" fill="#667eea"/>
+    <circle cx="317.5" cy="25.0" r="4" fill="#667eea"/>
+    <text x="95.5" y="15.0" text-anchor="middle" class="label">A</text>
+    <text x="317.5" y="15.0" text-anchor="middle" class="label">B</text>
+</svg>

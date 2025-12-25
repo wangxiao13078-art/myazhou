@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <!-- 线段 -->
+  <line x1="50" y1="50" x2="350" y2="50" stroke="#333" stroke-width="2"/>
+  
+  <!-- 点A -->
+  <circle cx="50" cy="50" r="4" fill="#e74c3c"/>
+  <text x="50" y="35" text-anchor="middle" font-size="16" font-weight="bold" fill="#e74c3c">A</text>
+  
+  <!-- 点B -->
+  <circle cx="200" cy="50" r="4" fill="#3498db"/>
+  <text x="200" y="35" text-anchor="middle" font-size="16" font-weight="bold" fill="#3498db">B</text>
+  
+  <!-- 点C -->
+  <circle cx="350" cy="50" r="4" fill="#27ae60"/>
+  <text x="350" y="35" text-anchor="middle" font-size="16" font-weight="bold" fill="#27ae60">C</text>
+</svg>

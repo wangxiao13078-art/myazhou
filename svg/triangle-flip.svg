@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- 数轴主线 -->
+  <line x1="30" y1="120" x2="570" y2="120" 
+        stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="0" y1="115" x2="0" y2="125" stroke="#333" stroke-width="1.5"/>
+  <text x="0" y="140" text-anchor="middle" font-size="12" fill="#333">-3</text>
+  <line x1="50" y1="115" x2="50" y2="125" stroke="#333" stroke-width="1.5"/>
+  <text x="50" y="140" text-anchor="middle" font-size="12" fill="#333">-2</text>
+  <line x1="100" y1="115" x2="100" y2="125" stroke="#333" stroke-width="1.5"/>
+  <text x="100" y="140" text-anchor="middle" font-size="12" fill="#333">-1</text>
+  <line x1="150" y1="115" x2="150" y2="125" stroke="#333" stroke-width="1.5"/>
+  <text x="150" y="140" text-anchor="middle" font-size="12" fill="#333">0</text>
+  <line x1="200" y1="115" x2="200" y2="125" stroke="#333" stroke-width="1.5"/>
+  <text x="200" y="140" text-anchor="middle" font-size="12" fill="#333">1</text>
+  <line x1="250" y1="115" x2="250" y2="125" stroke="#333" stroke-width="1.5"/>
+  <text x="250" y="140" text-anchor="middle" font-size="12" fill="#333">2</text>
+  <line x1="300" y1="115" x2="300" y2="125" stroke="#333" stroke-width="1.5"/>
+  <text x="300" y="140" text-anchor="middle" font-size="12" fill="#333">3</text>
+  <line x1="350" y1="115" x2="350" y2="125" stroke="#333" stroke-width="1.5"/>
+  <text x="350" y="140" text-anchor="middle" font-size="12" fill="#333">4</text>
+  <line x1="400" y1="115" x2="400" y2="125" stroke="#333" stroke-width="1.5"/>
+  <text x="400" y="140" text-anchor="middle" font-size="12" fill="#333">5</text>
+
+  <!-- 等边三角形 ABC -->
+  <polygon points="150,120 100,120 125.0,76.7" 
+           fill="rgba(52, 152, 219, 0.2)" stroke="#3498db" stroke-width="2"/>
+  
+  <!-- 顶点标记 -->
+  <circle cx="150" cy="120" r="5" fill="#e74c3c"/>
+  <text x="150" y="110" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c">A</text>
+  
+  <circle cx="100" cy="120" r="5" fill="#27ae60"/>
+  <text x="100" y="110" text-anchor="middle" font-size="14" font-weight="bold" fill="#27ae60">C</text>
+  
+  <circle cx="125.0" cy="76.7" r="5" fill="#9b59b6"/>
+  <text x="125.0" y="66.7" text-anchor="middle" font-size="14" font-weight="bold" fill="#9b59b6">B</text>
+</svg>

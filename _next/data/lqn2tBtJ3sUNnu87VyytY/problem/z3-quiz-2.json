@@ -1,0 +1,1 @@
+{"pageProps":{"problem":{"id":"z3-quiz-2","grade":"7","semester":"up","category":"专题集训","title":"专题集训三 第2题","difficulty":3,"tags":["代数式","求值"],"content":"当 $x = x^2$ 分别取值 $21$，$20$，$21$ 时，求代数式 $x^2 + \\frac{1}{19}, \\frac{1}{20}, \\frac{1}{21}$ 的值，然后将所求得的结果相加，其和等于（ ）","steps":[{"title":"计算","content":"分别代入计算后求和","formula":""}]},"id":"z3-quiz-2"},"__N_SSG":true}

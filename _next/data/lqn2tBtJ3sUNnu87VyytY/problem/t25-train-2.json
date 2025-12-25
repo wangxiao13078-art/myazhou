@@ -1,0 +1,1 @@
+{"pageProps":{"problem":{"id":"t25-train-2","grade":"7","semester":"up","category":"一元一次方程","title":"针对训练2：方程整体思想","difficulty":3,"tags":["方程","整体思想"],"content":"解方程：$\\frac{2(y+1)+m}{2} = \\frac{2(x-2)-\\frac{1}{2}(2x+3)}{3(4x-3)+2(3-4x)}$","steps":[{"title":"去分母整理","content":"先简化分母：\n\n去分母，移项，合并同类项","formula":"\\text{按步骤整理}"}]},"id":"t25-train-2"},"__N_SSG":true}

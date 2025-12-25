@@ -1,0 +1,1 @@
+{"pageProps":{"problem":{"id":"z4-quiz-6","grade":"7","semester":"up","category":"专题集训","title":"专题集训四 第6题","difficulty":4,"tags":["整式","同类项"],"content":"若 $a^{6m}b^{5n}$ 与 $3a^2b^{6n}$ 是同类项，则 $3^m \\cdot 3^n = $ ______","steps":[{"title":"同类项条件","content":"同类项要求字母相同且指数相同\n$6m = 2$ 得 $m = \\frac{1}{3}$\n$5n = 6n$ 矛盾，需重新分析","formula":""}]},"id":"z4-quiz-6"},"__N_SSG":true}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 130" width="540" height="130">
+  <style>
+    .line { stroke: #333; stroke-width: 2; fill: none; }
+    .thin-line { stroke: #333; stroke-width: 1.5; fill: none; }
+    .arrow { stroke: #333; stroke-width: 2; fill: #333; }
+    .point { fill: #2563eb; }
+    .label { font-family: 'Times New Roman', serif; font-size: 16px; fill: #333; }
+    .small-label { font-family: 'Times New Roman', serif; font-size: 14px; fill: #333; }
+    .italic { font-style: italic; }
+  </style>
+
+  <!-- A选项 -->
+  <g transform="translate(30, 20)">
+    <!-- 三角形1 -->
+    <polygon points="0,80 80,80 0,0" fill="none" stroke="#333" stroke-width="1.5"/>
+    <!-- 三角形2 -->
+    <polygon points="10,70 70,70 70,10" fill="none" stroke="#333" stroke-width="1.5"/>
+    <!-- 角度标记 -->
+    <text x="8" y="65" class="small-label italic">α</text>
+    <text x="55" y="65" class="small-label italic">β</text>
+    <text x="40" y="105" class="small-label" text-anchor="middle">A</text>
+  </g>
+  
+  <!-- B选项 -->
+  <g transform="translate(160, 20)">
+    <!-- 三角形1 -->
+    <polygon points="0,80 80,80 80,0" fill="none" stroke="#333" stroke-width="1.5"/>
+    <!-- 三角形2 -->
+    <polygon points="10,70 70,70 10,10" fill="none" stroke="#333" stroke-width="1.5"/>
+    <!-- 角度标记 -->
+    <text x="60" y="65" class="small-label italic">β</text>
+    <text x="18" y="25" class="small-label italic">α</text>
+    <text x="40" y="105" class="small-label" text-anchor="middle">B</text>
+  </g>
+  
+  <!-- C选项 -->
+  <g transform="translate(290, 20)">
+    <!-- 三角形1 -->
+    <polygon points="0,80 80,80 40,0" fill="none" stroke="#333" stroke-width="1.5"/>
+    <!-- 三角形2（内部） -->
+    <polygon points="20,80 60,80 40,30" fill="none" stroke="#333" stroke-width="1.5"/>
+    <!-- 角度标记 -->
+    <text x="8" y="70" class="small-label italic">α</text>
+    <text x="60" y="70" class="small-label italic">β</text>
+    <text x="40" y="105" class="small-label" text-anchor="middle">C</text>
+  </g>
+  
+  <!-- D选项 -->
+  <g transform="translate(420, 20)">
+    <!-- 三角形1 -->
+    <polygon points="0,80 80,80 80,20" fill="none" stroke="#333" stroke-width="1.5"/>
+    <!-- 三角形2 -->
+    <polygon points="0,60 60,60 0,0" fill="none" stroke="#333" stroke-width="1.5"/>
+    <!-- 角度标记 -->
+    <text x="65" y="70" class="small-label italic">α</text>
+    <text x="8" y="50" class="small-label italic">β</text>
+    <text x="40" y="105" class="small-label" text-anchor="middle">D</text>
+  </g>
+
+</svg>

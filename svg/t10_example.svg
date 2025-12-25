@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="80" viewBox="0 0 400 80">
+<style>
+text { font-family: -apple-system, 'Helvetica Neue', sans-serif; }
+.axis { stroke: #333; stroke-width: 2; fill: none; }
+.tick { stroke: #333; stroke-width: 1.5; }
+.grid { stroke: #ddd; stroke-width: 0.5; }
+.point { fill: #e74c3c; }
+.point-blue { fill: #667eea; }
+.label { font-size: 14px; fill: #333; font-weight: 500; }
+.small { font-size: 12px; fill: #666; }
+.shape { stroke: #667eea; stroke-width: 2; fill: none; }
+.shape-fill { stroke: #667eea; stroke-width: 2; fill: rgba(102,126,234,0.1); }
+.segment { stroke: #667eea; stroke-width: 3; }
+.arrow { fill: #333; }
+</style>
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+<path d="M0,0 L0,6 L9,3 z" class="arrow"/>
+</marker>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+<path d="M0,0 L0,6 L9,3 z" fill="#667eea"/>
+</marker>
+</defs>
+<line x1="40" y1="40.0" x2="370" y2="40.0" class="axis" marker-end="url(#arrow)"/>
+<line x1="40.0" y1="35.0" x2="40.0" y2="45.0" class="tick"/>
+<text x="40.0" y="60.0" text-anchor="middle" class="small">-3</text>
+<line x1="93.33333333333334" y1="35.0" x2="93.33333333333334" y2="45.0" class="tick"/>
+<text x="93.33333333333334" y="60.0" text-anchor="middle" class="small">-2</text>
+<line x1="146.66666666666669" y1="35.0" x2="146.66666666666669" y2="45.0" class="tick"/>
+<text x="146.66666666666669" y="60.0" text-anchor="middle" class="small">-1</text>
+<line x1="200.0" y1="35.0" x2="200.0" y2="45.0" class="tick"/>
+<text x="200.0" y="60.0" text-anchor="middle" class="small">0</text>
+<line x1="253.33333333333334" y1="35.0" x2="253.33333333333334" y2="45.0" class="tick"/>
+<text x="253.33333333333334" y="60.0" text-anchor="middle" class="small">1</text>
+<line x1="306.6666666666667" y1="35.0" x2="306.6666666666667" y2="45.0" class="tick"/>
+<text x="306.6666666666667" y="60.0" text-anchor="middle" class="small">2</text>
+<line x1="360.0" y1="35.0" x2="360.0" y2="45.0" class="tick"/>
+<text x="360.0" y="60.0" text-anchor="middle" class="small">3</text>
+<circle cx="200.0" cy="40.0" r="5" class="point"/>
+<text x="200.0" y="28.0" text-anchor="middle" class="label">0</text>
+<circle cx="253.33333333333334" cy="40.0" r="5" class="point"/>
+<text x="253.33333333333334" y="28.0" text-anchor="middle" class="label">1</text>
+</svg>

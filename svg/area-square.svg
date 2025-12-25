@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <!-- 外框 -->
+  <rect x="50" y="50" width="200" height="200" fill="none" stroke="#333" stroke-width="2"/>
+  
+  <!-- a² 区域 -->
+  <rect x="50" y="50" width="130" height="130" fill="#e74c3c" fill-opacity="0.3" stroke="#e74c3c" stroke-width="1"/>
+  <text x="115" y="120" text-anchor="middle" font-size="20" font-weight="bold" fill="#c0392b">a²</text>
+  
+  <!-- b² 区域 -->
+  <rect x="180" y="180" width="70" height="70" fill="#3498db" fill-opacity="0.3" stroke="#3498db" stroke-width="1"/>
+  <text x="215" y="220" text-anchor="middle" font-size="16" font-weight="bold" fill="#2980b9">b²</text>
+  
+  <!-- ab 区域 (上) -->
+  <rect x="180" y="50" width="70" height="130" fill="#27ae60" fill-opacity="0.3" stroke="#27ae60" stroke-width="1"/>
+  <text x="215" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e8449">ab</text>
+  
+  <!-- ab 区域 (左) -->
+  <rect x="50" y="180" width="130" height="70" fill="#27ae60" fill-opacity="0.3" stroke="#27ae60" stroke-width="1"/>
+  <text x="115" y="220" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e8449">ab</text>
+  
+  <!-- 标注 a -->
+  <text x="115" y="40" text-anchor="middle" font-size="16" fill="#333">a</text>
+  <line x1="50" y1="45" x2="180" y2="45" stroke="#333" stroke-width="1"/>
+  
+  <!-- 标注 b -->
+  <text x="215" y="40" text-anchor="middle" font-size="16" fill="#333">b</text>
+  <line x1="180" y1="45" x2="250" y2="45" stroke="#333" stroke-width="1"/>
+  
+  <!-- 右侧标注 -->
+  <text x="265" y="120" text-anchor="middle" font-size="16" fill="#333">a</text>
+  <text x="265" y="220" text-anchor="middle" font-size="16" fill="#333">b</text>
+</svg>

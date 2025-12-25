@@ -1,0 +1,1 @@
+{"pageProps":{"problem":{"id":"z5-quiz-6","grade":"7","semester":"up","category":"专题集训","title":"专题集训五 第6题","difficulty":3,"tags":["方程","应用"],"content":"若一方程 $(m+3)x^{m^2-7} - 5 = 0$ 是关于 $x$ 的一元一次方程，则 $m = $ ______","steps":[{"title":"确定条件","content":"一元一次方程要求：\n1. $m^2 - 7 = 1$，即 $m = \\pm 2\\sqrt{2}$\n2. $m + 3 \\neq 0$","formula":""}]},"id":"z5-quiz-6"},"__N_SSG":true}

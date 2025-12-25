@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+  <line x1="200" y1="200" x2="330.0" y2="200.0" 
+        stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="345.0" y="200.0" 
+        text-anchor="middle" font-size="16" font-weight="bold">A</text>
+  <line x1="200" y1="200" x2="135.00000000000003" y2="87.41669750802295" 
+        stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="127.50000000000003" y="74.42631645125637" 
+        text-anchor="middle" font-size="16" font-weight="bold">B</text>
+  <line x1="200" y1="200" x2="291.9238815542512" y2="108.07611844574883" 
+        stroke="#3498db" stroke-width="2" stroke-dasharray="5" marker-end="url(#arrowhead)"/>
+  <text x="303.9238815542512" y="103.07611844574883" text-anchor="middle" font-size="16" font-weight="bold" fill="#3498db">M</text>
+  <line x1="200" y1="200" x2="222.57426309670095" y2="71.97499210841295" 
+        stroke="#e74c3c" stroke-width="2" stroke-dasharray="5" marker-end="url(#arrowhead)"/>
+  <text x="217.57426309670095" y="61.97499210841295" text-anchor="middle" font-size="16" font-weight="bold" fill="#e74c3c">N</text>
+
+  <path d="M 250 170 A 50 50 0 0 0 230 150" 
+        fill="none" stroke="#27ae60" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="260" y="150" font-size="12" fill="#27ae60">旋转</text>
+
+  <circle cx="200" cy="200" r="4" fill="#333"/>
+  <text x="215" y="215" text-anchor="middle" font-size="16" font-weight="bold">O</text>
+
+  <path d="M 230 200 A 30 30 0 0 0 185.0 174.01923788646684" 
+        fill="none" stroke="#666" stroke-width="1"/>
+  <text x="180" y="160" font-size="12" fill="#666">120°</text>
+</svg>

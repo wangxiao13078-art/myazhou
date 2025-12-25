@@ -1,0 +1,1 @@
+{"pageProps":{"problem":{"id":"z4-quiz-10","grade":"7","semester":"up","category":"专题集训","title":"专题集训四 第10题","difficulty":5,"tags":["整式","新定义"],"content":"(一题多解) 已知 $|a^2 - bc = 6$，$b^2 + 2bc = -7$，求 $3(a^2 + bc) - 2(b^2 - a^2) - 6(1 - b^2)$ 的值。","steps":[{"title":"化简","content":"先化简表达式，再代入已知条件","formula":""}]},"id":"z4-quiz-10"},"__N_SSG":true}
