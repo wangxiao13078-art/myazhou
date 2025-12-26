@@ -4754,21 +4754,21 @@ A. 19  B. 20  C. 21  D. 22`,
     grade: '7',
     semester: 'up',
     category: '几何',
-    title: '针对训练1：线段中点',
+    title: '针对训练1：线段中点问题',
     difficulty: 3,
-    tags: ['几何', '线段'],
+    tags: ['几何', '线段', '中点'],
     images: ['segment-abc.svg'],
-    content: `已知 $AB = 10$，$C$ 是线段 $AB$ 上一点，$M$ 是线段 $AC$ 的中点，$N$ 分别为 $AC$、$BD$ 的中点，
+    content: `1.5 【解析】设 $AC = 2x$，则 $BC = 10 - 2x$。
 
-(2) 若 $M$、$N$ 分别为线段 $AC$、$BD$ 的中点，
+因为 $M$ 是线段 $AC$ 的中点，$N$ 是线段 $BC$ 的中点，所以
 
-BC = 4，求线段 MN 的长；
+$AM = MC = \\frac{1}{2}AC = x$，$CN = NB = \\frac{1}{2}BC = 5 - x$，所以
 
-(3) 当 $CD$ 运动到某一时刻时，点 $D$ 与点 $B$ 重合，求点 $M$ 所对应的数分别是______，点 $N$ 所对应的数分别是______。`,
+$MN = MC + CN = x + 5 - x = 5$。`,
     steps: [
       {
-        title: '分析',
-        content: '$MN = MC + CN = \\frac{AC}{2} + \\frac{BC}{2} = \\frac{AC + BC}{2} = \\frac{AB}{2} = 5$',
+        title: '解答',
+        content: '设 $AC = 2x$，则 $BC = 10 - 2x$。\n\n因为 $M$ 是线段 $AC$ 的中点，$N$ 是线段 $BC$ 的中点，\n所以 $MC = \\frac{1}{2}AC = x$，$CN = \\frac{1}{2}BC = 5 - x$。\n\n所以 $MN = MC + CN = x + (5-x) = 5$。\n\n**结论**：无论 $C$ 在 $AB$ 上何处，$MN$ 的长度始终等于 $\\frac{1}{2}AB = 5$。',
         formula: 'MN = 5'
       }
     ]
@@ -5021,14 +5021,35 @@ BC = 4，求线段 MN 的长；
     difficulty: 4,
     tags: ['几何', '分类讨论'],
     images: ['segment-abc.svg'],
-    content: `已知线段 $AB = 5$，$C$ 为直线 $AB$ 上一点，且 $AC : BC = 3 : 2$，$D$ 是线段 $AC$ 的中点，则线段 $BD$ 的长为（  ）
+    content: `1.C 【解析】如图，当点 $C$ 在线段 $AB$ 上时，
 
-A. 3.5  B. 3.5 或 7.5  C. 3.5 或 2.5  D. 2.5 或 7.5`,
+因为 $AB = 5$，$AC : BC = 3 : 2$，所以 $AC = 3$，$BC = 2$。
+
+因为 $D$ 是线段 $AC$ 的中点，所以 $CD = \\frac{1}{2}AC = 1.5$，所以
+
+$BD = BC + CD = 2 + 1.5 = 3.5$。
+
+如图，当点 $C$ 在线段 $BA$ 的延长线上时，
+
+因为 $AC : BC = 3 : 2$，设 $AC = 3k$，$BC = 2k$，
+
+则 $AC - BC = AB$，即 $3k - 2k = 5$，解得 $k = 5$。
+
+所以 $AC = 15$，$BC = 10$，$CD = \\frac{1}{2}AC = 7.5$。
+
+所以 $BD = BC - CD = 10 - 7.5 = 2.5$。
+
+综上所述，线段 $BD$ 的长为 $3.5$ 或 $2.5$。故选 C。`,
     steps: [
       {
-        title: '分类讨论',
-        content: '情况1：$C$ 在 $AB$ 之间\n$AC = 3$，$BC = 2$\n$AD = \\frac{AC}{2} = 1.5$\n$BD = AB - AD = 5 - 1.5 = 3.5$\n\n情况2：$C$ 在 $AB$ 延长线上\n$AC = 7.5$，$BC = 5$\n$AD = 3.75$，$BD = 7.5$',
-        formula: '\\text{答案：D}'
+        title: '情况1：C在AB上',
+        content: '因为 $AB = 5$，$AC : BC = 3 : 2$，\n所以 $AC = 3$，$BC = 2$。\n$D$ 是 $AC$ 中点，$CD = 1.5$。\n$BD = BC + CD = 2 + 1.5 = 3.5$',
+        formula: ''
+      },
+      {
+        title: '情况2：C在BA延长线上',
+        content: '设 $AC = 3k$，$BC = 2k$，\n则 $AC - BC = AB = 5$，$k = 5$。\n$AC = 15$，$BC = 10$，$CD = 7.5$。\n$BD = CD - BC = 7.5 - 10 = ... $（需重新计算位置）\n实际：$BD = |BC - CD| = |10 - 7.5| = 2.5$',
+        formula: '\\text{答案：C. } 3.5 \\text{ 或 } 2.5'
       }
     ]
   },
