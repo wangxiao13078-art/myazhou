@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150">
+  <!-- 角AOB和角平分线OM、ON -->
+  <line x1="30" y1="100" x2="170" y2="100" stroke="#333" stroke-width="2"/>
+  <line x1="100" y1="100" x2="50" y2="30" stroke="#333" stroke-width="2"/>
+  <line x1="100" y1="100" x2="150" y2="30" stroke="#333" stroke-width="2"/>
+  <line x1="100" y1="100" x2="75" y2="50" stroke="#2196F3" stroke-width="1.5" stroke-dasharray="4"/>
+  <line x1="100" y1="100" x2="125" y2="50" stroke="#2196F3" stroke-width="1.5" stroke-dasharray="4"/>
+  <!-- 标签 -->
+  <text x="25" y="105" font-family="Arial" font-size="12">A</text>
+  <text x="45" y="25" font-family="Arial" font-size="12">B</text>
+  <text x="155" y="25" font-family="Arial" font-size="12">C</text>
+  <text x="100" y="115" font-family="Arial" font-size="12">O</text>
+  <text x="65" y="45" font-family="Arial" font-size="11" fill="#2196F3">M</text>
+  <text x="130" y="45" font-family="Arial" font-size="11" fill="#2196F3">N</text>
+  <!-- 角度标记 -->
+  <path d="M 85 90 A 15 15 0 0 1 75 80" fill="none" stroke="#666" stroke-width="1"/>
+  <text x="70" y="75" font-family="Arial" font-size="10" fill="#666">α</text>
+  <path d="M 115 90 A 15 15 0 0 0 125 80" fill="none" stroke="#666" stroke-width="1"/>
+  <text x="125" y="75" font-family="Arial" font-size="10" fill="#666">β</text>
+</svg>
+

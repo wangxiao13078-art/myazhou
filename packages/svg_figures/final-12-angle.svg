@@ -1,0 +1,32 @@
+<svg width="350" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 点O -->
+  <circle cx="100" cy="150" r="3" fill="#333"/>
+  <text x="85" y="165" font-size="14" font-style="italic">O</text>
+  
+  <!-- 射线OA（水平向左上） -->
+  <line x1="100" y1="150" x2="30" y2="80" stroke="#333" stroke-width="1.5"/>
+  <text x="20" y="70" font-size="14" font-style="italic">A</text>
+  
+  <!-- 射线OB（水平向右） -->
+  <line x1="100" y1="150" x2="300" y2="150" stroke="#333" stroke-width="1.5"/>
+  <text x="305" y="155" font-size="14" font-style="italic">B</text>
+  
+  <!-- 射线OC（中间偏上） -->
+  <line x1="100" y1="150" x2="180" y2="50" stroke="#2196F3" stroke-width="1.5"/>
+  <text x="185" y="45" font-size="14" font-style="italic" fill="#2196F3">C</text>
+  
+  <!-- 射线OD（中间偏下） -->
+  <line x1="100" y1="150" x2="250" y2="100" stroke="#F44336" stroke-width="1.5"/>
+  <text x="255" y="95" font-size="14" font-style="italic" fill="#F44336">D</text>
+  
+  <!-- 角度标记 -->
+  <path d="M 120,150 A 20,20 0 0,0 115,135" fill="none" stroke="#333" stroke-width="1"/>
+  <path d="M 115,135 A 25,25 0 0,0 100,130" fill="none" stroke="#2196F3" stroke-width="1"/>
+  
+  <!-- 90度标记 -->
+  <rect x="100" y="130" width="8" height="8" fill="none" stroke="#333" stroke-width="1"/>
+  
+  <!-- 标注角AOB = 90° -->
+  <text x="200" y="180" font-size="12">∠AOB = 90°</text>
+  <text x="200" y="195" font-size="12">∠COD = 45°</text>
+</svg>

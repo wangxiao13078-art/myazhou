@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="100" viewBox="0 0 400 100">
+<style>
+text { font-family: -apple-system, 'Helvetica Neue', sans-serif; }
+.axis { stroke: #333; stroke-width: 2; fill: none; }
+.tick { stroke: #333; stroke-width: 1.5; }
+.grid { stroke: #ddd; stroke-width: 0.5; }
+.point { fill: #e74c3c; }
+.point-blue { fill: #667eea; }
+.label { font-size: 14px; fill: #333; font-weight: 500; }
+.small { font-size: 12px; fill: #666; }
+.shape { stroke: #667eea; stroke-width: 2; fill: none; }
+.shape-fill { stroke: #667eea; stroke-width: 2; fill: rgba(102,126,234,0.1); }
+.segment { stroke: #667eea; stroke-width: 3; }
+.arrow { fill: #333; }
+</style>
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+<path d="M0,0 L0,6 L9,3 z" class="arrow"/>
+</marker>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+<path d="M0,0 L0,6 L9,3 z" fill="#667eea"/>
+</marker>
+</defs>
+<line x1="40" y1="60.0" x2="360" y2="60.0" class="axis" marker-end="url(#arrow)"/>
+<line x1="80" y1="56.0" x2="80" y2="64.0" class="tick"/>
+<text x="80" y="78.0" text-anchor="middle" class="small">-3</text>
+<line x1="110" y1="56.0" x2="110" y2="64.0" class="tick"/>
+<text x="110" y="78.0" text-anchor="middle" class="small">-2</text>
+<line x1="140" y1="56.0" x2="140" y2="64.0" class="tick"/>
+<text x="140" y="78.0" text-anchor="middle" class="small">-1</text>
+<line x1="170" y1="56.0" x2="170" y2="64.0" class="tick"/>
+<text x="170" y="78.0" text-anchor="middle" class="small">0</text>
+<line x1="200" y1="56.0" x2="200" y2="64.0" class="tick"/>
+<text x="200" y="78.0" text-anchor="middle" class="small">1</text>
+<line x1="230" y1="56.0" x2="230" y2="64.0" class="tick"/>
+<text x="230" y="78.0" text-anchor="middle" class="small">2</text>
+<line x1="260" y1="56.0" x2="260" y2="64.0" class="tick"/>
+<text x="260" y="78.0" text-anchor="middle" class="small">3</text>
+<line x1="290" y1="56.0" x2="290" y2="64.0" class="tick"/>
+<text x="290" y="78.0" text-anchor="middle" class="small">4</text>
+<line x1="320" y1="56.0" x2="320" y2="64.0" class="tick"/>
+<text x="320" y="78.0" text-anchor="middle" class="small">5</text>
+<line x1="350" y1="56.0" x2="350" y2="64.0" class="tick"/>
+<text x="350" y="78.0" text-anchor="middle" class="small">6</text>
+<line x1="380" y1="56.0" x2="380" y2="64.0" class="tick"/>
+<text x="380" y="78.0" text-anchor="middle" class="small">7</text>
+<circle cx="230" cy="60.0" r="5" class="point"/>
+<circle cx="350" cy="60.0" r="5" class="point-blue"/>
+<text x="230" y="48.0" text-anchor="middle" class="label">A</text>
+<text x="350" y="48.0" text-anchor="middle" class="label">B</text>
+<path d="M230,52.0 Q290.0,20.0 350,52.0" class="shape" fill="none"/>
+<text x="290.0" y="15.0" text-anchor="middle" class="small">折叠</text>
+</svg>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="120" viewBox="0 0 350 120">
+<style>
+text { font-family: -apple-system, 'Helvetica Neue', sans-serif; }
+.formula { font-size: 16px; fill: #333; font-weight: 500; font-style: italic; }
+.label { font-size: 14px; fill: #333; font-weight: 500; }
+.small { font-size: 12px; fill: #666; }
+.box { stroke: #667eea; stroke-width: 2; fill: rgba(102,126,234,0.05); rx: 8; }
+.highlight { fill: #fef3c7; stroke: #fbbf24; }
+.arrow { fill: #667eea; }
+.line { stroke: #667eea; stroke-width: 2; }
+</style>
+<defs>
+<marker id="arrow-right" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+<path d="M0,0 L0,6 L9,3 z" class="arrow"/>
+</marker>
+</defs>
+<rect x="10" y="10" width="330" height="100" class="box"/>
+<rect x="20" y="25" width="60" height="35" class="highlight" rx="5"/>
+<text x="50" y="50" text-anchor="middle" class="formula">a⊙b</text>
+<text x="95" y="48" class="label">= a(a+b) - 1</text>
+<text x="25" y="85" class="small">例：(1⊙2)⊙3 = ?</text>
+</svg>

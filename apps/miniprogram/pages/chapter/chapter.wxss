@@ -1,0 +1,148 @@
+/* chapter.wxss - 专题详情页样式 */
+
+.container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* 专题头部 */
+.chapter-header {
+  padding: 48rpx 32rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.chapter-icon {
+  font-size: 80rpx;
+  margin-right: 24rpx;
+}
+
+.chapter-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.chapter-title {
+  font-size: 40rpx;
+  font-weight: bold;
+  margin-bottom: 8rpx;
+}
+
+.chapter-desc {
+  font-size: 28rpx;
+  opacity: 0.9;
+}
+
+/* 区块 */
+.section {
+  padding: 30rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 24rpx;
+}
+
+/* 考法卡片 */
+.technique-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.technique-card {
+  background: #fff;
+  border-radius: 12rpx;
+  padding: 28rpx 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.04);
+}
+
+.technique-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.technique-badge {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  color: #fff;
+  padding: 8rpx 20rpx;
+  border-radius: 24rpx;
+  font-size: 24rpx;
+  font-weight: 500;
+  margin-right: 16rpx;
+  flex-shrink: 0;
+}
+
+.technique-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.technique-title {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.technique-meta {
+  font-size: 22rpx;
+  color: #888;
+  margin-top: 4rpx;
+}
+
+.technique-arrow {
+  font-size: 40rpx;
+  color: #ccc;
+}
+
+/* 专题集训入口 */
+.quiz-entry {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  border-radius: 16rpx;
+  padding: 32rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.quiz-left {
+  display: flex;
+  align-items: center;
+}
+
+.quiz-icon {
+  font-size: 56rpx;
+  margin-right: 20rpx;
+}
+
+.quiz-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.quiz-title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.quiz-desc {
+  font-size: 24rpx;
+  opacity: 0.9;
+  margin-top: 4rpx;
+}
+
+.quiz-arrow {
+  font-size: 28rpx;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12rpx 24rpx;
+  border-radius: 24rpx;
+}
+

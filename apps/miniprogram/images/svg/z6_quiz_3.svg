@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 150">
+  <!-- 图1: OC在角AOB内部 -->
+  <g transform="translate(0,0)">
+    <line x1="20" y1="120" x2="80" y2="120" stroke="#333" stroke-width="2"/>
+    <line x1="50" y1="120" x2="20" y2="50" stroke="#333" stroke-width="2"/>
+    <line x1="50" y1="120" x2="80" y2="50" stroke="#333" stroke-width="2"/>
+    <line x1="50" y1="120" x2="50" y2="40" stroke="#333" stroke-width="2"/>
+    <line x1="50" y1="120" x2="35" y2="75" stroke="#2196F3" stroke-width="1.5"/>
+    <line x1="50" y1="120" x2="65" y2="75" stroke="#2196F3" stroke-width="1.5"/>
+    <text x="15" y="50" font-family="Arial" font-size="11">A</text>
+    <text x="80" y="50" font-family="Arial" font-size="11">B</text>
+    <text x="45" y="35" font-family="Arial" font-size="11">C</text>
+    <text x="50" y="135" font-family="Arial" font-size="11">O</text>
+    <text x="25" y="70" font-family="Arial" font-size="10" fill="#2196F3">E</text>
+    <text x="70" y="70" font-family="Arial" font-size="10" fill="#2196F3">F</text>
+    <text x="40" y="15" font-family="Arial" font-size="11">图1</text>
+  </g>
+  <!-- 图2: OC在角AOB外部 -->
+  <g transform="translate(120,0)">
+    <line x1="20" y1="120" x2="100" y2="120" stroke="#333" stroke-width="2"/>
+    <line x1="50" y1="120" x2="20" y2="50" stroke="#333" stroke-width="2"/>
+    <line x1="50" y1="120" x2="100" y2="50" stroke="#333" stroke-width="2"/>
+    <line x1="50" y1="120" x2="110" y2="80" stroke="#333" stroke-width="2"/>
+    <line x1="50" y1="120" x2="35" y2="75" stroke="#2196F3" stroke-width="1.5"/>
+    <line x1="50" y1="120" x2="80" y2="80" stroke="#2196F3" stroke-width="1.5"/>
+    <text x="15" y="50" font-family="Arial" font-size="11">A</text>
+    <text x="100" y="50" font-family="Arial" font-size="11">B</text>
+    <text x="115" y="80" font-family="Arial" font-size="11">C</text>
+    <text x="50" y="135" font-family="Arial" font-size="11">O</text>
+    <text x="25" y="70" font-family="Arial" font-size="10" fill="#2196F3">E</text>
+    <text x="85" y="75" font-family="Arial" font-size="10" fill="#2196F3">F</text>
+    <text x="55" y="15" font-family="Arial" font-size="11">图2</text>
+  </g>
+</svg>
+

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+  <!-- 火柴棒图形：正方形排列 -->
+  <!-- 图1: 1个正方形 -->
+  <rect x="30" y="30" width="30" height="30" fill="none" stroke="#FF5722" stroke-width="3"/>
+  <text x="45" y="80" font-family="Arial" font-size="10" text-anchor="middle">图1</text>
+  <text x="45" y="95" font-family="Arial" font-size="10" text-anchor="middle">5根</text>
+  <!-- 图2: 2个正方形 -->
+  <rect x="100" y="30" width="30" height="30" fill="none" stroke="#FF5722" stroke-width="3"/>
+  <rect x="130" y="30" width="30" height="30" fill="none" stroke="#FF5722" stroke-width="3"/>
+  <text x="130" y="80" font-family="Arial" font-size="10" text-anchor="middle">图2</text>
+  <text x="130" y="95" font-family="Arial" font-size="10" text-anchor="middle">9根</text>
+  <!-- 图3: 3个正方形 -->
+  <rect x="200" y="30" width="30" height="30" fill="none" stroke="#FF5722" stroke-width="3"/>
+  <rect x="230" y="30" width="30" height="30" fill="none" stroke="#FF5722" stroke-width="3"/>
+  <rect x="260" y="30" width="30" height="30" fill="none" stroke="#FF5722" stroke-width="3"/>
+  <text x="245" y="80" font-family="Arial" font-size="10" text-anchor="middle">图3</text>
+  <text x="245" y="95" font-family="Arial" font-size="10" text-anchor="middle">13根</text>
+  <!-- 省略号 -->
+  <text x="340" y="50" font-family="Arial" font-size="20" text-anchor="middle">...</text>
+</svg>

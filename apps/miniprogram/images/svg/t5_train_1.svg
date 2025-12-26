@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="80" viewBox="0 0 450 80">
+<style>
+text { font-family: -apple-system, 'Helvetica Neue', sans-serif; }
+.axis { stroke: #333; stroke-width: 2; fill: none; }
+.tick { stroke: #333; stroke-width: 1.5; }
+.point { fill: #e74c3c; }
+.point-blue { fill: #667eea; }
+.point-green { fill: #10B981; }
+.label { font-size: 14px; fill: #333; font-weight: 500; }
+.small { font-size: 12px; fill: #666; }
+.title { font-size: 16px; fill: #333; font-weight: 600; }
+.shape { stroke: #667eea; stroke-width: 2; fill: none; }
+.shape-fill { stroke: #667eea; stroke-width: 2; fill: rgba(102,126,234,0.1); }
+.segment { stroke: #667eea; stroke-width: 3; }
+.segment-red { stroke: #e74c3c; stroke-width: 2; stroke-dasharray: 5,3; }
+.arrow { fill: #333; }
+.table-line { stroke: #333; stroke-width: 1; }
+.table-header { fill: #f0f4ff; }
+</style>
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+<path d="M0,0 L0,6 L9,3 z" class="arrow"/>
+</marker>
+</defs>
+<line x1="30" y1="40.0" x2="420" y2="40.0" class="axis" marker-end="url(#arrow)"/>
+<line x1="225.0" y1="35.0" x2="225.0" y2="45.0" class="tick"/>
+<text x="225.0" y="60.0" text-anchor="middle" class="small">0</text>
+<circle cx="95.5" cy="40.0" r="5" class="point"/>
+<text x="95.5" y="28.0" text-anchor="middle" class="label">A</text>
+<circle cx="317.5" cy="40.0" r="5" class="point-blue"/>
+<text x="317.5" y="28.0" text-anchor="middle" class="label">B</text>
+<circle cx="225.0" cy="40.0" r="5" class="point-green"/>
+<text x="225.0" y="28.0" text-anchor="middle" class="label">C</text>
+</svg>

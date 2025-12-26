@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <!-- 训练2：∠COD=∠EOF=90°，OE平分∠AOC，OF平分∠BOC -->
+  <!-- 原点O -->
+  <circle cx="150" cy="150" r="4" fill="#333"/>
+  <!-- 直线AB -->
+  <line x1="50" y1="150" x2="270" y2="150" stroke="#333" stroke-width="2"/>
+  <!-- 射线OC（向上） -->
+  <line x1="150" y1="150" x2="150" y2="40" stroke="#333" stroke-width="2"/>
+  <!-- 射线OD（向右斜上） -->
+  <line x1="150" y1="150" x2="230" y2="80" stroke="#333" stroke-width="2"/>
+  <!-- 射线OE（平分∠AOC） -->
+  <line x1="150" y1="150" x2="80" y2="70" stroke="#2196F3" stroke-width="1.5"/>
+  <!-- 射线OF（平分∠BOC） -->
+  <line x1="150" y1="150" x2="220" y2="60" stroke="#E91E63" stroke-width="1.5"/>
+  <!-- 标签 -->
+  <text x="150" y="170" font-family="Arial" font-size="14" text-anchor="middle">O</text>
+  <text x="40" y="155" font-family="Arial" font-size="14">A</text>
+  <text x="280" y="155" font-family="Arial" font-size="14">B</text>
+  <text x="155" y="35" font-family="Arial" font-size="14">C</text>
+  <text x="235" y="75" font-family="Arial" font-size="14">D</text>
+  <text x="70" y="65" font-family="Arial" font-size="14" fill="#2196F3">E</text>
+  <text x="225" y="55" font-family="Arial" font-size="14" fill="#E91E63">F</text>
+</svg>

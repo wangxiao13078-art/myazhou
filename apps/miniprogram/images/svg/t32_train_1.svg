@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80">
+  <!-- 线段中点问题 -->
+  <line x1="50" y1="40" x2="350" y2="40" stroke="#333" stroke-width="2"/>
+  <circle cx="50" cy="40" r="4" fill="#333"/>
+  <circle cx="350" cy="40" r="4" fill="#333"/>
+  <circle cx="200" cy="40" r="3" fill="#2196F3"/>
+  <text x="50" y="65" font-family="Arial" font-size="14" text-anchor="middle">A</text>
+  <text x="200" y="65" font-family="Arial" font-size="14" text-anchor="middle" fill="#2196F3">M</text>
+  <text x="350" y="65" font-family="Arial" font-size="14" text-anchor="middle">B</text>
+  <text x="200" y="20" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">M是AB的中点</text>
+</svg>
+

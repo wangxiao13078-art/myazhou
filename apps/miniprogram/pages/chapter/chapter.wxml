@@ -1,0 +1,51 @@
+<!--chapter.wxml - 专题详情页-->
+<view class="container">
+  <!-- 专题头部 -->
+  <view class="chapter-header" style="background-color: {{chapter.color}};">
+    <text class="chapter-icon">{{chapter.icon}}</text>
+    <view class="chapter-info">
+      <text class="chapter-title">{{chapter.name}}</text>
+      <text class="chapter-desc">{{chapter.desc}}</text>
+    </view>
+  </view>
+
+  <!-- 考法列表 -->
+  <view class="section">
+    <view class="section-title">📚 考法列表 ({{chapter.techniques.length}}个)</view>
+    
+    <view class="technique-list">
+      <view 
+        class="technique-card"
+        wx:for="{{techniquesWithCount}}"
+        wx:key="id"
+        bindtap="goToProblem"
+        data-id="{{item.id}}"
+      >
+        <view class="technique-left">
+          <text class="technique-badge">{{item.name}}</text>
+          <view class="technique-info">
+            <text class="technique-title">{{item.title}}</text>
+            <text class="technique-meta">1例题 + {{item.trainCount}}训练</text>
+          </view>
+        </view>
+        <view class="technique-right">
+          <text class="technique-arrow">›</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 专题集训入口 -->
+  <view class="section">
+    <view class="quiz-entry" bindtap="goToQuiz">
+      <view class="quiz-left">
+        <text class="quiz-icon">💪</text>
+        <view class="quiz-info">
+          <text class="quiz-title">专题{{chapterId}}集训</text>
+          <text class="quiz-desc">检验学习成果</text>
+        </view>
+      </view>
+      <text class="quiz-arrow">开始 ›</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150">
+  <!-- 角COD=90°, OE平分角AOC, OF平分角BOC -->
+  <line x1="30" y1="100" x2="170" y2="100" stroke="#333" stroke-width="2"/>
+  <line x1="100" y1="100" x2="100" y2="20" stroke="#333" stroke-width="2"/>
+  <line x1="100" y1="100" x2="40" y2="40" stroke="#333" stroke-width="2"/>
+  <line x1="100" y1="100" x2="160" y2="40" stroke="#333" stroke-width="2"/>
+  <line x1="100" y1="100" x2="60" y2="60" stroke="#2196F3" stroke-width="1.5"/>
+  <line x1="100" y1="100" x2="140" y2="60" stroke="#2196F3" stroke-width="1.5"/>
+  <!-- 标签 -->
+  <text x="25" y="105" font-family="Arial" font-size="12">A</text>
+  <text x="170" y="105" font-family="Arial" font-size="12">B</text>
+  <text x="95" y="15" font-family="Arial" font-size="12">C</text>
+  <text x="35" y="35" font-family="Arial" font-size="12">D</text>
+  <text x="100" y="115" font-family="Arial" font-size="12">O</text>
+  <text x="50" y="55" font-family="Arial" font-size="11" fill="#2196F3">E</text>
+  <text x="145" y="55" font-family="Arial" font-size="11" fill="#2196F3">F</text>
+  <!-- 直角标记 -->
+  <path d="M 100 85 L 115 85 L 115 100" fill="none" stroke="#666" stroke-width="1"/>
+</svg>
+

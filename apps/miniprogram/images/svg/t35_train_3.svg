@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <line x1="20" y1="50" x2="380" y2="50" stroke="#333" stroke-width="2"/>
+  <polygon points="380,50 370,45 370,55" fill="#333"/>
+  <circle cx="180" cy="50" r="4" fill="#333"/>
+  <line x1="60" y1="45" x2="60" y2="55" stroke="#333" stroke-width="1"/>
+  <line x1="300" y1="45" x2="300" y2="55" stroke="#333" stroke-width="1"/>
+  <circle cx="100" cy="50" r="4" fill="#2196F3"/>
+  <circle cx="260" cy="50" r="4" fill="#E91E63"/>
+  <text x="180" y="75" font-family="Arial" font-size="12" text-anchor="middle">0</text>
+  <text x="60" y="75" font-family="Arial" font-size="12" text-anchor="middle">-2</text>
+  <text x="300" y="75" font-family="Arial" font-size="12" text-anchor="middle">2</text>
+  <text x="100" y="35" font-family="Arial" font-size="14" text-anchor="middle" fill="#2196F3">M</text>
+  <text x="260" y="35" font-family="Arial" font-size="14" text-anchor="middle" fill="#E91E63">N</text>
+</svg>

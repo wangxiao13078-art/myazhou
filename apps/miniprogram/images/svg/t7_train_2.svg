@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="140" viewBox="0 0 350 140">
+<style>
+text { font-family: -apple-system, 'Helvetica Neue', sans-serif; }
+.axis { stroke: #333; stroke-width: 2; fill: none; }
+.tick { stroke: #333; stroke-width: 1.5; }
+.point { fill: #e74c3c; }
+.point-blue { fill: #667eea; }
+.point-green { fill: #10B981; }
+.label { font-size: 14px; fill: #333; font-weight: 500; }
+.small { font-size: 12px; fill: #666; }
+.title { font-size: 16px; fill: #333; font-weight: 600; }
+.shape { stroke: #667eea; stroke-width: 2; fill: none; }
+.shape-fill { stroke: #667eea; stroke-width: 2; fill: rgba(102,126,234,0.1); }
+.segment { stroke: #667eea; stroke-width: 3; }
+.segment-red { stroke: #e74c3c; stroke-width: 2; stroke-dasharray: 5,3; }
+.arrow { fill: #333; }
+.table-line { stroke: #333; stroke-width: 1; }
+.table-header { fill: #f0f4ff; }
+</style>
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+<path d="M0,0 L0,6 L9,3 z" class="arrow"/>
+</marker>
+</defs>
+<rect x="20" y="15" width="320" height="35" class="table-header"/>
+<line x1="20" y1="15" x2="340" y2="15" class="table-line"/>
+<line x1="20" y1="50" x2="340" y2="50" class="table-line"/>
+<line x1="20" y1="85" x2="340" y2="85" class="table-line"/>
+<line x1="20" y1="120" x2="340" y2="120" class="table-line"/>
+<line x1="20" y1="15" x2="20" y2="120" class="table-line"/>
+<line x1="100" y1="15" x2="100" y2="120" class="table-line"/>
+<line x1="180" y1="15" x2="180" y2="120" class="table-line"/>
+<line x1="260" y1="15" x2="260" y2="120" class="table-line"/>
+<line x1="340" y1="15" x2="340" y2="120" class="table-line"/>
+<text x="60.0" y="37.5" text-anchor="middle" class="label">日期</text>
+<text x="140.0" y="37.5" text-anchor="middle" class="label">计划</text>
+<text x="220.0" y="37.5" text-anchor="middle" class="label">实际</text>
+<text x="300.0" y="37.5" text-anchor="middle" class="label">差额</text>
+<text x="60.0" y="72.5" text-anchor="middle" class="small">周一</text>
+<text x="140.0" y="72.5" text-anchor="middle" class="small">180</text>
+<text x="220.0" y="72.5" text-anchor="middle" class="small">175</text>
+<text x="300.0" y="72.5" text-anchor="middle" class="small">-5</text>
+<text x="60.0" y="107.5" text-anchor="middle" class="small">周二</text>
+<text x="140.0" y="107.5" text-anchor="middle" class="small">180</text>
+<text x="220.0" y="107.5" text-anchor="middle" class="small">186</text>
+<text x="300.0" y="107.5" text-anchor="middle" class="small">+6</text>
+</svg>

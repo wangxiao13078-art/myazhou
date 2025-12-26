@@ -1,0 +1,113 @@
+<!--problem.wxml - 题目详情页（仿PWA样式）-->
+<view class="container" wx:if="{{problem}}">
+  <!-- 顶部标签和难度 -->
+  <view class="header-row">
+    <view class="tags-row">
+      <text class="tag" wx:for="{{problem.tags}}" wx:key="*this">#{{item}}</text>
+    </view>
+    <view class="difficulty-row">
+      <text class="difficulty-label">难度</text>
+      <text class="star {{index < problem.difficulty ? 'filled' : ''}}" wx:for="{{5}}" wx:key="*this">★</text>
+    </view>
+  </view>
+
+  <!-- 题目标题 -->
+  <view class="title-section">
+    <text class="problem-title">{{problem.title}}</text>
+  </view>
+
+  <!-- 分隔线 -->
+  <view class="divider"></view>
+
+  <!-- 题目内容卡片 -->
+  <view class="content-card">
+    <text class="content-text" selectable="true" decode="true">{{contentText}}</text>
+  </view>
+
+  <!-- 题目图形 -->
+  <view class="svg-card" wx:if="{{svgPath}}">
+    <view class="card-header">
+      <text class="card-icon">📐</text>
+      <text class="card-title">题目图形</text>
+    </view>
+    <view class="svg-container">
+      <image 
+        class="svg-image" 
+        src="{{svgPath}}" 
+        mode="widthFix"
+        show-menu-by-longpress="true"
+        binderror="onSvgError"
+        bindload="onSvgLoad"
+      ></image>
+    </view>
+  </view>
+
+  <!-- 方法点拨 -->
+  <view class="method-card" wx:if="{{problem.methodName}}">
+    <view class="method-header">
+      <text class="method-icon">📖</text>
+      <text class="method-label">一本方法点拨</text>
+    </view>
+    <text class="method-name">{{problem.methodName}}</text>
+  </view>
+
+  <!-- 分步解析引导 -->
+  <view class="steps-section" wx:if="{{problem.steps.length > 0}}">
+    <view class="section-header">
+      <view class="section-line"></view>
+      <text class="section-title">分步解析引导</text>
+      <view class="section-line"></view>
+    </view>
+
+    <view class="steps-list">
+      <view 
+        class="step-item {{unlockedSteps[index] ? 'expanded' : ''}}"
+        wx:for="{{problem.steps}}"
+        wx:key="title"
+      >
+        <view class="step-header" bindtap="toggleStep" data-index="{{index}}">
+          <text class="step-title">{{item.title}}</text>
+          <text class="step-arrow">{{unlockedSteps[index] ? '▼' : '▶'}}</text>
+        </view>
+        <view class="step-body" wx:if="{{unlockedSteps[index]}}">
+          <text class="step-content" selectable="true">{{stepTexts[index]}}</text>
+          <view class="step-formula" wx:if="{{item.formula}}">
+            <text class="formula-text">{{formulaTexts[index]}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 针对训练 -->
+  <view class="training-section" wx:if="{{trainings.length > 0}}">
+    <view class="training-header">
+      <text class="training-icon">💪</text>
+      <text class="training-title">针对训练 ({{trainings.length}}题)</text>
+    </view>
+    <view class="training-list">
+      <view 
+        class="training-item"
+        wx:for="{{trainings}}"
+        wx:key="id"
+        bindtap="goToTraining"
+        data-id="{{item.id}}"
+      >
+        <view class="training-index">{{index + 1}}</view>
+        <text class="training-name">{{item.title}}</text>
+        <text class="training-arrow">›</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部操作栏 -->
+  <view class="bottom-bar">
+    <button class="btn-back" bindtap="goBack">返回</button>
+    <button class="btn-next" bindtap="nextProblem" wx:if="{{trainings.length > 0}}">下一题 ›</button>
+  </view>
+</view>
+
+<!-- 加载中 -->
+<view class="loading" wx:if="{{!problem}}">
+  <text class="loading-text">加载中...</text>
+</view>

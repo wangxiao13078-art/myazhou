@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <line x1="20" y1="50" x2="380" y2="50" stroke="#333" stroke-width="2"/>
+  <polygon points="380,50 370,45 370,55" fill="#333"/>
+  <circle cx="100" cy="50" r="4" fill="#2196F3"/>
+  <circle cx="280" cy="50" r="4" fill="#E91E63"/>
+  <circle cx="180" cy="50" r="4" fill="#333"/>
+  <line x1="100" y1="45" x2="100" y2="55" stroke="#333" stroke-width="1"/>
+  <line x1="280" y1="45" x2="280" y2="55" stroke="#333" stroke-width="1"/>
+  <text x="100" y="75" font-family="Arial" font-size="12" text-anchor="middle">-8</text>
+  <text x="180" y="75" font-family="Arial" font-size="12" text-anchor="middle">0</text>
+  <text x="280" y="75" font-family="Arial" font-size="12" text-anchor="middle">10</text>
+  <text x="100" y="35" font-family="Arial" font-size="14" text-anchor="middle" fill="#2196F3">A</text>
+  <text x="280" y="35" font-family="Arial" font-size="14" text-anchor="middle" fill="#E91E63">B</text>
+  <circle cx="150" cy="50" r="3" fill="#4CAF50"/>
+  <text x="150" y="35" font-family="Arial" font-size="14" text-anchor="middle" fill="#4CAF50">P</text>
+  <path d="M 155 48 L 175 48" stroke="#4CAF50" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <defs><marker id="arrowGreen" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4CAF50"/></marker></defs>
+</svg>

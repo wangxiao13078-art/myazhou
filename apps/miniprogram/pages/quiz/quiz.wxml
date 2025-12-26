@@ -1,0 +1,78 @@
+<!--quiz.wxml - 专题集训页-->
+<view class="container">
+  <!-- 头部 -->
+  <view class="header">
+    <text class="header-title">💪 专题集训</text>
+    <text class="header-subtitle">选择专题开始练习</text>
+  </view>
+
+  <!-- 专题列表 -->
+  <view class="quiz-list">
+    <view 
+      class="quiz-card"
+      wx:for="{{quizList}}"
+      wx:key="id"
+      bindtap="showQuizProblems"
+      data-id="{{item.id}}"
+      style="border-left-color: {{item.color}};"
+    >
+      <view class="quiz-left">
+        <text class="quiz-icon">{{item.icon}}</text>
+        <view class="quiz-info">
+          <text class="quiz-name">{{item.name}}</text>
+          <text class="quiz-count">共 {{item.count}} 题</text>
+        </view>
+      </view>
+      <view class="quiz-right">
+        <text class="quiz-start">查看 ›</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 期末冲刺 -->
+  <view class="section">
+    <view class="section-title">📝 期末冲刺练</view>
+    <view class="final-quiz" bindtap="startFinalQuiz">
+      <view class="final-left">
+        <text class="final-icon">🎯</text>
+        <view class="final-info">
+          <text class="final-name">综合模拟测试</text>
+          <text class="final-desc">共 {{finalQuizList.length}} 题，涵盖6大专题</text>
+        </view>
+      </view>
+      <text class="final-arrow">查看题目 ›</text>
+    </view>
+  </view>
+</view>
+
+<!-- 题目列表弹窗 - 使用 wx:if 确保 currentQuiz 存在 -->
+<view wx:if="{{showQuizDetail && currentQuiz}}">
+  <view class="modal-mask" bindtap="hideQuizDetail"></view>
+  <view class="modal-content show">
+    <view class="modal-header" style="background-color: {{currentQuiz.color}};">
+      <text class="modal-icon">{{currentQuiz.icon}}</text>
+      <text class="modal-title">{{currentQuiz.name}} ({{currentQuiz.count}}题)</text>
+      <text class="modal-close" bindtap="hideQuizDetail">×</text>
+    </view>
+    <scroll-view class="modal-body" scroll-y>
+      <view class="problem-list">
+        <view 
+          class="problem-item"
+          wx:for="{{currentQuiz.problems}}"
+          wx:key="id"
+          bindtap="startProblem"
+          data-id="{{item.id}}"
+        >
+          <view class="problem-index">{{index + 1}}</view>
+          <view class="problem-info">
+            <text class="problem-title">{{item.title || item.content}}</text>
+            <view class="problem-tags" wx:if="{{item.tags && item.tags.length > 0}}">
+              <text class="problem-tag" wx:for="{{item.tags}}" wx:for-item="tag" wx:key="*this">{{tag}}</text>
+            </view>
+          </view>
+          <text class="problem-arrow">›</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

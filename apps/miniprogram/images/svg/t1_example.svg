@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="90" viewBox="0 0 500 90">
+<style>
+text { font-family: -apple-system, 'Helvetica Neue', sans-serif; }
+.axis { stroke: #333; stroke-width: 2; fill: none; }
+.tick { stroke: #333; stroke-width: 1.5; }
+.grid { stroke: #ddd; stroke-width: 0.5; }
+.point { fill: #e74c3c; }
+.point-blue { fill: #667eea; }
+.label { font-size: 14px; fill: #333; font-weight: 500; }
+.small { font-size: 12px; fill: #666; }
+.shape { stroke: #667eea; stroke-width: 2; fill: none; }
+.shape-fill { stroke: #667eea; stroke-width: 2; fill: rgba(102,126,234,0.1); }
+.segment { stroke: #667eea; stroke-width: 3; }
+.arrow { fill: #333; }
+</style>
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+<path d="M0,0 L0,6 L9,3 z" class="arrow"/>
+</marker>
+<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+<path d="M0,0 L0,6 L9,3 z" fill="#667eea"/>
+</marker>
+</defs>
+<line x1="40" y1="60" x2="470" y2="60" class="axis" marker-end="url(#arrow)"/>
+<line x1="40.0" y1="56" x2="40.0" y2="64" class="tick"/>
+<text x="40.0" y="78" text-anchor="middle" class="small">-5</text>
+<line x1="61.0" y1="56" x2="61.0" y2="64" class="tick"/>
+<text x="61.0" y="78" text-anchor="middle" class="small">-4</text>
+<line x1="82.0" y1="56" x2="82.0" y2="64" class="tick"/>
+<text x="82.0" y="78" text-anchor="middle" class="small">-3</text>
+<line x1="103.0" y1="56" x2="103.0" y2="64" class="tick"/>
+<text x="103.0" y="78" text-anchor="middle" class="small">-2</text>
+<line x1="124.0" y1="56" x2="124.0" y2="64" class="tick"/>
+<text x="124.0" y="78" text-anchor="middle" class="small">-1</text>
+<line x1="145.0" y1="56" x2="145.0" y2="64" class="tick"/>
+<text x="145.0" y="78" text-anchor="middle" class="small">0</text>
+<line x1="166.0" y1="56" x2="166.0" y2="64" class="tick"/>
+<text x="166.0" y="78" text-anchor="middle" class="small">1</text>
+<line x1="187.0" y1="56" x2="187.0" y2="64" class="tick"/>
+<text x="187.0" y="78" text-anchor="middle" class="small">2</text>
+<line x1="208.0" y1="56" x2="208.0" y2="64" class="tick"/>
+<text x="208.0" y="78" text-anchor="middle" class="small">3</text>
+<line x1="229.0" y1="56" x2="229.0" y2="64" class="tick"/>
+<text x="229.0" y="78" text-anchor="middle" class="small">4</text>
+<line x1="250.0" y1="56" x2="250.0" y2="64" class="tick"/>
+<text x="250.0" y="78" text-anchor="middle" class="small">5</text>
+<line x1="271.0" y1="56" x2="271.0" y2="64" class="tick"/>
+<text x="271.0" y="78" text-anchor="middle" class="small">6</text>
+<line x1="292.0" y1="56" x2="292.0" y2="64" class="tick"/>
+<text x="292.0" y="78" text-anchor="middle" class="small">7</text>
+<line x1="313.0" y1="56" x2="313.0" y2="64" class="tick"/>
+<text x="313.0" y="78" text-anchor="middle" class="small">8</text>
+<line x1="334.0" y1="56" x2="334.0" y2="64" class="tick"/>
+<text x="334.0" y="78" text-anchor="middle" class="small">9</text>
+<line x1="355.0" y1="56" x2="355.0" y2="64" class="tick"/>
+<text x="355.0" y="78" text-anchor="middle" class="small">10</text>
+<line x1="376.0" y1="56" x2="376.0" y2="64" class="tick"/>
+<text x="376.0" y="78" text-anchor="middle" class="small">11</text>
+<line x1="397.0" y1="56" x2="397.0" y2="64" class="tick"/>
+<text x="397.0" y="78" text-anchor="middle" class="small">12</text>
+<line x1="418.0" y1="56" x2="418.0" y2="64" class="tick"/>
+<text x="418.0" y="78" text-anchor="middle" class="small">13</text>
+<line x1="439.0" y1="56" x2="439.0" y2="64" class="tick"/>
+<text x="439.0" y="78" text-anchor="middle" class="small">14</text>
+<line x1="460.0" y1="56" x2="460.0" y2="64" class="tick"/>
+<text x="460.0" y="78" text-anchor="middle" class="small">15</text>
+<circle cx="103.0" cy="40" r="4" class="point-blue"/>
+<text x="103.0" y="28" text-anchor="middle" class="label">B</text>
+<circle cx="355.0" cy="40" r="4" class="point-blue"/>
+<text x="355.0" y="28" text-anchor="middle" class="label">A</text>
+<line x1="103.0" y1="40" x2="355.0" y2="40" class="segment"/>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+  <!-- 五边形扩展图形 -->
+  <!-- s1 = 1 -->
+  <polygon points="45,20 60,35 55,55 35,55 30,35" fill="none" stroke="#9C27B0" stroke-width="2"/>
+  <text x="45" y="75" font-family="Arial" font-size="10" text-anchor="middle">s₁=1</text>
+  <!-- s2 = 4 -->
+  <polygon points="120,15 140,30 135,55 105,55 100,30" fill="none" stroke="#9C27B0" stroke-width="2"/>
+  <polygon points="140,30 155,45 150,65 125,65 120,45" fill="none" stroke="#9C27B0" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="130" y="85" font-family="Arial" font-size="10" text-anchor="middle">s₂=4</text>
+  <!-- s3 = 10 -->
+  <polygon points="210,10 235,30 230,60 190,60 185,30" fill="none" stroke="#9C27B0" stroke-width="2"/>
+  <polygon points="235,30 255,45 250,70 220,70 215,45" fill="none" stroke="#9C27B0" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <polygon points="255,45 270,60 265,80 245,80 240,60" fill="none" stroke="#9C27B0" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="230" y="95" font-family="Arial" font-size="10" text-anchor="middle">s₃=10</text>
+  <!-- 省略号 -->
+  <text x="340" y="50" font-family="Arial" font-size="20" text-anchor="middle">...</text>
+</svg>

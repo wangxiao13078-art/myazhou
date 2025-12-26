@@ -1,0 +1,36 @@
+<!--final.wxml - 期末冲刺练页面-->
+<view class="container">
+  <view class="header">
+    <text class="header-title">🎯 期末冲刺练</text>
+    <text class="header-subtitle">共 {{problemList.length}} 道综合练习题</text>
+  </view>
+
+  <view class="problem-list">
+    <view 
+      class="problem-card"
+      wx:for="{{problemList}}"
+      wx:key="id"
+      bindtap="goToProblem"
+      data-id="{{item.id}}"
+    >
+      <view class="problem-number">{{index + 1}}</view>
+      <view class="problem-content">
+        <text class="problem-title">{{item.title}}</text>
+        <view class="problem-tags">
+          <text class="tag" wx:for="{{item.tags}}" wx:for-item="tag" wx:key="*this">{{tag}}</text>
+        </view>
+      </view>
+      <view class="problem-meta">
+        <view class="difficulty">
+          <text class="star" wx:for="{{item.difficulty}}" wx:key="*this">★</text>
+        </view>
+        <text class="arrow">›</text>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{problemList.length === 0}}" class="empty">
+    <text class="empty-text">暂无题目</text>
+  </view>
+</view>
+

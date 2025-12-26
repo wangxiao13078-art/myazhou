@@ -1,0 +1,32 @@
+<svg width="550" height="120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow15" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- 数轴 -->
+  <line x1="30" y1="60" x2="520" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrow15)"/>
+  
+  <!-- 点A：-26 -->
+  <line x1="80" y1="55" x2="80" y2="65" stroke="#333" stroke-width="2"/>
+  <circle cx="80" cy="60" r="4" fill="#F44336"/>
+  <text x="80" y="85" text-anchor="middle" font-size="12">-26</text>
+  <text x="80" y="40" text-anchor="middle" font-size="14" font-style="italic">A</text>
+  
+  <!-- 点B：-10 -->
+  <line x1="200" y1="55" x2="200" y2="65" stroke="#333" stroke-width="2"/>
+  <circle cx="200" cy="60" r="4" fill="#2196F3"/>
+  <text x="200" y="85" text-anchor="middle" font-size="12">-10</text>
+  <text x="200" y="40" text-anchor="middle" font-size="14" font-style="italic">B</text>
+  
+  <!-- 原点0 -->
+  <line x1="280" y1="55" x2="280" y2="65" stroke="#333" stroke-width="2"/>
+  <text x="280" y="85" text-anchor="middle" font-size="12">0</text>
+  
+  <!-- 点C：10 -->
+  <line x1="360" y1="55" x2="360" y2="65" stroke="#333" stroke-width="2"/>
+  <circle cx="360" cy="60" r="4" fill="#4CAF50"/>
+  <text x="360" y="85" text-anchor="middle" font-size="12">10</text>
+  <text x="360" y="40" text-anchor="middle" font-size="14" font-style="italic">C</text>
+</svg>

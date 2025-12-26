@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120">
+  <!-- 钟表角度 -->
+  <circle cx="100" cy="60" r="50" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="100" y1="60" x2="100" y2="20" stroke="#333" stroke-width="3"/>
+  <line x1="100" y1="60" x2="140" y2="60" stroke="#2196F3" stroke-width="2"/>
+  <circle cx="100" cy="60" r="4" fill="#333"/>
+  <text x="95" y="15" font-family="Arial" font-size="10">12</text>
+  <text x="145" y="65" font-family="Arial" font-size="10">3</text>
+  <text x="97" y="115" font-family="Arial" font-size="10">6</text>
+  <text x="50" y="65" font-family="Arial" font-size="10">9</text>
+</svg>
