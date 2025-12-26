@@ -6442,26 +6442,26 @@ A. $-12$  B. $-2$ 或 $-12$  C. $2$  D. $-2$`,
     semester: 'up',
     category: '专题集训',
     title: '专题集训二 第7题',
-    difficulty: 4,
-    tags: ['有理数', '新定义'],
-    content: `定义一种新运算 "$\\otimes$"：对于任意有理数 $a$、$b$，定义一种新运算：$a \\otimes b = a - b^2$。例如 $3 \\otimes 1 = 3 \\times 3 + 1 = 7$，则 $(-2) \\otimes $______$= $______。
+    difficulty: 3,
+    tags: ['数轴', '中点'],
+    content: `数轴上有 $A$，$B$，$C$ 三点，$A$，$B$ 两点所表示的数如图所示。若 $BC = 3$，则 $AC$ 的中点所表示的数为______。
 
-若有 $a \\nabla b = a - b^2$，例如 $2 \\nabla 3 = 2 - 3^2$，则 $(2 \\nabla 2) \\nabla 2 = $______。`,
+[图示：数轴上 $A$ 表示 $-1$，$B$ 表示 $5$]`,
     steps: [
       {
-        title: '理解新运算定义',
-        content: '$a \\otimes b = a \\times a + b = a^2 + b$\n$a \\nabla b = a - b^2$',
+        title: '分析题目条件',
+        content: '从图可知：$A$ 点表示 $-1$，$B$ 点表示 $5$\n$BC = 3$，所以 $C$ 可能在 $B$ 的左边或右边',
         formula: ''
       },
       {
-        title: '计算 $(-2) \\otimes b$',
-        content: '$(-2) \\otimes b = (-2)^2 + b = 4 + b$\n根据题目填空要求确定 $b$ 的值',
-        formula: '(-2) \\otimes 3 = 4 + 3 = 7'
+        title: '确定 $C$ 点位置',
+        content: '若 $C$ 在 $B$ 右边：$C = 5 + 3 = 8$\n若 $C$ 在 $B$ 左边：$C = 5 - 3 = 2$',
+        formula: ''
       },
       {
-        title: '计算 $(2 \\nabla 2) \\nabla 2$',
-        content: '先算内层：$2 \\nabla 2 = 2 - 2^2 = 2 - 4 = -2$\n再算外层：$(-2) \\nabla 2 = -2 - 2^2 = -2 - 4 = -6$',
-        formula: '(2 \\nabla 2) \\nabla 2 = -6'
+        title: '求 $AC$ 中点',
+        content: '情况1：$C = 8$ 时，$AC$ 中点 $= \\frac{-1 + 8}{2} = \\frac{7}{2} = 3.5$\n情况2：$C = 2$ 时，$AC$ 中点 $= \\frac{-1 + 2}{2} = \\frac{1}{2} = 0.5$',
+        formula: '\\text{答案：} 3.5 \\text{ 或 } 0.5'
       }
     ]
   }
