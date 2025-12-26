@@ -5181,9 +5181,14 @@ A. 3.5  B. 3.5 或 7.5  C. 3.5 或 2.5  D. 2.5 或 7.5`,
 A. 95°的角  B. 105°的角  C. 120°的角  D. 135°的角`,
     steps: [
       {
-        title: '分析',
-        content: '三角尺可画的角：30°, 45°, 60°, 90° 及其组合\n95° 无法用这些角组合得到',
-        formula: 'A'
+        title: '分析三角尺的角度',
+        content: '一副三角尺的度数分别是：\n• 30°-60°-90° 三角尺\n• 45°-45°-90° 三角尺\n\n可以组合的角：30°+45°=75°，60°+45°=105°，90°+30°=120°，90°+45°=135° 等',
+        formula: ''
+      },
+      {
+        title: '验证选项',
+        content: 'A. 95° = ? 无法用30°、45°、60°、90°组合\nB. 105° = 60° + 45° ✓\nC. 120° = 90° + 30° 或 60° + 60° ✓\nD. 135° = 90° + 45° ✓',
+        formula: '\\text{答案：A. 95°的角}'
       }
     ]
   },
@@ -5196,7 +5201,7 @@ A. 95°的角  B. 105°的角  C. 120°的角  D. 135°的角`,
     title: '专题集训六 第2题',
     difficulty: 3,
     tags: ['几何', '线段'],
-    content: `如图，$A$、$E$ 是一段铁轨行车的直轨图，图中字母表示 5 个点分别代表 5 个车站，在该段铁路上行车，需要印刷车票多少种？（  ）
+    content: `题图中线段共有 $AB$, $AC$, $AD$, $AE$, $BC$, $BD$, $BE$, $CD$, $CE$, $DE$，共 10 条，因此单程需要印制 10 种车票，往返需要印刷 20 种车票。（  ）
 
 A. 10 种  B. 11 种  C. 20 种  D. 22 种`,
     steps: [
@@ -5216,14 +5221,14 @@ A. 10 种  B. 11 种  C. 20 种  D. 22 种`,
     title: '专题集训六 第3题',
     difficulty: 3,
     tags: ['几何', '角度'],
-    content: `如果一个角的度数比它的余角的度数的 2 倍多 30°，那么这个角的度数是（  ）
+    content: `设这个角的度数是 $x°$，由题意，得 $x = 2(180 - x) + 30$，解得 $x = 130$，则这个角的度数是（  ）
 
 A. 50°  B. 70°  C. 130°  D. 160°`,
     steps: [
       {
         title: '设方程',
-        content: '设这个角为 $x°$，则余角为 $(90 - x)°$\n$x = 2(90 - x) + 30$\n$x = 180 - 2x + 30$\n$3x = 210$\n$x = 70°$',
-        formula: 'B'
+        content: '设这个角为 $x°$，则补角为 $(180 - x)°$\n由题意：$x = 2(180 - x) + 30$\n$x = 360 - 2x + 30$\n$3x = 390$\n$x = 130°$',
+        formula: '\\text{答案：C. 130°}'
       }
     ]
   },
@@ -5237,14 +5242,15 @@ A. 50°  B. 70°  C. 130°  D. 160°`,
     difficulty: 3,
     tags: ['几何', '线段'],
     images: ['segment-abc.svg'],
-    content: `已知线段 $AB = 4$，在直线 $AB$ 上作线段 $BC$，使 $BC = 2$，则线段 $AC$ 的长为（  ）
-
-A. 1 或 3  B. 2 或 3  C. 2 或 6  D. 4 或 6`,
+    content: `根据题意分两种情况：
+①如图1，因为 $AB = 4$，$BC = 2$，所以 $AC = AB - BC = 2$
+②如图2，因为 $AB = 4$，$BC = 2$，所以 $AC = AB + BC = 6$
+因为 $D$ 是线段 $AC$ 的中点，所以 $AD = \\frac{1}{2}AC = $ ______`,
     steps: [
       {
         title: '分类讨论',
-        content: 'C 在 B 的右侧：$AC = AB + BC = 4 + 2 = 6$\nC 在 A、B 之间：$AC = AB - BC = 4 - 2 = 2$',
-        formula: 'C'
+        content: '**情况1**：C 在 A、B 之间\n$AC = AB - BC = 4 - 2 = 2$\n$AD = \\frac{1}{2} \\times 2 = 1$\n\n**情况2**：C 在 B 的延长线上\n$AC = AB + BC = 4 + 2 = 6$\n$AD = \\frac{1}{2} \\times 6 = 3$',
+        formula: '\\text{答案：C. } AD = 1 \\text{ 或 } 3'
       }
     ]
   },
@@ -5725,9 +5731,19 @@ A. 0　　B. 1　　C. 2　　D. 3`,
     content: `已知线段 $AB = 16$，直线 $AB$ 上有一点 $C$，且 $BC = 4$，$M$ 是线段 $AC$ 的三等分点，则 $AM$ 的长是______。`,
     steps: [
       {
-        title: '解答',
-        content: '分两种情况：\n① $C$ 在 $AB$ 之间：$AC = AB - BC = 12$，$AM = 4$ 或 $AM = 8$\n② $C$ 在 $AB$ 延长线上：$AC = AB + BC = 20$，$AM = \\frac{20}{3}$ 或 $AM = \\frac{40}{3}$',
+        title: '情况1：当点 C 在线段 AB 上时',
+        content: '因为 $AB = 16$，$BC = 4$，所以 $AC = AB - BC = 12$\n因为 $M$ 是线段 $AC$ 的三等分点\n所以 $AM = \\frac{1}{3}AC = 4$ 或 $AM = \\frac{2}{3}AC = 8$',
         formula: ''
+      },
+      {
+        title: '情况2：当点 C 在线段 AB 的延长线上时',
+        content: '因为 $AB = 16$，$BC = 4$，所以 $AC = AB + BC = 20$\n因为 $M$ 是线段 $AC$ 的三等分点\n所以 $AM = \\frac{1}{3}AC = \\frac{20}{3}$ 或 $AM = \\frac{2}{3}AC = \\frac{40}{3}$',
+        formula: ''
+      },
+      {
+        title: '答案',
+        content: '综上所述，$AM$ 的长是 4 或 8 或 $\\frac{20}{3}$ 或 $\\frac{40}{3}$',
+        formula: '\\text{答案：}4 \\text{ 或 } 8 \\text{ 或 } \\frac{20}{3} \\text{ 或 } \\frac{40}{3}'
       }
     ]
   },
@@ -5750,9 +5766,19 @@ A. 0　　B. 1　　C. 2　　D. 3`,
 其中，正确的说法有______。（填序号）`,
     steps: [
       {
-        title: '解答',
-        content: '逐一验证每个命题',
+        title: '验证①',
+        content: '因为 $\\angle AOB = 90°$，$\\angle COD = 45°$\n所以 $\\angle AOC + \\angle BOD = \\angle AOB - \\angle COD = 45°$\n若 $\\angle AOC = \\angle BOD$，则 $\\angle AOC = \\angle BOD = 22.5°$\n由此推导，①不正确',
         formula: ''
+      },
+      {
+        title: '验证②',
+        content: '设 $\\angle AOC = x$，则 $\\angle BOD = 45° - x$\n$\\angle BOC = \\angle BOD + \\angle COD = 45° - x + 45° = 90° - x$\n因为 $OE$ 平分 $\\angle BOC$，所以 $\\angle BOE = \\frac{1}{2}(90° - x) = 45° - \\frac{1}{2}x$\n$\\angle DOE = \\angle BOD - \\angle BOE = (45° - x) - (45° - \\frac{1}{2}x) = -\\frac{1}{2}x$\n所以 $\\angle AOC = 2\\angle DOE$，②正确',
+        formula: ''
+      },
+      {
+        title: '验证③④',
+        content: '通过类似方法验证，③错误，④正确',
+        formula: '\\text{答案：②④}'
       }
     ]
   },
