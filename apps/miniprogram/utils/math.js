@@ -1,4 +1,5 @@
-// math.js - 数学公式处理工具
+// math.js - 数学公式处理工具（增强版）
+// 支持更多数学符号、分数、根号、几何符号等
 
 /**
  * 将 LaTeX 公式转换为可读文本
@@ -14,7 +15,7 @@ function renderMath(text) {
 
   // 处理独立公式块 $$...$$ （需要先处理，因为包含两个$）
   result = result.replace(/\$\$([\s\S]*?)\$\$/g, (match, formula) => {
-    return formatFormula(formula)
+    return '\n' + formatFormula(formula) + '\n'
   })
 
   // 处理行内公式 $...$
@@ -25,18 +26,9 @@ function renderMath(text) {
   // 处理不在 $ 内的 \text{...} 命令
   result = result.replace(/\\text\s*\{([^{}]*)\}/g, '$1')
 
-  // 处理不在 $ 内的 \angle, \triangle 等符号
-  result = result.replace(/\\angle/g, '∠')
-  result = result.replace(/\\triangle/g, '△')
-  result = result.replace(/\\times/g, '×')
-  result = result.replace(/\\div/g, '÷')
-  result = result.replace(/\\pm/g, '±')
-  result = result.replace(/\\leq/g, '≤')
-  result = result.replace(/\\geq/g, '≥')
-  result = result.replace(/\\neq/g, '≠')
-  result = result.replace(/\\pi/g, 'π')
-  result = result.replace(/\\sqrt/g, '√')
-
+  // 处理不在 $ 内的几何和数学符号
+  result = processGeometrySymbols(result)
+  
   // 处理不在 $ 内的下标和上标（如 C_6^3）
   result = processInlineFormulas(result)
 
@@ -48,6 +40,60 @@ function renderMath(text) {
   result = result.replace(/\\[a-zA-Z]+/g, '')
 
   return result.trim()
+}
+
+/**
+ * 处理几何和数学符号
+ */
+function processGeometrySymbols(text) {
+  let result = text
+  
+  // 几何符号
+  result = result.replace(/\\angle/g, '∠')
+  result = result.replace(/\\triangle/g, '△')
+  result = result.replace(/\\square/g, '□')
+  result = result.replace(/\\circ/g, '°')
+  result = result.replace(/\\degree/g, '°')
+  result = result.replace(/\\parallel/g, '∥')
+  result = result.replace(/\\perp/g, '⊥')
+  result = result.replace(/\\cong/g, '≅')
+  
+  // 运算符
+  result = result.replace(/\\times/g, '×')
+  result = result.replace(/\\div/g, '÷')
+  result = result.replace(/\\pm/g, '±')
+  result = result.replace(/\\mp/g, '∓')
+  result = result.replace(/\\cdot/g, '·')
+  
+  // 比较符号
+  result = result.replace(/\\leq/g, '≤')
+  result = result.replace(/\\le/g, '≤')
+  result = result.replace(/\\geq/g, '≥')
+  result = result.replace(/\\ge/g, '≥')
+  result = result.replace(/\\neq/g, '≠')
+  result = result.replace(/\\ne/g, '≠')
+  result = result.replace(/\\approx/g, '≈')
+  
+  // 希腊字母
+  result = result.replace(/\\pi/g, 'π')
+  result = result.replace(/\\alpha/g, 'α')
+  result = result.replace(/\\beta/g, 'β')
+  result = result.replace(/\\gamma/g, 'γ')
+  result = result.replace(/\\theta/g, 'θ')
+  
+  // 省略号
+  result = result.replace(/\\cdots/g, '⋯')
+  result = result.replace(/\\ldots/g, '…')
+  result = result.replace(/\\vdots/g, '⋮')
+  
+  // 根号（简单情况）
+  result = result.replace(/\\sqrt/g, '√')
+  
+  // 逻辑符号
+  result = result.replace(/\\therefore/g, '∴')
+  result = result.replace(/\\because/g, '∵')
+  
+  return result
 }
 
 /**
@@ -109,7 +155,7 @@ function convertToSuperscript(text) {
     '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹',
     'n': 'ⁿ', 'm': 'ᵐ', 'i': 'ⁱ', 'k': 'ᵏ', 'a': 'ᵃ', 'b': 'ᵇ', 'c': 'ᶜ',
     'x': 'ˣ', 'y': 'ʸ', 'z': 'ᶻ',
-    '+': '⁺', '-': '⁻', '(': '⁽', ')': '⁾'
+    '+': '⁺', '-': '⁻', '(': '⁽', ')': '⁾', '°': '°'
   }
   let result = ''
   for (const char of text) {
@@ -127,11 +173,12 @@ function formatFormula(formula) {
 
   let result = formula
 
-  // ========== 处理分数 \frac{a}{b} → (a)/(b) ==========
+  // ========== 处理分数 \frac{a}{b} → (a)/(b) 或简化形式 ==========
   for (let i = 0; i < 5; i++) {
     result = result.replace(/\\frac\s*\{([^{}]*)\}\s*\{([^{}]*)\}/g, (match, num, den) => {
       const n = num.trim()
       const d = den.trim()
+      // 简单分数用斜线表示
       if (n.length <= 3 && d.length <= 3 && !n.includes(' ') && !d.includes(' ')) {
         return `${n}/${d}`
       }
@@ -140,6 +187,10 @@ function formatFormula(formula) {
   }
 
   // ========== 处理根号 ==========
+  result = result.replace(/\\sqrt\s*\[([^\]]+)\]\s*\{([^{}]+)\}/g, (match, index, content) => {
+    // n次根号
+    return convertToSuperscript(index) + '√(' + content + ')'
+  })
   result = result.replace(/\\sqrt\s*\{([^{}]+)\}/g, '√($1)')
   result = result.replace(/\\sqrt\s*(\d+)/g, '√$1')
   result = result.replace(/\\sqrt/g, '√')
@@ -150,7 +201,7 @@ function formatFormula(formula) {
   })
   
   // ^x 单字符形式
-  result = result.replace(/\^([0-9n])/g, (match, char) => convertToSuperscript(char))
+  result = result.replace(/\^([0-9n°])/g, (match, char) => convertToSuperscript(char))
 
   // ========== 处理下标 _{...} ==========
   result = result.replace(/_\{([^{}]+)\}/g, (match, exp) => {
@@ -166,6 +217,7 @@ function formatFormula(formula) {
   result = result.replace(/\\textit\s*\{([^{}]*)\}/g, '$1')
   result = result.replace(/\\mathrm\s*\{([^{}]*)\}/g, '$1')
   result = result.replace(/\\mathbf\s*\{([^{}]*)\}/g, '$1')
+  result = result.replace(/\\rm\s*\{([^{}]*)\}/g, '$1')
 
   // ========== 希腊字母 ==========
   const greekLetters = {
@@ -193,6 +245,7 @@ function formatFormula(formula) {
     'cdots': '⋯',
     'ldots': '…',
     'vdots': '⋮',
+    'ddots': '⋱',
     'neq': '≠',
     'ne': '≠',
     'leq': '≤',
@@ -263,13 +316,17 @@ function formatFormula(formula) {
   // ========== 几何符号 ==========
   const geometry = {
     'angle': '∠',
+    'measuredangle': '∡',
     'triangle': '△',
     'square': '□',
     'circ': '°',
     'degree': '°',
     'parallel': '∥',
+    'nparallel': '∦',
     'perp': '⊥',
-    'cong': '≅'
+    'cong': '≅',
+    'sim': '∼',
+    'simeq': '≃'
   }
   for (const [name, unicode] of Object.entries(geometry)) {
     result = result.replace(new RegExp('\\\\' + name + '(?![a-zA-Z])', 'g'), unicode)
@@ -300,7 +357,7 @@ function formatFormula(formula) {
   result = result.replace(/\\ /g, ' ')
   result = result.replace(/~/g, ' ')
 
-  // ========== 其他常用命令 ==========
+  // ========== 上划线、向量等 ==========
   result = result.replace(/\\overline\s*\{([^{}]+)\}/g, '$1̅')
   result = result.replace(/\\underline\s*\{([^{}]+)\}/g, '$1')
   result = result.replace(/\\widehat\s*\{([^{}]+)\}/g, '$1̂')
@@ -308,6 +365,8 @@ function formatFormula(formula) {
   result = result.replace(/\\bar\s*\{([^{}]+)\}/g, '$1̄')
   result = result.replace(/\\dot\s*\{([^{}]+)\}/g, '$1̇')
   result = result.replace(/\\ddot\s*\{([^{}]+)\}/g, '$1̈')
+  result = result.replace(/\\hat\s*\{([^{}]+)\}/g, '$1̂')
+  result = result.replace(/\\tilde\s*\{([^{}]+)\}/g, '$1̃')
 
   // ========== 清理 ==========
   // 移除剩余的未知 LaTeX 命令（保留命令后的内容）
@@ -346,8 +405,74 @@ function formatSimple(text) {
     .replace(/[{}]/g, '')
 }
 
+/**
+ * 解析富文本内容（支持图片引用）
+ * 格式：[图:filename.svg] 或 [图形:描述]
+ */
+function parseRichContent(text) {
+  if (!text) return { text: '', images: [] }
+  
+  const images = []
+  let processedText = text
+  
+  // 匹配 [图:xxx] 格式
+  const imagePattern = /\[图[:：]([^\]]+)\]/g
+  let match
+  let imageIndex = 0
+  
+  while ((match = imagePattern.exec(text)) !== null) {
+    const imageName = match[1].trim()
+    images.push({
+      index: imageIndex,
+      name: imageName,
+      placeholder: `{{IMAGE_${imageIndex}}}`
+    })
+    processedText = processedText.replace(match[0], `\n{{IMAGE_${imageIndex}}}\n`)
+    imageIndex++
+  }
+  
+  return {
+    text: renderMath(processedText),
+    images: images
+  }
+}
+
+/**
+ * 创建分数的Unicode表示（用于简单分数）
+ */
+function createFraction(numerator, denominator) {
+  // 使用斜线分数
+  return `${numerator}⁄${denominator}`
+}
+
+/**
+ * 角度格式化
+ * 将数值转换为角度表示
+ */
+function formatAngle(value) {
+  if (typeof value === 'number') {
+    return `${value}°`
+  }
+  return value.replace(/(\d+)\s*度/g, '$1°')
+}
+
+/**
+ * 线段格式化
+ * 将AB表示为线段AB（加上上划线）
+ */
+function formatSegment(name) {
+  // 使用上划线表示线段
+  return name.split('').map(c => c + '\u0305').join('')
+}
+
 module.exports = {
   renderMath,
   formatFormula,
-  formatSimple
+  formatSimple,
+  parseRichContent,
+  createFraction,
+  formatAngle,
+  formatSegment,
+  convertToSubscript,
+  convertToSuperscript
 }

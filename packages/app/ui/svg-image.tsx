@@ -352,7 +352,11 @@ export const problemSvgMap: Record<string, string[]> = {
   
   // ========== 专题集训二 ==========
   'z2-quiz-1': ['number-line-ab'],
-  'z2-quiz-4': ['number-line-ab'],
+  'z2-quiz-2': ['number-line-abcd'],
+  'z2-quiz-4': ['jumping-point'],
+  'z2-quiz-5': ['circle-numbers'],
+  'z2-quiz-6': ['number-line-ab'],
+  'z2-quiz-7': ['number-line-ab-2'],
   
   // ========== 专题集训三 ==========
   'z3-quiz-3': ['jumping-point'],

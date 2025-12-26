@@ -1,25 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
-  <!-- 数形结合：数轴 -->
-  <line x1="20" y1="50" x2="380" y2="50" stroke="#333" stroke-width="2"/>
-  <!-- 箭头 -->
-  <polygon points="380,50 370,45 370,55" fill="#333"/>
-  <!-- 原点 -->
-  <circle cx="200" cy="50" r="4" fill="#333"/>
-  <!-- 刻度 -->
-  <line x1="80" y1="45" x2="80" y2="55" stroke="#333" stroke-width="1"/>
-  <line x1="140" y1="45" x2="140" y2="55" stroke="#333" stroke-width="1"/>
-  <line x1="260" y1="45" x2="260" y2="55" stroke="#333" stroke-width="1"/>
-  <line x1="320" y1="45" x2="320" y2="55" stroke="#333" stroke-width="1"/>
-  <!-- 点A和B -->
-  <circle cx="100" cy="50" r="4" fill="#2196F3"/>
-  <circle cx="280" cy="50" r="4" fill="#E91E63"/>
-  <!-- 标签 -->
-  <text x="200" y="75" font-family="Arial" font-size="12" text-anchor="middle">0</text>
-  <text x="80" y="75" font-family="Arial" font-size="12" text-anchor="middle">-2</text>
-  <text x="140" y="75" font-family="Arial" font-size="12" text-anchor="middle">-1</text>
-  <text x="260" y="75" font-family="Arial" font-size="12" text-anchor="middle">1</text>
-  <text x="320" y="75" font-family="Arial" font-size="12" text-anchor="middle">2</text>
-  <text x="100" y="35" font-family="Arial" font-size="14" text-anchor="middle" fill="#2196F3">A</text>
-  <text x="280" y="35" font-family="Arial" font-size="14" text-anchor="middle" fill="#E91E63">B</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 80">
+  <line x1="30" y1="40" x2="470" y2="40" stroke="#333" stroke-width="2"/>
+  <polygon points="470,40 460,35 460,45" fill="#333"/>
+  <line x1="40.0" y1="35" x2="40.0" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="40.0" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">-12</text>
+  <line x1="52.35294117647059" y1="35" x2="52.35294117647059" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="52.35294117647059" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">-11</text>
+  <line x1="64.70588235294117" y1="35" x2="64.70588235294117" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="64.70588235294117" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">-10</text>
+  <line x1="77.05882352941177" y1="35" x2="77.05882352941177" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="77.05882352941177" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">-9</text>
+  <line x1="89.41176470588235" y1="35" x2="89.41176470588235" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="89.41176470588235" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">-8</text>
+  <line x1="101.76470588235294" y1="35" x2="101.76470588235294" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="101.76470588235294" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">-7</text>
+  <line x1="114.11764705882354" y1="35" x2="114.11764705882354" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="114.11764705882354" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">-6</text>
+  <line x1="126.47058823529412" y1="35" x2="126.47058823529412" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="126.47058823529412" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">-5</text>
+  <line x1="138.8235294117647" y1="35" x2="138.8235294117647" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="138.8235294117647" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">-4</text>
+  <line x1="151.1764705882353" y1="35" x2="151.1764705882353" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="151.1764705882353" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">-3</text>
+  <line x1="163.52941176470588" y1="35" x2="163.52941176470588" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="163.52941176470588" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">-2</text>
+  <line x1="175.88235294117646" y1="35" x2="175.88235294117646" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="175.88235294117646" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">-1</text>
+  <line x1="188.23529411764707" y1="35" x2="188.23529411764707" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="188.23529411764707" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">0</text>
+  <line x1="200.58823529411765" y1="35" x2="200.58823529411765" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="200.58823529411765" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">1</text>
+  <line x1="212.94117647058823" y1="35" x2="212.94117647058823" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="212.94117647058823" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">2</text>
+  <line x1="225.29411764705884" y1="35" x2="225.29411764705884" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="225.29411764705884" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">3</text>
+  <line x1="237.64705882352942" y1="35" x2="237.64705882352942" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="237.64705882352942" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">4</text>
+  <line x1="250.0" y1="35" x2="250.0" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="250.0" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">5</text>
+  <line x1="262.3529411764706" y1="35" x2="262.3529411764706" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="262.3529411764706" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">6</text>
+  <line x1="274.7058823529412" y1="35" x2="274.7058823529412" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="274.7058823529412" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">7</text>
+  <line x1="287.05882352941177" y1="35" x2="287.05882352941177" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="287.05882352941177" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">8</text>
+  <line x1="299.4117647058824" y1="35" x2="299.4117647058824" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="299.4117647058824" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">9</text>
+  <line x1="311.7647058823529" y1="35" x2="311.7647058823529" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="311.7647058823529" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">10</text>
+  <line x1="324.11764705882354" y1="35" x2="324.11764705882354" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="324.11764705882354" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">11</text>
+  <line x1="336.47058823529414" y1="35" x2="336.47058823529414" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="336.47058823529414" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">12</text>
+  <line x1="348.8235294117647" y1="35" x2="348.8235294117647" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="348.8235294117647" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">13</text>
+  <line x1="361.1764705882353" y1="35" x2="361.1764705882353" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="361.1764705882353" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">14</text>
+  <line x1="373.5294117647059" y1="35" x2="373.5294117647059" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="373.5294117647059" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">15</text>
+  <line x1="385.88235294117646" y1="35" x2="385.88235294117646" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="385.88235294117646" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">16</text>
+  <line x1="398.2352941176471" y1="35" x2="398.2352941176471" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="398.2352941176471" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">17</text>
+  <line x1="410.5882352941177" y1="35" x2="410.5882352941177" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="410.5882352941177" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">18</text>
+  <line x1="422.94117647058823" y1="35" x2="422.94117647058823" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="422.94117647058823" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">19</text>
+  <line x1="435.29411764705884" y1="35" x2="435.29411764705884" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="435.29411764705884" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">20</text>
+  <line x1="447.64705882352945" y1="35" x2="447.64705882352945" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="447.64705882352945" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">21</text>
+  <line x1="460.0" y1="35" x2="460.0" y2="45" stroke="#333" stroke-width="1.5"/>
+  <text x="460.0" y="60" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">22</text>
+  <text x="188.23529411764707" y="72" font-family="Arial" font-size="11" text-anchor="middle" fill="#666">O</text>
+  <circle cx="64.70588235294117" cy="40" r="4" fill="#2196F3"/>
+  <text x="64.70588235294117" y="28" font-family="Arial" font-size="13" text-anchor="middle" fill="#2196F3">A</text>
+  <circle cx="89.41176470588235" cy="40" r="4" fill="#2196F3"/>
+  <text x="89.41176470588235" y="68" font-family="Arial" font-size="13" text-anchor="middle" fill="#2196F3">B</text>
+  <circle cx="385.88235294117646" cy="40" r="4" fill="#4CAF50"/>
+  <text x="385.88235294117646" y="28" font-family="Arial" font-size="13" text-anchor="middle" fill="#4CAF50">C</text>
+  <circle cx="435.29411764705884" cy="40" r="4" fill="#4CAF50"/>
+  <text x="435.29411764705884" y="68" font-family="Arial" font-size="13" text-anchor="middle" fill="#4CAF50">D</text>
 </svg>
-

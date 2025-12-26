@@ -1,0 +1,93 @@
+/* math-content.wxss - 数学内容样式 */
+
+.math-content {
+  display: block;
+  font-size: 30rpx;
+  line-height: 1.8;
+  color: #333;
+}
+
+.math-text {
+  font-family: "Source Han Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+  word-break: break-word;
+}
+
+/* 内嵌图形 */
+.inline-figure {
+  display: block;
+  margin: 20rpx 0;
+  text-align: center;
+}
+
+.figure-image {
+  max-width: 100%;
+  border-radius: 8rpx;
+  background: #f8f9fa;
+}
+
+.figure-caption {
+  display: block;
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 8rpx;
+}
+
+/* 分数显示 */
+.inline-fraction {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  margin: 0 4rpx;
+  font-size: 26rpx;
+}
+
+.fraction-num,
+.fraction-den {
+  padding: 0 4rpx;
+  line-height: 1.2;
+}
+
+.fraction-line {
+  width: 100%;
+  height: 2rpx;
+  background: #333;
+  margin: 2rpx 0;
+}
+
+/* 角度符号 */
+.angle-symbol {
+  font-style: italic;
+  color: #2196F3;
+}
+
+/* 换行 */
+.line-break {
+  display: block;
+  height: 16rpx;
+}
+
+/* 数学符号高亮 */
+.math-content text {
+  /* 使用支持数学符号的字体 */
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* 上标下标样式增强 */
+.superscript {
+  font-size: 0.7em;
+  vertical-align: super;
+}
+
+.subscript {
+  font-size: 0.7em;
+  vertical-align: sub;
+}
+
+/* 重点公式高亮 */
+.formula-highlight {
+  background: linear-gradient(120deg, #fff3cd 0%, #fff3cd 100%);
+  padding: 4rpx 8rpx;
+  border-radius: 4rpx;
+}
+

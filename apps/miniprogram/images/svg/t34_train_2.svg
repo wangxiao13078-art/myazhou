@@ -1,11 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80">
-  <line x1="30" y1="40" x2="370" y2="40" stroke="#333" stroke-width="2"/>
-  <circle cx="30" cy="40" r="4" fill="#333"/>
-  <circle cx="130" cy="40" r="3" fill="#2196F3"/>
-  <circle cx="230" cy="40" r="3" fill="#E91E63"/>
-  <circle cx="370" cy="40" r="4" fill="#333"/>
-  <text x="30" y="65" font-family="Arial" font-size="14" text-anchor="middle">A</text>
-  <text x="130" y="65" font-family="Arial" font-size="14" text-anchor="middle" fill="#2196F3">M</text>
-  <text x="230" y="65" font-family="Arial" font-size="14" text-anchor="middle" fill="#E91E63">N</text>
-  <text x="370" y="65" font-family="Arial" font-size="14" text-anchor="middle">B</text>
+  <line x1="40.0" y1="40" x2="360.0" y2="40" stroke="#333" stroke-width="2"/>
+  <circle cx="40.0" cy="40" r="4" fill="#333"/>
+  <text x="40.0" y="62" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">A</text>
+  <circle cx="254.4" cy="40" r="3" fill="#4CAF50"/>
+  <text x="254.4" y="62" font-family="Arial" font-size="14" text-anchor="middle" fill="#4CAF50">C</text>
+  <circle cx="360.0" cy="40" r="4" fill="#333"/>
+  <text x="360.0" y="62" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">B</text>
 </svg>

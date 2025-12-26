@@ -1,12 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
-  <circle cx="150" cy="140" r="4" fill="#333"/>
-  <line x1="30" y1="140" x2="270" y2="140" stroke="#333" stroke-width="2"/>
-  <line x1="150" y1="140" x2="200" y2="60" stroke="#2196F3" stroke-width="2"/>
-  <line x1="150" y1="140" x2="100" y2="60" stroke="#2196F3" stroke-width="2" stroke-dasharray="4,2"/>
-  <path d="M 170 100 Q 150 80 130 100" fill="none" stroke="#666" stroke-width="1"/>
-  <text x="150" y="160" font-family="Arial" font-size="14" text-anchor="middle">O</text>
-  <text x="20" y="135" font-family="Arial" font-size="14">M</text>
-  <text x="275" y="145" font-family="Arial" font-size="14">N</text>
-  <text x="205" y="55" font-family="Arial" font-size="14" fill="#2196F3">P</text>
-  <text x="90" y="55" font-family="Arial" font-size="14" fill="#2196F3">P'</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <circle cx="150" cy="150" r="4" fill="#333"/>
+  <text x="150" y="170" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">O</text>
+  <line x1="150" y1="150" x2="250.0" y2="150.0" stroke="#333" stroke-width="2"/>
+  <text x="265.0" y="150.0" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">A</text>
+  <line x1="150" y1="150" x2="220.71067811865476" y2="79.28932188134526" stroke="#2196F3" stroke-width="2"/>
+  <text x="231.31727983645297" y="68.68272016354705" font-family="Arial" font-size="14" text-anchor="middle" fill="#2196F3">M</text>
+  <line x1="150" y1="150" x2="150.0" y2="50.0" stroke="#333" stroke-width="2"/>
+  <text x="150.0" y="35.0" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">B</text>
+  <line x1="150" y1="150" x2="79.28932188134526" y2="79.28932188134524" stroke="#E91E63" stroke-width="2"/>
+  <text x="68.68272016354705" y="68.68272016354703" font-family="Arial" font-size="14" text-anchor="middle" fill="#E91E63">N</text>
+  <line x1="150" y1="150" x2="50.0" y2="150.0" stroke="#333" stroke-width="2"/>
+  <text x="35.0" y="150.0" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">C</text>
+  <path d="M 171.21320343559643 128.78679656440357 A 30 30 0 0 1 180.0 150.0" fill="none" stroke="#2196F3" stroke-width="1.5"/>
 </svg>

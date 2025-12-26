@@ -1,4 +1,4 @@
-// problem.js - 题目详情页逻辑
+// problem.js - 题目详情页逻辑（增强版）
 const problems = require('../../data/problems.js')
 const mathUtils = require('../../utils/math.js')
 
@@ -12,7 +12,8 @@ Page({
     unlockedSteps: {},
     trainings: [],
     hasNext: false,
-    svgPath: ''
+    svgPath: '',
+    figures: []  // 多图形支持
   },
 
   onLoad(options) {
@@ -32,15 +33,6 @@ Page({
     }
 
     console.log('题目数据:', problem.title)
-    console.log('原始内容前100字符:', problem.content.substring(0, 100))
-
-    // 处理数学公式 - 转换为纯文本
-    const contentText = mathUtils.renderMath(problem.content)
-    console.log('转换后内容前100字符:', contentText.substring(0, 100))
-    const stepTexts = problem.steps.map(step => mathUtils.renderMath(step.content))
-    const formulaTexts = problem.steps.map(step => 
-      step.formula ? mathUtils.formatFormula(step.formula) : ''
-    )
 
     // 获取针对训练
     const trainings = problems.getTrainingsByTechnique(id)
@@ -49,27 +41,60 @@ Page({
     // 处理SVG路径 - 使用相对路径
     let svgPath = ''
     if (problem.svgUrl) {
-      // svgUrl格式: /images/svg/xxx.svg
-      // 转换为相对路径: ../../images/svg/xxx.svg
-      svgPath = problem.svgUrl.replace('/images/', '../../images/')
+      svgPath = problem.svgUrl.replace('/images/', '/images/')
       console.log('SVG路径:', svgPath)
     }
+
+    // 处理多图形（如果题目有多张图）
+    const figures = this.extractFigures(problem)
 
     this.setData({
       problemId: id,
       problem: problem,
-      contentText: contentText,
-      stepTexts: stepTexts,
-      formulaTexts: formulaTexts,
       trainings: trainings,
       hasNext: trainings.length > 0,
-      svgPath: svgPath
+      svgPath: svgPath,
+      figures: figures
     })
 
     // 设置导航栏标题
     wx.setNavigationBarTitle({
       title: problem.title.length > 15 ? problem.title.substring(0, 15) + '...' : problem.title
     })
+  },
+
+  /**
+   * 提取题目中的多个图形
+   */
+  extractFigures(problem) {
+    const figures = []
+    
+    // 检查是否有额外图形
+    if (problem.figures && Array.isArray(problem.figures)) {
+      problem.figures.forEach((fig, index) => {
+        figures.push({
+          src: fig.url.replace('/images/', '/images/'),
+          label: fig.label || `图${index + 1}`
+        })
+      })
+    }
+    
+    // 从内容中提取图形引用
+    const content = problem.content || ''
+    const figurePattern = /\[图(\d+)[：:]([^\]]+)\]/g
+    let match
+    while ((match = figurePattern.exec(content)) !== null) {
+      const figNum = match[1]
+      const figDesc = match[2]
+      // 查找对应的SVG
+      const svgName = `${problem.id.replace(/-/g, '_')}_fig${figNum}.svg`
+      figures.push({
+        src: `/images/svg/${svgName}`,
+        label: `图${figNum}`
+      })
+    }
+    
+    return figures
   },
 
   // 切换步骤展示
@@ -119,5 +144,7 @@ Page({
   // SVG加载失败
   onSvgError(e) {
     console.error('SVG加载失败:', this.data.svgPath, e.detail)
+    // 隐藏图形卡片
+    this.setData({ svgPath: '' })
   }
 })
