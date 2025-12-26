@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react'
-import { YStack, XStack, Text, Button, Card, ScrollView, H2, H3, Theme, Separator } from 'tamagui'
+import { YStack, XStack, Text, Button, Card, ScrollView, H3, Theme, Separator } from 'tamagui'
 import { ChevronRight, ChevronDown, BookOpen, Star, ListOrdered, Eye, EyeOff } from '@tamagui/lucide-icons'
 import { Problem, MathStep } from './schema'
 import { MathText } from '../../ui/math-text'
@@ -80,7 +80,7 @@ export function ProblemDetailScreen({ problem }: ProblemDetailScreenProps) {
                 ))}
               </XStack>
             </XStack>
-            <H2 color="$color" fontSize="$6" lineHeight={32}>{problem.title}</H2>
+            <MathText content={problem.title} color="$color" fontSize="$6" lineHeight={32} fontWeight="bold" />
           </YStack>
 
           <Separator />
@@ -128,7 +128,7 @@ export function ProblemDetailScreen({ problem }: ProblemDetailScreenProps) {
                   <BookOpen size={18} color="$orange10" />
                   <Text fontWeight="bold" color="$orange10" fontSize="$3">一本方法点拨</Text>
                 </XStack>
-                <Text color="$orange11" fontSize="$3">{problem.methodName}</Text>
+                <MathText content={problem.methodName} color="$orange11" fontSize="$3" />
               </YStack>
             </Theme>
           )}
@@ -214,9 +214,7 @@ export function ProblemDetailScreen({ problem }: ProblemDetailScreenProps) {
                           <Text color="$green10" fontWeight="bold" fontSize="$3">
                             训练{index + 1}
                           </Text>
-                          <Text color="$gray11" fontSize="$3" numberOfLines={1} f={1}>
-                            {tp.title.replace(/^针对训练\d+：/, '')}
-                          </Text>
+                          <MathText content={tp.title.replace(/^针对训练\d+：/, '')} color="$gray11" fontSize="$3" />
                         </XStack>
                         <ChevronRight size={16} color="$gray8" />
                       </XStack>
