@@ -4727,19 +4727,24 @@ A. 19  B. 20  C. 21  D. 22`,
     images: ['segment-midpoints.svg'],
     content: `如图，已知点 $C$ 在线段 $AB$ 上，$M$、$N$ 分别是 $AC$、$BC$ 的中点。
 
-(1) 若 $AC = a$ cm，$BC = b$ cm，求线段 $MN$ 的长度；
-(2) 若 $AC = a$ cm，求线段 $MN$ 的长度；
+(1) 若 $AC = 6$ cm，$BC = 9$ cm，求线段 $MN$ 的长度；
+(2) 若 $AC = a$ cm，$BC = b$ cm，求线段 $MN$ 的长度；
 (3) 若点 $C$ 在线段 $AB$ 的延长线上，且满足 $AC - BC = c$ cm，请求出线段 $MN$ 的长度。`,
     steps: [
       {
         title: '第(1)问',
-        content: '$MC = \\frac{1}{2}AC = \\frac{a}{2}$\n$NC = \\frac{1}{2}BC = \\frac{b}{2}$\n$MN = MC + NC = \\frac{a + b}{2}$',
-        formula: 'MN = \\frac{a + b}{2}'
+        content: '因为 $M$，$N$ 分别是 $AC$，$BC$ 的中点，\n所以 $MC = \\frac{1}{2}AC$，$CN = \\frac{1}{2}BC$。\n因为 $AC = 6$ cm，$BC = 9$ cm，\n所以 $MN = MC + CN = \\frac{1}{2} \\times (6+9) = 7.5$ cm。',
+        formula: 'MN = 7.5 \\text{ cm}'
       },
       {
         title: '第(2)问',
-        content: '设 $AB = L$，则 $BC = L - a$\n$MN = \\frac{AC + BC}{2} = \\frac{a + (L-a)}{2} = \\frac{L}{2}$',
-        formula: 'MN = \\frac{AB}{2}'
+        content: '因为 $M$，$N$ 分别是 $AC$，$BC$ 的中点，\n所以 $MC = \\frac{1}{2}AC = \\frac{1}{2}a$ cm，$CN = \\frac{1}{2}BC = \\frac{1}{2}b$ cm，\n所以 $MN = MC + CN = \\frac{1}{2}a + \\frac{1}{2}b = \\frac{1}{2}(a+b)$ cm。',
+        formula: 'MN = \\frac{1}{2}(a+b) \\text{ cm}'
+      },
+      {
+        title: '第(3)问',
+        content: '如图，因为 $M$，$N$ 分别是 $AC$，$BC$ 的中点，\n所以 $MC = \\frac{1}{2}AC$，$CN = \\frac{1}{2}BC$。\n当点 $C$ 在 $AB$ 延长线上时：\n$MN = MC - CN = \\frac{1}{2}AC - \\frac{1}{2}BC = \\frac{1}{2}(AC - BC) = \\frac{1}{2}c$ cm。',
+        formula: 'MN = \\frac{c}{2} \\text{ cm}'
       }
     ]
   },
@@ -4778,17 +4783,30 @@ BC = 4，求线段 MN 的长；
     difficulty: 4,
     tags: ['几何', '线段', '方程'],
     methodName: '方程思想',
-    content: `如图，已知点 $B$ 在线段 $AC$ 上，点 $D$ 在线段 $AB$ 上，满足 $BD：AB = 1：4$，且 $D$、$E$ 分别是线段 $AC$、$AB$ 的中点长度。`,
+    content: `设 $BD = x$，则 $BC = 2x$，$BD = BC + CD = 2x + 5x = 7x$。
+
+因为 $F$ 是 $BD$ 的中点，所以 $BF = DF = \\frac{7x}{2}$。
+
+所以 $CF = CD - DF = 5x - \\frac{7x}{2} = \\frac{3x}{2}$。
+
+因为 $EF = 20$，所以 $\\frac{3x}{2} + \\frac{3x}{2} = 3$，解得 $x = 1$。
+
+所以 $CD = 5x = 5$。`,
     steps: [
       {
-        title: '设线段长度',
-        content: '设 $AB = 4x$，则 $BD = x$\n$AD = AB - BD = 3x$',
+        title: '设未知数',
+        content: '设 $BD = x$，则 $BC = 2x$，$CD = 5x$，$BD = BC + CD = 7x$。',
         formula: ''
       },
       {
         title: '利用中点性质',
-        content: '$E$ 是 $AB$ 中点，$AE = 2x$\n$D$ 是 $AC$ 中点的条件...',
+        content: '因为 $F$ 是 $BD$ 的中点，所以 $BF = DF = \\frac{7x}{2}$。\n因为 $E$ 是 $AC$ 的中点，所以 $AE = \\frac{1}{2}AC$。',
         formula: ''
+      },
+      {
+        title: '建立方程求解',
+        content: '$CF = CD - DF = 5x - \\frac{7x}{2} = \\frac{3x}{2}$\n因为 $EF = 20$，所以 $\\frac{3x}{2} + \\frac{3x}{2} = 3$，解得 $x = 1$。\n所以 $CD = 5x = 5$。',
+        formula: 'CD = 5'
       }
     ]
   },
@@ -4802,17 +4820,36 @@ BC = 4，求线段 MN 的长；
     difficulty: 4,
     tags: ['几何', '线段', '分类讨论'],
     methodName: '分类讨论',
-    content: `已知线段 $AB$ 上一点 $C$ 是线段 $AB$ 上一点，$AC = 5$ cm，点 $P$ 从点 $A$ 出发沿 $AB$ 以 3 cm/s 的速度向点 $B$ 运动，同时点 $Q$ 从点 $C$ 出发沿 $CB$ 以 1 cm/s 的速度向点 $B$ 运动，结果点 $P$ 比点 $Q$ 提前 s 到达点 $B$，求 $t$ 的值；
+    content: `(1) 设 $AB = x$ cm。
 
-(1) 求 $AB$ 的长；
-(2) 当点 $P$、$Q$ 运动的时间为 $t$ s，
-① 当点 $P$ 与点 $Q$ 重合时，求 $t$ 的值；
-② 当点 $P$ 与点 $Q$ 相距 2 cm 时，求 $t$ 的值。`,
+由题意，得 $x - 5 - \\frac{x}{3} = 3$，解得 $x = 12$。
+
+故 $AB$ 的长为 $12$ cm。
+
+(2)①根据题意，得 $3t = t + 5$，解得 $t = \\frac{5}{2}$。
+
+②当点 $P$ 追上点 $Q$ 前相距 $2$ cm 时，根据题意，得 $3t + 2 = t + 5$，解得 $t = \\frac{3}{2}$；
+
+当点 $P$ 追上点 $Q$ 后相距 $2$ cm 时，根据题意，得 $3t - 2 = t + 5$，解得 $t = \\frac{7}{2}$；
+
+当点 $P$ 到达终点 $B$，点 $Q$ 距离点 $P$ $2$ cm 时，根据题意，得 $t + 5 + 2 = 12$，解得 $t = 5$。
+
+综上所述，当点 $P$ 与点 $Q$ 相距 $2$ cm 时，$t$ 的值为 $\\frac{3}{2}$ 或 $\\frac{7}{2}$ 或 $5$。`,
     steps: [
       {
         title: '第(1)问',
-        content: '设 $AB = x$ cm\n点 P 到达 B 的时间：$\\frac{x}{3}$ s\n点 Q 到达 B 的时间：$\\frac{x-5}{1}$ s',
-        formula: ''
+        content: '设 $AB = x$ cm\n点 P 到达 B 的时间：$\\frac{x}{3}$ s\n点 Q 到达 B 的时间：$\\frac{x-5}{1}$ s\n根据"P 比 Q 提前 3s"：$(x-5) - \\frac{x}{3} = 3$\n解得 $x = 12$',
+        formula: 'AB = 12 \\text{ cm}'
+      },
+      {
+        title: '第(2)问①',
+        content: '当 P 与 Q 重合时：$3t = t + 5$\n解得 $t = \\frac{5}{2}$',
+        formula: 't = \\frac{5}{2}'
+      },
+      {
+        title: '第(2)问②',
+        content: '分类讨论：\n• P 追上 Q 前相距 2cm：$3t + 2 = t + 5$，$t = \\frac{3}{2}$\n• P 追上 Q 后相距 2cm：$3t - 2 = t + 5$，$t = \\frac{7}{2}$\n• P 到达 B 时：$t + 5 + 2 = 12$，$t = 5$',
+        formula: 't = \\frac{3}{2} \\text{ 或 } \\frac{7}{2} \\text{ 或 } 5'
       }
     ]
   },
@@ -4826,15 +4863,38 @@ BC = 4，求线段 MN 的长；
     difficulty: 4,
     tags: ['几何', '线段', '数形结合'],
     methodName: '数形结合',
-    content: `如图，在数轴上线段 $AB = 2$，线段 $CD = 4$，点 $A$ 在数轴上表示的数是 $-10$，点 $C$ 在数轴上表示的数是 16，点 $A$、$B$ 沿数轴向右运动，每秒移动 $k$（$k$ 是正数）个单位长度，同时线段 $CD$ 以每秒 2 个单位长度的速度沿数轴向左运动，设运动的时间为 $t$ s。
+    content: `因为 $AB = 2$，点 $A$ 在数轴上表示的数是 $-10$，所以点 $B$ 在数轴上表示的数是 $-8$。
 
-(1) 当点 $B$ 与点 $C$ 相遇时，点 $B$ 则与点 $C$ 的中点 $M$ 在数轴上表示的数与运动之间的关系为______
-(2) 当点 $A$、$B$、$C$、$D$ 在数轴上表示的数，根据运动进程表示出运动和时间 $t$ 的关系，分别表示出运动和时间 $t$ 的值。`,
+又因为 $CD = 4$，点 $C$ 在数轴上表示的数是 $16$，所以点 $D$ 在数轴上表示的数是 $20$。
+
+根据题意，当运动时间为 $t$ s时，点 $A$ 在数轴上表示的数是 $-10 + 6t$，点 $B$ 在数轴上表示的数是 $-8 + 6t$，点 $C$ 在数轴上表示的数是 $16 - 2t$，点 $D$ 在数轴上表示的数是 $20 - 2t$。
+
+(1) 当点 $B$ 与点 $C$ 相遇时，易得 $-8 + 6t = 16 - 2t$，解得 $t = 3$。
+
+点 $A$ 在数轴上表示的数是 $-10 + 6 \\times 3 = 8$，点 $D$ 在数轴上表示的数是 $20 - 2 \\times 3 = 14$。
+
+故答案为 $8$，$14$。
+
+(2) 当运动时间为 $t$ s时，线段 $CD$ 的中点在数轴上所表示的数是 $18 - 2t$。
+
+根据题意，得 $-8 + 6t = 18 - 2t$，解得 $t = \\frac{13}{4}$。
+
+所以点 $P$ 表示的数为 $1 - 6 \\times 4 = -23$。`,
     steps: [
       {
-        title: '分析位置',
-        content: '点 A：$-10 + kt$\n点 B：$-10 + 2 + kt = -8 + kt$\n点 C：$16 - 2t$\n点 D：$16 + 4 - 2t = 20 - 2t$',
+        title: '确定各点位置',
+        content: '点 A：$-10 + 6t$\n点 B：$-8 + 6t$\n点 C：$16 - 2t$\n点 D：$20 - 2t$',
         formula: ''
+      },
+      {
+        title: '第(1)问：B与C相遇',
+        content: '当 B 与 C 重合：$-8 + 6t = 16 - 2t$\n$8t = 24$，$t = 3$\n此时 A = $-10 + 18 = 8$，D = $20 - 6 = 14$',
+        formula: '\\text{答案：} 8, 14'
+      },
+      {
+        title: '第(2)问',
+        content: 'CD 中点：$\\frac{C + D}{2} = \\frac{(16-2t) + (20-2t)}{2} = 18 - 2t$\n当 B 与 CD 中点重合：$-8 + 6t = 18 - 2t$\n解得 $t = \\frac{13}{4}$',
+        formula: 't = \\frac{13}{4}'
       }
     ]
   },
@@ -4844,25 +4904,25 @@ BC = 4，求线段 MN 的长；
     grade: '7',
     semester: 'up',
     category: '几何',
-    title: '考点2例题：数学思想在角度计算中的应用',
+    title: '考点2例题：整体思想在角度计算中的应用',
     difficulty: 4,
     tags: ['几何', '角度', '整体思想'],
     methodName: '整体思想',
     images: ['rays-abcde.svg'],
     content: `如图，已知 $OC$ 是 $\\angle AOD$ 的平分线，$OE$ 是 $\\angle BOD$ 的平分线。
 
-(1) 若 $\\angle AOB = 150°$，$OE$ 是 $\\angle BOD$ 的平分线，求 $\\angle COE$ 的度数；
-(2) 若 $\\angle AOB = a$，则 $\\angle COE$ =$______$，求 $\\angle COD$ 与 $\\angle AOE$ 的关系。`,
+(1) 若 $\\angle AOB = 150°$，求 $\\angle COE$ 的度数；
+(2) 若 $\\angle AOB = \\alpha$，则 $\\angle COE = $______$（用含 $\\alpha$ 的代数式表示）。`,
     steps: [
       {
         title: '第(1)问',
-        content: '$\\angle COD = \\frac{1}{2}\\angle AOD$\n$\\angle EOD = \\frac{1}{2}\\angle BOD$\n$\\angle COE = \\angle COD + \\angle DOE = \\frac{1}{2}(\\angle AOD + \\angle BOD) = \\frac{1}{2} \\times 150° = 75°$',
+        content: '因为 $OC$ 是 $\\angle AOD$ 的平分线，\n所以 $\\angle COD = \\frac{1}{2}\\angle AOD$。\n\n因为 $OE$ 是 $\\angle BOD$ 的平分线，\n所以 $\\angle EOD = \\frac{1}{2}\\angle BOD$。\n\n所以 $\\angle COE = \\angle COD + \\angle EOD = \\frac{1}{2}\\angle AOD + \\frac{1}{2}\\angle BOD = \\frac{1}{2}(\\angle AOD + \\angle BOD) = \\frac{1}{2}\\angle AOB$。\n\n因为 $\\angle AOB = 150°$，所以 $\\angle COE = \\frac{1}{2} \\times 150° = 75°$。',
         formula: '\\angle COE = 75°'
       },
       {
         title: '第(2)问',
-        content: '$\\angle COE = \\frac{a}{2}$',
-        formula: ''
+        content: '由(1)得 $\\angle COE = \\frac{1}{2}\\angle AOB$。\n\n因为 $\\angle AOB = \\alpha$，所以 $\\angle COE = \\frac{\\alpha}{2}$。',
+        formula: '\\angle COE = \\frac{\\alpha}{2}'
       }
     ]
   },
