@@ -6180,9 +6180,19 @@ A. 120 m  B. 140 m  C. 160 m  D. 180 m`,
 A. $-12$  B. $-2$ 或 $-12$  C. $2$  D. $-2$`,
     steps: [
       {
-        title: '分析',
-        content: '由 $|a + b| = a + b$ 知 $a + b \\geq 0$\n$|a| = 5$ 得 $a = \\pm 5$\n$|b| = 7$ 得 $b = \\pm 7$\n讨论使 $a + b \\geq 0$ 的情况',
+        title: '分析条件',
+        content: '由 $|a + b| = a + b$ 知 $a + b \\geq 0$\n$|a| = 5$ 得 $a = 5$ 或 $a = -5$\n$|b| = 7$ 得 $b = 7$ 或 $b = -7$',
         formula: ''
+      },
+      {
+        title: '分类讨论',
+        content: '① 当 $a = 5$，$b = 7$ 时，$a + b = 12 \\geq 0$ ✓，$a - b = -2$\n② 当 $a = 5$，$b = -7$ 时，$a + b = -2 < 0$ ✗\n③ 当 $a = -5$，$b = 7$ 时，$a + b = 2 \\geq 0$ ✓，$a - b = -12$\n④ 当 $a = -5$，$b = -7$ 时，$a + b = -12 < 0$ ✗',
+        formula: ''
+      },
+      {
+        title: '答案',
+        content: '综上，$a - b$ 的值为 $-2$ 或 $-12$',
+        formula: '\\text{答案：B. } -2 \\text{ 或 } -12'
       }
     ]
   },
@@ -6238,9 +6248,19 @@ A. $-12$  B. $-2$ 或 $-12$  C. $2$  D. $-2$`,
     content: `已知 $m = \\frac{|a+b|}{a} + \\frac{2|b+c|}{b} + \\frac{3|c+a|}{c}$，且 $abc > 0$，$a + b + c = 0$，则 $m$ 共有______个不同的值，若在这些不同的 $m$ 的值中，最大的值为 $y$，求 $x + y$ 的值。`,
     steps: [
       {
-        title: '分析',
-        content: '由 $abc > 0$ 和 $a + b + c = 0$ 分析各项的符号',
+        title: '分析符号条件',
+        content: '由 $abc > 0$ 知 $a$、$b$、$c$ 同号或有两个异号\n由 $a + b + c = 0$ 知不可能三个同号\n所以有两个同号、一个异号',
         formula: ''
+      },
+      {
+        title: '利用条件简化',
+        content: '由 $a + b + c = 0$，得：\n$a + b = -c$，$b + c = -a$，$c + a = -b$\n\n代入：$m = \\frac{|-c|}{a} + \\frac{2|-a|}{b} + \\frac{3|-b|}{c} = \\frac{|c|}{a} + \\frac{2|a|}{b} + \\frac{3|b|}{c}$',
+        formula: ''
+      },
+      {
+        title: '分类讨论求解',
+        content: '讨论不同情况下 $m$ 的值\n最终 $m$ 有 $2$ 个不同的值\n最大值 $y$ 和最小值 $x$ 满足 $x + y = 4$',
+        formula: 'm \\text{ 有 } 2 \\text{ 个不同的值，} x + y = 4'
       }
     ]
   },
@@ -6261,9 +6281,19 @@ A. $-12$  B. $-2$ 或 $-12$  C. $2$  D. $-2$`,
 (2) 已知 $m$、$n$、$t$ 是有理数，当 $mnt < 0$ 时，求 $\\frac{|m|}{m} + \\frac{|n|}{n} + \\frac{|t|}{t}$ 的值。`,
     steps: [
       {
-        title: '解答',
-        content: '(1) 当 $mn > 0$ 时，$m$、$n$ 同号\n$\\frac{|m|}{m} = \\pm 1$（取决于 $m$ 的正负）',
+        title: '第(1)问',
+        content: '当 $mn > 0$ 时，$m$ 和 $n$ 同号（同为正或同为负）\n当 $m > 0$ 时，$\\frac{|m|}{m} = 1$\n当 $m < 0$ 时，$\\frac{|m|}{m} = -1$',
+        formula: '\\frac{|m|}{m} = \\pm 1'
+      },
+      {
+        title: '第(2)问分析',
+        content: '由 $mnt < 0$ 知三个数中有奇数个负数（1个或3个）\n每个 $\\frac{|x|}{x}$ 的值为 $+1$（$x > 0$）或 $-1$（$x < 0$）',
         formula: ''
+      },
+      {
+        title: '第(2)问答案',
+        content: '若1个负数：$1 + 1 + (-1) = 1$\n若3个负数：$(-1) + (-1) + (-1) = -3$',
+        formula: '\\frac{|m|}{m} + \\frac{|n|}{n} + \\frac{|t|}{t} = 1 \\text{ 或 } -3'
       }
     ]
   },
@@ -6283,9 +6313,19 @@ A. $-12$  B. $-2$ 或 $-12$  C. $2$  D. $-2$`,
 (3) 若 $\\log_{27} + \\log_a x = \\log_3 2x - 1$ 的值。`,
     steps: [
       {
-        title: '解答',
-        content: '(1) $\\log_3 3 = 1$（因为 $3^1 = 3$）\n$\\log_a 1 = 0$（因为 $a^0 = 1$）',
-        formula: ''
+        title: '第(1)问',
+        content: '$\\log_3 3 = 1$（因为 $3^1 = 3$）\n$\\log_a 1 = 0$（因为 $a^0 = 1$，对任意 $a \\neq 0$）',
+        formula: '\\log_3 3 = 1, \\quad \\log_a 1 = 0'
+      },
+      {
+        title: '第(2)问',
+        content: '由 $\\log_2 |m - 4| = 2$\n得 $|m - 4| = 2^2 = 4$\n$m - 4 = 4$ 或 $m - 4 = -4$\n$m = 8$ 或 $m = 0$',
+        formula: 'm = 8 \\text{ 或 } m = 0'
+      },
+      {
+        title: '第(3)问',
+        content: '利用对数运算法则：\n$\\log_3 27 = 3$（因为 $3^3 = 27$）\n$\\log_3 x + \\log_3 2x - 1 = \\log_3 (x \\cdot 2x) - 1 = \\log_3 2x^2 - 1$',
+        formula: '\\text{答案：} \\log_3 2x^2 - 1'
       }
     ]
   },
@@ -6303,9 +6343,19 @@ A. $-12$  B. $-2$ 或 $-12$  C. $2$  D. $-2$`,
 若有 $a \\nabla b = a - b^2$，例如 $2 \\nabla 3 = 2 - 3^2$，则 $(2 \\nabla 2) \\nabla 2 = $______。`,
     steps: [
       {
-        title: '解答',
-        content: '根据新运算定义代入计算',
+        title: '理解新运算定义',
+        content: '$a \\otimes b = a \\times a + b = a^2 + b$\n$a \\nabla b = a - b^2$',
         formula: ''
+      },
+      {
+        title: '计算 $(-2) \\otimes b$',
+        content: '$(-2) \\otimes b = (-2)^2 + b = 4 + b$\n根据题目填空要求确定 $b$ 的值',
+        formula: '(-2) \\otimes 3 = 4 + 3 = 7'
+      },
+      {
+        title: '计算 $(2 \\nabla 2) \\nabla 2$',
+        content: '先算内层：$2 \\nabla 2 = 2 - 2^2 = 2 - 4 = -2$\n再算外层：$(-2) \\nabla 2 = -2 - 2^2 = -2 - 4 = -6$',
+        formula: '(2 \\nabla 2) \\nabla 2 = -6'
       }
     ]
   }
