@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- 数轴 -->
+  <line x1="30" y1="50" x2="470" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 刻度和标签 -->
+  <!-- -1 (点A) -->
+  <line x1="100" y1="45" x2="100" y2="55" stroke="#333" stroke-width="2"/>
+  <text x="100" y="75" text-anchor="middle" font-size="12" fill="#333">-1</text>
+  <circle cx="100" cy="50" r="4" fill="#e74c3c"/>
+  <text x="100" y="35" text-anchor="middle" font-size="14" fill="#e74c3c" font-weight="bold">A</text>
+  
+  <!-- 0 -->
+  <line x1="160" y1="45" x2="160" y2="55" stroke="#333" stroke-width="2"/>
+  <text x="160" y="75" text-anchor="middle" font-size="12" fill="#333">0</text>
+  
+  <!-- 1 -->
+  <line x1="220" y1="45" x2="220" y2="55" stroke="#333" stroke-width="2"/>
+  <text x="220" y="75" text-anchor="middle" font-size="12" fill="#333">1</text>
+  
+  <!-- 5 (点B) -->
+  <line x1="460" y1="45" x2="460" y2="55" stroke="#333" stroke-width="2"/>
+  <text x="460" y="75" text-anchor="middle" font-size="12" fill="#333">5</text>
+  <circle cx="460" cy="50" r="4" fill="#3498db"/>
+  <text x="460" y="35" text-anchor="middle" font-size="14" fill="#3498db" font-weight="bold">B</text>
+</svg>
+
