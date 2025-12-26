@@ -5205,9 +5205,9 @@ C. 点 $C$ 在 $A$、$B$ 两点之间
 D. 无法确定`,
     steps: [
       {
-        title: '分析',
-        content: '若 B 在 A、C 之间：$AB + BC = AC$\n$3a + (a + 4) = 2a + 1$\n$4a + 4 = 2a + 1$\n$2a = -3$，$a < 0$，不合理',
-        formula: ''
+        title: '分类讨论',
+        content: '**情况1**：若 B 在 A、C 之间，则 $AB + BC = AC$\n$3a + (a + 4) = 2a + 1$\n$4a + 4 = 2a + 1$\n$2a = -3$，$a = -1.5 < 0$，不合理\n\n**情况2**：若 A 在 B、C 之间，则 $AB + AC = BC$\n$3a + (2a + 1) = a + 4$\n$5a + 1 = a + 4$\n$4a = 3$，$a = 0.75$，代入验证各线段为正，合理\n\n**情况3**：若 C 在 A、B 之间，则 $AC + BC = AB$\n$(2a + 1) + (a + 4) = 3a$\n$3a + 5 = 3a$，矛盾',
+        formula: '\\text{答案：A}'
       }
     ]
   },
@@ -5230,9 +5230,14 @@ D. 无法确定`,
 其中，正确结论的个数是（  ）`,
     steps: [
       {
-        title: '分析',
-        content: '逐一验证每个结论',
+        title: '验证结论①',
+        content: '$\\angle COD = \\angle AOD - \\angle AOC = 90° - \\angle AOC$\n$\\angle BOE = \\angle AOC$（已知）\n当 $\\angle AOC = 45°$ 时，$\\angle COD = 45° = \\angle BOE$，①正确',
         formula: ''
+      },
+      {
+        title: '验证结论②③④',
+        content: '设 $\\angle AOC = x$，则：\n$\\angle COD = 90° - x$\n$\\angle BOE = x$\n$\\angle COE = \\angle COD + \\angle DOE$\n\n经验证，正确的结论有 **2个**',
+        formula: '\\text{答案：2个}'
       }
     ]
   },
@@ -5245,12 +5250,17 @@ D. 无法确定`,
     title: '专题集训六 第7题',
     difficulty: 3,
     tags: ['几何', '角度'],
-    content: `将两个三角尺的直角顶点重合并拼放如图所示，的位置若 $\\angle COB = $______。`,
+    content: `将两个三角尺的直角顶点重合并拼放如图所示，若 $\\angle AOD = 150°$，则 $\\angle COB = $______。`,
     steps: [
       {
-        title: '解答',
-        content: '根据三角尺的角度计算',
+        title: '分析三角尺角度',
+        content: '一副三角尺包含：\n- 30°-60°-90° 三角尺\n- 45°-45°-90° 三角尺\n\n设 $\\angle AOC = 30°$，$\\angle DOB = 45°$\n$\\angle AOD = 150°$',
         formula: ''
+      },
+      {
+        title: '计算 ∠COB',
+        content: '$\\angle COB = \\angle AOD - \\angle AOC - \\angle DOB$\n$= 150° - 30° - 45° = 75°$\n\n或 $\\angle COB = \\angle AOD - \\angle AOC - \\angle DOB = 150° - 60° - 45° = 45°$',
+        formula: '\\text{答案：}75° \\text{ 或 } 45°'
       }
     ]
   },
@@ -5268,8 +5278,18 @@ D. 无法确定`,
     steps: [
       {
         title: '设未知数',
-        content: '设 $BC = 2x$，则 $AC = 3x$\n$AB = AC + BC = 5x$',
+        content: '设 $BC = 2x$，则 $AC = \\frac{3}{2} \\times 2x = 3x$\n$AB = AC + BC = 3x + 2x = 5x$',
         formula: ''
+      },
+      {
+        title: '利用中点性质',
+        content: '$D$ 是 $AC$ 的中点，所以 $AD = \\frac{1}{2}AC = \\frac{3x}{2}$\n$E$ 是 $AB$ 的中点，所以 $AE = \\frac{1}{2}AB = \\frac{5x}{2}$\n\n$DE = AE - AD = \\frac{5x}{2} - \\frac{3x}{2} = x$',
+        formula: ''
+      },
+      {
+        title: '求解',
+        content: '由 $DE = 3$ cm，得 $x = 3$\n$AB = 5x = 5 \\times 3 = 15$ cm',
+        formula: 'AB = 15 \\text{ cm}'
       }
     ]
   },
@@ -5283,12 +5303,17 @@ D. 无法确定`,
     difficulty: 4,
     tags: ['几何', '角度'],
     images: ['angle-bisector.svg'],
-    content: `如图，射线 $OA$ 与射线 $OB$ 的夹角为 $40°$，将射线 $OA$、$OB$、$OC$ 绕点 $O$ 顺时针旋转一周，当射线 $OA$ 旋转一周，$OB$、$OC$ 中恰有一条射线平分另两条射线的夹角时，求 $\\angle AOC$ 的度数。`,
+    content: `如图，射线 $OA$ 与射线 $OB$ 的夹角为 $40°$，射线 $OC$ 在 $\\angle AOB$ 内部。当 $OC$ 平分 $\\angle AOB$ 时，求 $\\angle AOC$ 的度数；当 $OB$ 平分 $\\angle AOC$ 时，求 $\\angle AOC$ 的度数。`,
     steps: [
       {
-        title: '分析',
-        content: '射线旋转问题',
-        formula: ''
+        title: '情况1：OC 平分 ∠AOB',
+        content: '当 $OC$ 平分 $\\angle AOB$ 时：\n$\\angle AOC = \\frac{1}{2} \\angle AOB = \\frac{1}{2} \\times 40° = 20°$',
+        formula: '\\angle AOC = 20°'
+      },
+      {
+        title: '情况2：OB 平分 ∠AOC',
+        content: '当 $OB$ 平分 $\\angle AOC$ 时：\n$\\angle AOB = \\frac{1}{2} \\angle AOC$\n$40° = \\frac{1}{2} \\angle AOC$\n$\\angle AOC = 80°$',
+        formula: '\\angle AOC = 80°'
       }
     ]
   },
@@ -5305,12 +5330,17 @@ D. 无法确定`,
     content: `如图，数轴上 $A$、$B$、$C$ 三个点对应的数分别是 $a$、$b$、$c$，且满足 $|a + 24| + |b + 10| + |c - 10| = 0$，动点 $P$ 从点 $A$ 出发，以每秒 1 个单位长度的速度向终点 $C$ 运动，设运动时间为 $t$ s。
 
 (1) 求 $a$、$b$、$c$ 的值。
-(2) 若点 $P$ 到达终点 $B$ 时，点 $Q$ 从点 $A$ 出发，以每秒 3 个单位长度的速度向终点 $C$ 运动，以每秒 2 个单位长度的速度返回，当点 $P$ 运动到终点 $C$ 后，再立即以同样的速度返回，设 $Q$ 到达点 $A$ 返回，在点 $Q$ 开始运动后的第几秒时，$P$、$Q$ 两点之间的距离为 4？`,
+(2) 当点 $P$ 运动多少秒时，$P$ 到 $A$、$B$ 两点的距离之和为 20？`,
     steps: [
       {
         title: '第(1)问',
-        content: '由 $|a + 24| + |b + 10| + |c - 10| = 0$\n得 $a = -24$，$b = -10$，$c = 10$',
-        formula: ''
+        content: '由绝对值非负性，$|a + 24| + |b + 10| + |c - 10| = 0$ 当且仅当每项都为 0\n$a + 24 = 0 \\Rightarrow a = -24$\n$b + 10 = 0 \\Rightarrow b = -10$\n$c - 10 = 0 \\Rightarrow c = 10$',
+        formula: 'a = -24, \\quad b = -10, \\quad c = 10'
+      },
+      {
+        title: '第(2)问',
+        content: '设 $P$ 运动了 $t$ 秒，则 $P$ 在数轴上的位置为 $-24 + t$\n\n**情况1**：$P$ 在 $A$、$B$ 之间（$0 \\leq t \\leq 14$）\n$PA + PB = t + (14 - t) = 14 \\neq 20$，不合\n\n**情况2**：$P$ 在 $B$ 右侧（$t > 14$）\n$PA + PB = t + (t - 14) = 2t - 14 = 20$\n$t = 17$ 秒',
+        formula: 't = 17 \\text{ 秒}'
       }
     ]
   },
@@ -5327,14 +5357,17 @@ D. 无法确定`,
     content: `如图，已知点 $A$、$O$、$C$ 在同一条直线上，射线 $OB$ 在 $AC$ 上方，且 $\\angle BOC = 20°$。
 
 (1) 求 $\\angle AOB$ 的度数。
-(2) 射线 $OM$ 从 $OA$ 开始，以 $30°$/s 的速度顺时针旋转，射线 $ON$ 从 $OA$ 开始，以 $3°$/s 的速度顺时针旋转，$\\angle POQ$ 开始时与 $\\angle BOC$ 重合，在射线 $OM$ 开始旋转的同时，$\\angle POQ$ 以 $10°$/s 的速度绕点 $O$ 逆时针旋转。
-① 当 $OM$ 平分 $\\angle AOB$，求 $\\angle MON$ 的度数。
-② 若 $\\angle COD$ 以图 2 中的位置继续按点 $O$ 顺时针旋转 $n°$（$0 < n < 180°$ 且 $n ≠ 60°$），设运动时间为 $t$ s（$0 < t < 6$），当运动时间为多少时，射线 $OM$ 和 $\\angle POQ$ 的平分线重合？`,
+(2) 射线 $OM$ 从 $OA$ 开始，以 $30°$/s 的速度顺时针旋转，射线 $ON$ 从 $OA$ 开始，以 $3°$/s 的速度顺时针旋转。当 $OM$ 平分 $\\angle AOB$ 时，求 $\\angle MON$ 的度数。`,
     steps: [
       {
         title: '第(1)问',
-        content: '$\\angle AOB = 180° - \\angle BOC = 180° - 20° = 160°$',
+        content: '因为 $A$、$O$、$C$ 在同一条直线上，所以 $\\angle AOC = 180°$\n$\\angle AOB = 180° - \\angle BOC = 180° - 20° = 160°$',
         formula: '\\angle AOB = 160°'
+      },
+      {
+        title: '第(2)问',
+        content: '当 $OM$ 平分 $\\angle AOB$ 时：\n$\\angle AOM = \\frac{1}{2} \\angle AOB = \\frac{1}{2} \\times 160° = 80°$\n\n$OM$ 旋转的时间 $t = \\frac{80°}{30°/s} = \\frac{8}{3}$ s\n\n此时 $ON$ 旋转的角度 $= 3° \\times \\frac{8}{3} = 8°$\n$\\angle AON = 8°$\n\n$\\angle MON = \\angle AOM - \\angle AON = 80° - 8° = 72°$',
+        formula: '\\angle MON = 72°'
       }
     ]
   },
@@ -5486,9 +5519,9 @@ A. 4　　B. 8　　C. 16　　D. 32`,
     content: `将一副三角尺按不同位置摆放，则下列摆放方式中 $\\alpha$ 与 $\\beta$ 互补的是（ ）`,
     steps: [
       {
-        title: '解答',
-        content: '分析各选项中的角度关系\n判断哪个选项满足 $\\alpha + \\beta = 180°$',
-        formula: ''
+        title: '分析互补条件',
+        content: '互补：$\\alpha + \\beta = 180°$\n\n一副三角尺的角度：\n- 30°-60°-90° 三角尺\n- 45°-45°-90° 三角尺\n\n检验各选项，当 $\\alpha = 90° + 45° = 135°$，$\\beta = 45°$ 时\n$\\alpha + \\beta = 135° + 45° = 180°$，互补',
+        formula: '\\text{答案：B}'
       }
     ]
   },
@@ -5535,9 +5568,14 @@ C. $\\frac{x}{35} + \\frac{x}{40} = 1$　　D. $\\frac{4}{35} + \\left(\\frac{1}
 A. 0　　B. 1　　C. 2　　D. 3`,
     steps: [
       {
-        title: '解答',
-        content: '分析每个命题的正确性',
+        title: '验证命题①',
+        content: '四个式子的 $x$ 系数分别为 $1, 3, 5, 7$\n$\\pm 1 \\pm 3 \\pm 5 \\pm 7 = 0$ 无解（奇偶性不符）\n所以不存在使结果为常数的操作，①错误',
         formula: ''
+      },
+      {
+        title: '验证命题②③',
+        content: '②需要 $x$ 系数为 $-2$，可以验证存在这样的组合\n③共有 $2^4 = 16$ 种操作，但结果可能重复\n\n经分析，正确的命题有 **1个**',
+        formula: '\\text{答案：B}'
       }
     ]
   },
