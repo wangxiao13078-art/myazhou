@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react'
 import { YStack, XStack, Text, Button, Card, ScrollView, H2, H3, Theme, Separator } from 'tamagui'
-import { ChevronRight, ChevronDown, BookOpen, Star, ListOrdered } from '@tamagui/lucide-icons'
+import { ChevronRight, ChevronDown, BookOpen, Star, ListOrdered, Eye, EyeOff } from '@tamagui/lucide-icons'
 import { Problem, MathStep } from './schema'
 import { MathText } from '../../ui/math-text'
 import { Header } from '../../ui/header'
@@ -43,6 +43,18 @@ export function ProblemDetailScreen({ problem }: ProblemDetailScreenProps) {
       setUnlockedSteps(unlockedSteps.filter(i => i !== index))
     } else {
       setUnlockedSteps([...unlockedSteps, index])
+    }
+  }
+
+  // 检查是否全部展开
+  const isAllExpanded = problem.steps.length > 0 && unlockedSteps.length === problem.steps.length
+
+  // 一键展开/收起全部答案
+  const toggleAllSteps = () => {
+    if (isAllExpanded) {
+      setUnlockedSteps([])
+    } else {
+      setUnlockedSteps(problem.steps.map((_, index) => index))
     }
   }
 
@@ -128,6 +140,20 @@ export function ProblemDetailScreen({ problem }: ProblemDetailScreenProps) {
               <Text fontSize="$2" color="$gray9" fontWeight="bold">分步解析引导</Text>
               <Separator f={1} />
             </XStack>
+            
+            {/* 一键展开/收起按钮 */}
+            {problem.steps.length > 0 && (
+              <Button
+                size="$3"
+                theme={isAllExpanded ? "gray" : "blue"}
+                onPress={toggleAllSteps}
+                icon={isAllExpanded ? <EyeOff size={16} /> : <Eye size={16} />}
+                br="$10"
+                alignSelf="center"
+              >
+                {isAllExpanded ? '收起全部答案' : '展开全部答案'}
+              </Button>
+            )}
             
             {problem.steps.map((step, index) => {
               const isUnlocked = unlockedSteps.includes(index)
