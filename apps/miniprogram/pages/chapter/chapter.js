@@ -49,11 +49,11 @@ Page({
     })
   },
 
-  // 跳转到题目详情
+  // 跳转到题目详情（分包路径）
   goToProblem(e) {
     const id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: `/pages/problem/problem?id=${id}-example`
+      url: `/packageA/pages/problem/problem?id=${id}-example`
     })
   },
 
@@ -70,9 +70,9 @@ Page({
       return
     }
 
-    // 直接跳转到第一题
+    // 直接跳转到第一题（分包路径）
     wx.navigateTo({
-      url: `/pages/problem/problem?id=${quizId}-quiz-1`
+      url: `/packageA/pages/problem/problem?id=${quizId}-quiz-1`
     })
   }
 })

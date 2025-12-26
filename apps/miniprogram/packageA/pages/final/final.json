@@ -3,6 +3,6 @@
   "navigationBarBackgroundColor": "#F59E0B",
   "navigationBarTextStyle": "white",
   "usingComponents": {
-    "math-content": "/components/math-content/math-content"
+    "math-content": "../../components/math-content/math-content"
   }
 }

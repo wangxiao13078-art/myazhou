@@ -60,18 +60,18 @@ Page({
     })
   },
 
-  // 开始做题
+  // 开始做题（分包路径）
   startProblem(e) {
     const id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: `/pages/problem/problem?id=${id}`
+      url: `/packageA/pages/problem/problem?id=${id}`
     })
   },
 
-  // 开始期末冲刺（跳转到专门页面）
+  // 开始期末冲刺（分包路径）
   startFinalQuiz() {
     wx.navigateTo({
-      url: '/pages/final/final'
+      url: '/packageA/pages/final/final'
     })
   }
 })

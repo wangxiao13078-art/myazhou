@@ -1,0 +1,40 @@
+<!--math-content.wxml - 数学内容渲染组件-->
+<view class="math-content">
+  <!--简单文本模式-->
+  <block wx:if="{{!richMode}}">
+    <text class="math-text" selectable="{{selectable}}" decode="true">{{displayText}}</text>
+  </block>
+  
+  <!--富文本模式：支持内嵌图形-->
+  <block wx:else>
+    <block wx:for="{{contentParts}}" wx:key="index">
+      <!--文本部分-->
+      <text wx:if="{{item.type === 'text'}}" class="math-text" selectable="{{selectable}}" decode="true">{{item.content}}</text>
+      
+      <!--图片部分-->
+      <view wx:elif="{{item.type === 'image'}}" class="inline-figure">
+        <image 
+          class="figure-image" 
+          src="{{item.src}}" 
+          mode="widthFix"
+          show-menu-by-longpress="true"
+        ></image>
+        <text class="figure-caption" wx:if="{{item.caption}}">{{item.caption}}</text>
+      </view>
+      
+      <!--分数部分（特殊渲染）-->
+      <view wx:elif="{{item.type === 'fraction'}}" class="inline-fraction">
+        <text class="fraction-num">{{item.numerator}}</text>
+        <view class="fraction-line"></view>
+        <text class="fraction-den">{{item.denominator}}</text>
+      </view>
+      
+      <!--角度标记-->
+      <text wx:elif="{{item.type === 'angle'}}" class="angle-symbol">∠{{item.content}}</text>
+      
+      <!--换行-->
+      <view wx:elif="{{item.type === 'break'}}" class="line-break"></view>
+    </block>
+  </block>
+</view>
+

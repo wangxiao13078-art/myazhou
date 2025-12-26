@@ -2,10 +2,28 @@
   "pages": [
     "pages/index/index",
     "pages/chapter/chapter",
-    "pages/problem/problem",
-    "pages/quiz/quiz",
-    "pages/final/final"
+    "pages/quiz/quiz"
   ],
+  "subpackages": [
+    {
+      "root": "packageA",
+      "name": "problems",
+      "pages": [
+        "pages/problem/problem",
+        "pages/final/final"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": ["problems"]
+    },
+    "pages/quiz/quiz": {
+      "network": "all", 
+      "packages": ["problems"]
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#3B82F6",
@@ -36,4 +54,3 @@
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"
 }
-

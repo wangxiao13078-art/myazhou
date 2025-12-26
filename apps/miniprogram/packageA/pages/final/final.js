@@ -1,4 +1,4 @@
-// final.js - 期末冲刺练页面
+// final.js - 期末冲刺练页面（分包版）
 const problems = require('../../data/problems.js')
 
 Page({
@@ -18,8 +18,7 @@ Page({
   goToProblem(e) {
     const id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: `/pages/problem/problem?id=${id}`
+      url: `/packageA/pages/problem/problem?id=${id}`
     })
   }
 })
-
