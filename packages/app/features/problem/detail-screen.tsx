@@ -168,9 +168,9 @@ export function ProblemDetailScreen({ problem }: ProblemDetailScreenProps) {
                     height="auto"
                     pressStyle={{ opacity: 0.8 }}
                   >
-                    <Text fontWeight="bold" color={isUnlocked ? "$blue10" : "$gray11"} f={1} pr="$2">
-                      {step.title}
-                    </Text>
+                    <XStack f={1} pr="$2">
+                      <MathText content={step.title} fontWeight="bold" color={isUnlocked ? "$blue10" : "$gray11"} />
+                    </XStack>
                     {isUnlocked ? <ChevronDown size={20} color="$blue10" /> : <ChevronRight size={20} color="$gray8" />}
                   </Button>
                   
