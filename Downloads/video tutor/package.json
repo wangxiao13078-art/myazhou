@@ -1,0 +1,43 @@
+{
+  "name": "solito-blank",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18",
+    "eslint": "^8.21.0",
+    "turbo": "^2.4.4",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "native": "cd apps/expo && yarn start",
+    "web": "cd apps/next && npx next dev --webpack"
+  },
+  "packageManager": "yarn@4.7.0",
+  "eslintConfig": {
+    "extends": "next",
+    "settings": {
+      "next": {
+        "rootDir": "apps/next/"
+      }
+    },
+    "root": true
+  },
+  "prettier": {
+    "semi": false,
+    "useTabs": false,
+    "tabWidth": 2,
+    "singleQuote": true
+  },
+  "resolutions": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}

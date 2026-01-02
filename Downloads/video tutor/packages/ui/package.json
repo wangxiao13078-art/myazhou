@@ -1,0 +1,19 @@
+{
+  "name": "@my/ui",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "@tamagui/config": "latest",
+    "@tamagui/core": "latest",
+    "@tamagui/font-inter": "latest",
+    "@tamagui/lucide-icons": "latest",
+    "@tamagui/shorthands": "latest",
+    "@tamagui/theme-base": "latest",
+    "tamagui": "latest"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  }
+}
